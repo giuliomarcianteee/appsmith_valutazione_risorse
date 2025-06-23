@@ -365,7 +365,7 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "onRowSelected": "{{dataController.onRowSelect(TabellaSettimane.selectedRow)}}",
+  "onRowSelected": "{{dataController.salvaIdSettimana();}},{{GetDettaglioSettimana.run()}}",
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {

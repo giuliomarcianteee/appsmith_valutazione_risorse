@@ -1,4 +1,9 @@
 export default {
+	  salvaIdSettimana: () => {
+    storeValue("selectedSettimanaId", TabellaSettimane.selectedRow.IdSettimane);
+    return TabellaSettimane.selectedRow.IdSettimane;
+		},
+	
   formatObjectForTable: () => {
     const details = appsmith.store.selectedWeekDetails;
     if (!details) {
