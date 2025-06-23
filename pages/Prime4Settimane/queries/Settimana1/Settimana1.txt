@@ -1,0 +1,40 @@
+SELECT 
+    vr.IdSettimane,
+    vr.1ConoscenzaManualeFormativo,
+    vr.1NoteConoscenzaManualeFormativo,
+    vr.1ConoscenzaOrganizzazioneMerceologica,
+    vr.1NoteConoscenzaOrganizzazioneMerceologica,
+    vr.1AccoglienzaCliente,
+    vr.1NoteAccoglienzaCliente,
+    vr.1PresentazioneProdottoeSconti,
+    vr.1NotePresentazioneProdottoeSconti,
+    vr.1ConoscenzaBrandOreficeria,
+    vr.1NoteConoscenzaBrandOreficeria,
+    vr.1VenditaInSicurezza,
+    vr.1NoteVenditaInSicurezza,
+    vr.1FidelizzazioneCliente,
+    vr.1NoteFidelizzazioneCliente,
+    vr.1UtilizzoCassaPos,
+    vr.1NoteUtilizzoCassaPos,
+    vr.1MetodoScaricoVenditaFidelityOrari,
+    vr.1NoteMetodoScaricoVenditaFidelityOrari,
+    vr.1ConfezionamentoProdotto,
+    vr.1NoteConfezionamentoProdotto,
+    vr.1CongedoCliente,
+    vr.1NoteCongedoCliente,
+    vr.1Vetrine,
+    vr.1NoteVetrine,
+    d.NEG,
+    d.Nome,
+    d.IdDipendenti,
+    d.OreSet,
+    d.Livello,
+    d.DataAssunzione,
+    d.DataFineContratto,
+    ln.Coordinatore
+FROM valutazionerisorse_settimane AS vr
+LEFT JOIN dipendenti AS d
+ON vr.IdSettimane = d.IdDipendenti
+LEFT JOIN listanegozi AS ln
+ON d.NEG = ln.NEG
+WHERE d.IdDipendenti =  '{{TabellaSettimane.triggeredRow.IdDipendenti}}';

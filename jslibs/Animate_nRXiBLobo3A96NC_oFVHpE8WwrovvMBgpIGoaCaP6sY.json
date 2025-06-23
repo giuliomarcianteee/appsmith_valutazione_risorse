@@ -1,0 +1,10 @@
+{
+  "accessor": [
+    "Animate"
+  ],
+  "defs": "{\"!name\":\"LIB/Animate\",\"Animate\":{\"!type\":\"fn()\",\"prototype\":{\"isAboveScrollPos\":{\"!type\":\"fn()\",\"prototype\":{}},\"getElementOffset\":{\"!type\":\"fn()\",\"prototype\":{}},\"isInView\":{\"!type\":\"fn()\",\"prototype\":{}},\"addAnimation\":{\"!type\":\"fn()\",\"prototype\":{}},\"removeAnimation\":{\"!type\":\"fn()\",\"prototype\":{}},\"completeAnimation\":{\"!type\":\"fn()\",\"prototype\":{}},\"removeEventListeners\":{\"!type\":\"fn()\",\"prototype\":{}},\"addEventListeners\":{\"!type\":\"fn()\",\"prototype\":{}},\"init\":{\"!type\":\"fn()\",\"prototype\":{}},\"kill\":{\"!type\":\"fn()\",\"prototype\":{}},\"render\":{\"!type\":\"fn()\",\"prototype\":{}}},\"isVisible\":{\"!type\":\"fn()\",\"prototype\":{}},\"hasAnimated\":{\"!type\":\"fn()\",\"prototype\":{}},\"doCallback\":{\"!type\":\"fn()\",\"prototype\":{}}}}",
+  "name": "Animate",
+  "uidString": "Animate_https://cdn.jsdelivr.net/npm/animate.js@2.0.2/dist/scripts/animate.min.js",
+  "url": "https://cdn.jsdelivr.net/npm/animate.js@2.0.2/dist/scripts/animate.min.js",
+  "version": "2.0.2"
+}

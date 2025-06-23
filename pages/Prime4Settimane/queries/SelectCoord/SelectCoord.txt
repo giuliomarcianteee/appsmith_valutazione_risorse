@@ -1,0 +1,2 @@
+SELECT * FROM usermanager
+WHERE Ruolo = 'Coordinatore'
