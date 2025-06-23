@@ -21,7 +21,11 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onInviaClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onInviaClick"
@@ -43,7 +47,7 @@
   "mobileRightColumn": 30,
   "mobileTopRow": 82,
   "needsErrorInfo": false,
-  "onInviaClick": "",
+  "onInviaClick": "{{dataController.updateSettimana()}}",
   "originalBottomRow": 331,
   "originalTopRow": 7,
   "parentColumnSpace": 20.125,

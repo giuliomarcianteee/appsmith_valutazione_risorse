@@ -1,0 +1,27 @@
+UPDATE valutazionerisorse_settimane 
+SET 
+    `1ConoscenzaManualeFormativo` = '{{ DettaglioSettimanaWidget.model.edited["1ConoscenzaManualeFormativo"] || DettaglioSettimanaWidget.model.data["1ConoscenzaManualeFormativo"] }}',
+    `1NoteConoscenzaManualeFormativo` = '{{ DettaglioSettimanaWidget.model.edited["1NoteConoscenzaManualeFormativo"] || DettaglioSettimanaWidget.model.data["1NoteConoscenzaManualeFormativo"] }}',
+    `1ConoscenzaOrganizzazioneMerceologica` = '{{ DettaglioSettimanaWidget.model.edited["1ConoscenzaOrganizzazioneMerceologica"] || DettaglioSettimanaWidget.model.data["1ConoscenzaOrganizzazioneMerceologica"] }}',
+    `1NoteConoscenzaOrganizzazioneMerceologica` = '{{ DettaglioSettimanaWidget.model.edited["1NoteConoscenzaOrganizzazioneMerceologica"] || DettaglioSettimanaWidget.model.data["1NoteConoscenzaOrganizzazioneMerceologica"] }}',
+    `1AccoglienzaCliente` = '{{ DettaglioSettimanaWidget.model.edited["1AccoglienzaCliente"] || DettaglioSettimanaWidget.model.data["1AccoglienzaCliente"] }}',
+    `1NoteAccoglienzaCliente` = '{{ DettaglioSettimanaWidget.model.edited["1NoteAccoglienzaCliente"] || DettaglioSettimanaWidget.model.data["1NoteAccoglienzaCliente"] }}',
+    `1PresentazioneProdottoeSconti` = '{{ DettaglioSettimanaWidget.model.edited["1PresentazioneProdottoeSconti"] || DettaglioSettimanaWidget.model.data["1PresentazioneProdottoeSconti"] }}',
+    `1NotePresentazioneProdottoeSconti` = '{{ DettaglioSettimanaWidget.model.edited["1NotePresentazioneProdottoeSconti"] || DettaglioSettimanaWidget.model.data["1NotePresentazioneProdottoeSconti"] }}',
+    `1ConoscenzaBrandOreficeria` = '{{ DettaglioSettimanaWidget.model.edited["1ConoscenzaBrandOreficeria"] || DettaglioSettimanaWidget.model.data["1ConoscenzaBrandOreficeria"] }}',
+    `1NoteConoscenzaBrandOreficeria` = '{{ DettaglioSettimanaWidget.model.edited["1NoteConoscenzaBrandOreficeria"] || DettaglioSettimanaWidget.model.data["1NoteConoscenzaBrandOreficeria"] }}',
+    `1VenditaInSicurezza` = '{{ DettaglioSettimanaWidget.model.edited["1VenditaInSicurezza"] || DettaglioSettimanaWidget.model.data["1VenditaInSicurezza"] }}',
+    `1NoteVenditaInSicurezza` = '{{ DettaglioSettimanaWidget.model.edited["1NoteVenditaInSicurezza"] || DettaglioSettimanaWidget.model.data["1NoteVenditaInSicurezza"] }}',
+    `1FidelizzazioneCliente` = '{{ DettaglioSettimanaWidget.model.edited["1FidelizzazioneCliente"] || DettaglioSettimanaWidget.model.data["1FidelizzazioneCliente"] }}',
+    `1NoteFidelizzazioneCliente` = '{{ DettaglioSettimanaWidget.model.edited["1NoteFidelizzazioneCliente"] || DettaglioSettimanaWidget.model.data["1NoteFidelizzazioneCliente"] }}',
+    `1UtilizzoCassaPos` = '{{ DettaglioSettimanaWidget.model.edited["1UtilizzoCassaPos"] || DettaglioSettimanaWidget.model.data["1UtilizzoCassaPos"] }}',
+    `1NoteUtilizzoCassaPos` = '{{ DettaglioSettimanaWidget.model.edited["1NoteUtilizzoCassaPos"] || DettaglioSettimanaWidget.model.data["1NoteUtilizzoCassaPos"] }}',
+    `1MetodoScaricoVenditaFidelityOrari` = '{{ DettaglioSettimanaWidget.model.edited["1MetodoScaricoVenditaFidelityOrari"] || DettaglioSettimanaWidget.model.data["1MetodoScaricoVenditaFidelityOrari"] }}',
+    `1NoteMetodoScaricoVenditaFidelityOrari` = '{{ DettaglioSettimanaWidget.model.edited["1NoteMetodoScaricoVenditaFidelityOrari"] || DettaglioSettimanaWidget.model.data["1NoteMetodoScaricoVenditaFidelityOrari"] }}',
+    `1ConfezionamentoProdotto` = '{{ DettaglioSettimanaWidget.model.edited["1ConfezionamentoProdotto"] || DettaglioSettimanaWidget.model.data["1ConfezionamentoProdotto"] }}',
+    `1NoteConfezionamentoProdotto` = '{{ DettaglioSettimanaWidget.model.edited["1NoteConfezionamentoProdotto"] || DettaglioSettimanaWidget.model.data["1NoteConfezionamentoProdotto"] }}',
+    `1CongedoCliente` = '{{ DettaglioSettimanaWidget.model.edited["1CongedoCliente"] || DettaglioSettimanaWidget.model.data["1CongedoCliente"] }}',
+    `1NoteCongedoCliente` = '{{ DettaglioSettimanaWidget.model.edited["1NoteCongedoCliente"] || DettaglioSettimanaWidget.model.data["1NoteCongedoCliente"] }}',
+    `1Vetrine` = '{{ DettaglioSettimanaWidget.model.edited["1Vetrine"] || DettaglioSettimanaWidget.model.data["1Vetrine"] }}',
+    `1NoteVetrine` = '{{ DettaglioSettimanaWidget.model.edited["1NoteVetrine"] || DettaglioSettimanaWidget.model.data["1NoteVetrine"] }}'
+WHERE IdSettimane = '{{ DettaglioSettimanaWidget.model.data.IdSettimane || TabellaSettimane.triggeredRow.IdDipendenti }}';
