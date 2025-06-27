@@ -1,7 +1,7 @@
 export default {
 	  salvaIdSettimana: () => {
-    storeValue("selectedSettimanaId", TabellaSettimane.selectedRow.IdSettimane);
-    return TabellaSettimane.selectedRow.IdSettimane;
+    storeValue("selectedSettimanaId", TabellaSettimane.triggeredRow.IdSettimane);
+    return TabellaSettimane.triggeredRow.IdSettimane;
 		},
 	
   formatObjectForTable: () => {
@@ -16,10 +16,10 @@ export default {
     });
   },
 	
-  onRowSelect: async (selectedRow) => {
+  onRowSelect: async (triggeredRow) => {
     // Qui è possibile eseguire validazioni o trasformazioni sui dati.
     // Esempio: formattare una data o calcolare un nuovo campo.
-    if (!selectedRow) {
+    if (!triggeredRow) {
       // Se la riga viene deselezionata, pulisce lo store.
       await removeValue('selectedWeekDetails');
       return;
@@ -28,7 +28,7 @@ export default {
     // Salva l'oggetto della riga selezionata nello store di Appsmith.
     // Il terzo parametro 'false' indica che il dato non deve persistere
     // tra le sessioni (viene cancellato al refresh della pagina).
-    await storeValue('selectedWeekDetails', selectedRow, false);
+    await storeValue('selectedWeekDetails', triggeredRow, false);
   },
 
   // Nuova funzione per gestire l'update

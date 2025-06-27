@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "685e632feeb42977c4dae9eb_a816c095-4bd4-4a47-9766-fc5f29b4038d",
+  "id": "Prime4Settimane_DatiWidgetQuery",
+  "unpublishedCollection": {
+    "name": "DatiWidgetQuery",
+    "pageId": "Prime4Settimane",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

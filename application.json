@@ -1,5 +1,8 @@
 {
   "appIsExample": false,
+  "appLayout": {
+    "type": "TABLET_LARGE"
+  },
   "applicationDetail": {
     "appPositioning": {
       "type": "FIXED"
@@ -22,6 +25,9 @@
       "isDefault": true
     }
   ],
+  "unpublishedAppLayout": {
+    "type": "TABLET_LARGE"
+  },
   "unpublishedApplicationDetail": {
     "appPositioning": {
       "type": "FIXED"

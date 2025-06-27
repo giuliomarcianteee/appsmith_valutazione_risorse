@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 3310,
+      "bottomRow": 3330,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -82,5 +82,5 @@
   "version": 2,
   "widgetId": "5iv8iqv3aj",
   "widgetName": "Settimana_1",
-  "width": 1166
+  "width": 1026
 }

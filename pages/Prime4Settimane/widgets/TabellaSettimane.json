@@ -333,6 +333,9 @@
   ],
   "dynamicPropertyPathList": [
     {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
       "key": "onRowSelected"
     }
   ],
@@ -366,6 +369,8 @@
   "mobileTopRow": 8,
   "needsErrorInfo": false,
   "onRowSelected": "{{dataController.salvaIdSettimana();}},{{GetDettaglioSettimana.run()}}",
+  "originalBottomRow": 35,
+  "originalTopRow": 7,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
@@ -2340,7 +2345,7 @@
       "labelColor": "#FFFFFF",
       "menuItemsSource": "STATIC",
       "notation": "standard",
-      "onClick": "{{showModal(Settimana_1.name);\nSettimana1.run()}}",
+      "onClick": "{{showModal(Settimana_1.name);\nSettimana1.run(),DipendentiQuery.run()}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
