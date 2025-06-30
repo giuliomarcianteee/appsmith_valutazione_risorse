@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "DatiWidgetQuery.getIdSettimane",
     "name": "getIdSettimane",
     "pageId": "Prime4Settimane",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

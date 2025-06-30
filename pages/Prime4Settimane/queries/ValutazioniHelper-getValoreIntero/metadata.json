@@ -30,10 +30,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "ValutazioniHelper.getValoreIntero",
     "name": "getValoreIntero",
     "pageId": "Prime4Settimane",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
