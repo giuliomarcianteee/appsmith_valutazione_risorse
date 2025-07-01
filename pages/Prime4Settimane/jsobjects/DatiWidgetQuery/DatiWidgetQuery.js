@@ -4,7 +4,7 @@ export default {
     // CAMBIA QUESTO: usa il nome corretto del tuo widget
     // Sostituisci "DettaglioSettimanaWidget" con il nome effettivo del tuo widget
     const widgetName = "DettaglioSettimanaWidget"; // O il nome che usi effettivamente
-    const widget = appsmith.store[widgetName] || window[widgetName];
+   	const widget = appsmith.store[widgetName] || window[widgetName];
     
     if (!widget?.model?.allData) {
       return {};
