@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "SelectCoord",
     "pageId": "Prime4Settimane",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }

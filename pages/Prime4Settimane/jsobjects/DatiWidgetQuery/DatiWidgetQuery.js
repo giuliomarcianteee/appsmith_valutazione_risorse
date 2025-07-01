@@ -36,7 +36,7 @@ export default {
   // Ottiene l'ID settimana
   getIdSettimane() {
     // Prima prova dal widget
-    let idSettimane = DatiWidgetQuery.getValore('IdSettimane');
+    let idSettimane = DatiWidgetQuery.getValore('selectedSettimanaId');
     
     // Se non c'è, prova dalla tabella
     if (!idSettimane && TabellaSettimane?.triggeredRow?.IdDipendenti) {

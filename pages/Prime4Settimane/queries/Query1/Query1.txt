@@ -1,2 +1,0 @@
-SELECT * FROM elenco_dip_tab
-where NOME = "DAL PRA LUCA"

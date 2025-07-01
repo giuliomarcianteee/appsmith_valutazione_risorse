@@ -17,10 +17,10 @@
       "key": "sourceData"
     },
     {
-      "key": "defaultOptionValue"
+      "key": "isVisible"
     },
     {
-      "key": "isVisible"
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -35,6 +35,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownOpen"
     }
   ],
   "isDisabled": false,
@@ -57,6 +60,7 @@
   "mobileRightColumn": 31,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
+  "onDropdownOpen": "{{SelectCoord.run()}}",
   "onOptionChange": "{{DipendentiQuery.run()}}",
   "optionLabel": "label",
   "optionValue": "label",
