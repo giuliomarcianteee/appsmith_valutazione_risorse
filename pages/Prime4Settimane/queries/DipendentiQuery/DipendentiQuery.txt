@@ -3,9 +3,9 @@ SELECT
     d.*,   -- Tutti i dati della tabella dipendenti
     ln.Coordinatore  -- Solo la colonna Coordinatore dalla tabella listanegozi
 FROM valutazionerisorse_settimane AS vr
-LEFT JOIN dipendenti AS d
+LEFT JOIN elenco_dip_tab AS d
 ON vr.IdSettimane = d.IdDipendenti
 LEFT JOIN listanegozi AS ln
-ON d.NEG = ln.NEG
+ON d.Neg= ln.NEG
 WHERE TIMESTAMPDIFF(day, d.DataAssunzione, CURDATE()) < 29
 AND ln.Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}';

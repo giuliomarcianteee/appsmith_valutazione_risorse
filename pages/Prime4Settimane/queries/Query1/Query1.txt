@@ -1,0 +1,2 @@
+SELECT * FROM elenco_dip_tab 
+where NOME = "MINEO MARIA CHIARA"

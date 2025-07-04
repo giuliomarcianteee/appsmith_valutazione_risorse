@@ -32,7 +32,6 @@
     }
   },
   "columnOrder": [
-    "NEG",
     "Nome",
     "DataAssunzione",
     "DataFineContratto",
@@ -89,12 +88,14 @@
     "_2ControlloCassa",
     "_2NoteControlloCassa",
     "IdDipendenti",
-    "OreSet",
     "Livello",
     "Coordinatore",
-    "_1ConoscenzaManualeFormativo"
+    "_1ConoscenzaManualeFormativo",
+    "Neg",
+    "OreSett",
+    "Note"
   ],
-  "columnUpdatedAt": 1750413920273,
+  "columnUpdatedAt": 1751614966020,
   "columnWidthMap": {
     "NEG": 76,
     "Nome": 219,
@@ -268,16 +269,10 @@
       "key": "primaryColumns._2NoteControlloCassa.computedValue"
     },
     {
-      "key": "primaryColumns.NEG.computedValue"
-    },
-    {
       "key": "primaryColumns.Nome.computedValue"
     },
     {
       "key": "primaryColumns.IdDipendenti.computedValue"
-    },
-    {
-      "key": "primaryColumns.OreSet.computedValue"
     },
     {
       "key": "primaryColumns.Livello.computedValue"
@@ -329,6 +324,15 @@
     },
     {
       "key": "primaryColumns._1ConoscenzaManualeFormativo.computedValue"
+    },
+    {
+      "key": "primaryColumns.Neg.computedValue"
+    },
+    {
+      "key": "primaryColumns.OreSett.computedValue"
+    },
+    {
+      "key": "primaryColumns.Note.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -421,6 +425,7 @@
       "horizontalAlignment": "LEFT",
       "id": "DataAssunzione",
       "index": 54,
+      "inputFormat": "YYYY-MM-DDTHH:mm:ss",
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -578,20 +583,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "NEG": {
-      "alias": "NEG",
+    "Neg": {
+      "alias": "Neg",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"NEG\"])) :  currentRow[\"NEG\"] })()}}",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Neg\"])) : Neg })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "NEG",
+      "id": "Neg",
       "index": 49,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -601,9 +606,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "NEG",
+      "label": "Neg",
       "notation": "standard",
-      "originalId": "NEG",
+      "originalId": "Neg",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -646,21 +651,21 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "OreSet": {
-      "alias": "OreSet",
+    "Note": {
+      "alias": "Note",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"OreSet\"])) :  currentRow[\"OreSet\"] })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Note\"])) : Note })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "OreSet",
-      "index": 52,
+      "id": "Note",
+      "index": 56,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -668,10 +673,44 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
-      "label": "OreSet",
+      "isVisible": true,
+      "label": "Note",
       "notation": "standard",
-      "originalId": "OreSet",
+      "originalId": "Note",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "OreSett": {
+      "alias": "OreSett",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"OreSett\"])) : OreSett })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "OreSett",
+      "index": 51,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "OreSett",
+      "notation": "standard",
+      "originalId": "OreSett",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

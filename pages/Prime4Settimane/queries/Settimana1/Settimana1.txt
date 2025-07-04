@@ -24,17 +24,17 @@ SELECT
     vr.1NoteCongedoCliente,
     vr.1Vetrine,
     vr.1NoteVetrine,
-    d.NEG,
+    d.Neg,
     d.Nome,
     d.IdDipendenti,
-    d.OreSet,
+    d.OreSett,
     d.Livello,
     d.DataAssunzione,
     d.DataFineContratto,
     ln.Coordinatore
 FROM valutazionerisorse_settimane AS vr
-LEFT JOIN dipendenti AS d
+LEFT JOIN elenco_dip_tab AS d
 ON vr.IdSettimane = d.IdDipendenti
 LEFT JOIN listanegozi AS ln
 ON d.NEG = ln.NEG
-WHERE d.IdDipendenti =  '{{appsmith.store.selectedIdSettimana}}';
+WHERE d.IdDipendenti =  '{{appsmith.store.selectedSettimanaId}}';
