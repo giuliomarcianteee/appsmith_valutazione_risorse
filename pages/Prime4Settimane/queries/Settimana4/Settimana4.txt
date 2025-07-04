@@ -1,0 +1,32 @@
+SELECT
+    vr.IdSettimane,
+    vr.4AutonomiaAllarmiAperturaChiusura,
+    vr.4NoteAutonomiaAllarmiAperturaChiusura,
+    vr.4AutonomiaChiusraContabile,
+    vr.4NoteAutonomiaChiusraContabile,
+    vr.4CapacitaConfrontoColleghe,
+    vr.4NoteCapacitaConfrontoColleghe,
+    vr.4ConoscenzaCompletaComproOro,
+    vr.4NoteConoscenzaCompletaComproOro,
+    vr.4VenditaOroInvestimento,
+    vr.4NoteVenditaOreInvestimento,
+    vr.4RicercaProdottiSuTablet,
+    vr.4NoteRicercaProdottiSuTablet,
+    vr.4MetodoRistampaDocFediSchede,
+    vr.4NoteMetodoRistampaDocFediSchede,
+    vr.4MetodoDisimpegnoOggettiPrenotati,
+    vr.4NoteMetodoDisimpegnoOggettiPrenotati,
+    d.Neg,
+    d.Nome,
+    d.IdDipendenti,
+    d.OreSett,
+    d.Livello,
+    d.DataAssunzione,
+    d.DataFineContratto,
+    ln.Coordinatore
+FROM valutazionerisorse_settimane AS vr
+LEFT JOIN elenco_dip_tab AS d
+ON vr.IdSettimane = d.IdDipendenti
+LEFT JOIN listanegozi AS ln
+ON d.NEG = ln.NEG
+WHERE d.IdDipendenti = '{{appsmith.store.selectedSettimanaId}}';

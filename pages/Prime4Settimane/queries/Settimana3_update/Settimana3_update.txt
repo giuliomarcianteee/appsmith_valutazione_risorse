@@ -1,0 +1,18 @@
+UPDATE valutazionerisorse_settimane
+SET
+    `3PianificazioneLavoroDaSvolgere` = {{ DatiWidgetQuery.getValoreNumerico("3PianificazioneLavoroDaSvolgere") }},
+    `3NotePianificazioneLavoroDaSvolgere` = '{{ DatiWidgetQuery.getValore("3NotePianificazioneLavoroDaSvolgere") }}',
+    `3ProceduraComproOro` = {{ DatiWidgetQuery.getValoreNumerico("3ProceduraComproOro") }},
+    `3NoteProceduraComproOro` = '{{ DatiWidgetQuery.getValore("3NoteProceduraComproOro") }}',
+    `3TestSulMetallo` = {{ DatiWidgetQuery.getValoreNumerico("3TestSulMetallo") }},
+    `3NoteTestSulMetallo` = '{{ DatiWidgetQuery.getValore("3NoteTestSulMetallo") }}',
+    `3ConoscenzaOroDaInvestimetno` = {{ DatiWidgetQuery.getValoreNumerico("3ConoscenzaOroDaInvestimetno") }},
+    `3NoteConoscenzaOroDaInvestimetno` = '{{ DatiWidgetQuery.getValore("3NoteConoscenzaOroDaInvestimetno") }}',
+    `3ProcedureGiroMerce` = {{ DatiWidgetQuery.getValoreNumerico("3ProcedureGiroMerce") }},
+    `3NoteProcedureGiroMerce` = '{{ DatiWidgetQuery.getValore("3NoteProcedureGiroMerce") }}',
+    `3GestioneCambioTurno` = {{ DatiWidgetQuery.getValoreNumerico("3GestioneCambioTurno") }},
+    `3NoteGestioneCambioTurno` = '{{ DatiWidgetQuery.getValore("3NoteGestioneCambioTurno") }}',
+    `3MetodoCaricoScaricoComproOroPreventiviOroInvestimento` = {{ DatiWidgetQuery.getValoreNumerico("3MetodoCaricoScaricoComproOroPreventiviOroInvestimento") }},
+    `3TabletComproOro` = {{ DatiWidgetQuery.getValoreNumerico("3TabletComproOro") }},
+    `3NoteTabletComproOro` = '{{ DatiWidgetQuery.getValore("3NoteTabletComproOro") }}'
+WHERE IdSettimane = '{{ DatiWidgetQuery.getIdSettimane() }}';

@@ -7,5 +7,5 @@ LEFT JOIN elenco_dip_tab AS d
 ON vr.IdSettimane = d.IdDipendenti
 LEFT JOIN listanegozi AS ln
 ON d.Neg= ln.NEG
-WHERE TIMESTAMPDIFF(day, d.DataAssunzione, CURDATE()) < 29
+WHERE TIMESTAMPDIFF(day,DATE(d.DataAssunzione), CURDATE()) < 35
 AND ln.Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}';

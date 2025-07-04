@@ -1,0 +1,19 @@
+UPDATE valutazionerisorse_settimane
+SET
+    `4AutonomiaAllarmiAperturaChiusura` = {{ DatiWidgetQuery.getValoreNumerico("4AutonomiaAllarmiAperturaChiusura") }},
+    `4NoteAutonomiaAllarmiAperturaChiusura` = '{{ DatiWidgetQuery.getValore("4NoteAutonomiaAllarmiAperturaChiusura") }}',
+    `4AutonomiaChiusraContabile` = {{ DatiWidgetQuery.getValoreNumerico("4AutonomiaChiusraContabile") }},
+    `4NoteAutonomiaChiusraContabile` = '{{ DatiWidgetQuery.getValore("4NoteAutonomiaChiusraContabile") }}',
+    `4CapacitaConfrontoColleghe` = {{ DatiWidgetQuery.getValoreNumerico("4CapacitaConfrontoColleghe") }},
+    `4NoteCapacitaConfrontoColleghe` = '{{ DatiWidgetQuery.getValore("4NoteCapacitaConfrontoColleghe") }}',
+    `4ConoscenzaCompletaComproOro` = {{ DatiWidgetQuery.getValoreNumerico("4ConoscenzaCompletaComproOro") }},
+    `4NoteConoscenzaCompletaComproOro` = '{{ DatiWidgetQuery.getValore("4NoteConoscenzaCompletaComproOro") }}',
+    `4VenditaOroInvestimento` = {{ DatiWidgetQuery.getValoreNumerico("4VenditaOroInvestimento") }},
+    `4NoteVenditaOreInvestimento` = '{{ DatiWidgetQuery.getValore("4NoteVenditaOreInvestimento") }}',
+    `4RicercaProdottiSuTablet` = {{ DatiWidgetQuery.getValoreNumerico("4RicercaProdottiSuTablet") }},
+    `4NoteRicercaProdottiSuTablet` = '{{ DatiWidgetQuery.getValore("4NoteRicercaProdottiSuTablet") }}',
+    `4MetodoRistampaDocFediSchede` = {{ DatiWidgetQuery.getValoreNumerico("4MetodoRistampaDocFediSchede") }},
+    `4NoteMetodoRistampaDocFediSchede` = '{{ DatiWidgetQuery.getValore("4NoteMetodoRistampaDocFediSchede") }}',
+    `4MetodoDisimpegnoOggettiPrenotati` = {{ DatiWidgetQuery.getValoreNumerico("4MetodoDisimpegnoOggettiPrenotati") }},
+    `4NoteMetodoDisimpegnoOggettiPrenotati` = '{{ DatiWidgetQuery.getValore("4NoteMetodoDisimpegnoOggettiPrenotati") }}'
+WHERE IdSettimane = '{{ DatiWidgetQuery.getIdSettimane() }}';

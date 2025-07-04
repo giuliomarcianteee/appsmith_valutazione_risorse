@@ -21,11 +21,14 @@ export default {
     return widget?.model?.isReady === true;
   },
 
-  // Resto del codice rimane uguale...
-  getValore(campo, defaultValue = '') {
-    const allData = DatiWidgetQuery.getAllData();
-    return allData[campo] !== undefined ? allData[campo] : defaultValue;
-  },
+	getValore(campo, defaultValue = '') {
+		const allData = DatiWidgetQuery.getAllData();
+		const valore = allData[campo];
+
+		// Restituisce il valore se esiste (anche se è 0, false, o stringa vuota)
+		// Solo se è undefined o null usa il defaultValue
+		return (valore !== undefined && valore !== null) ? valore : defaultValue;
+	},
 
   getValoreNumerico(campo, defaultValue = 0) {
     const valore = DatiWidgetQuery.getValore(campo, defaultValue);
@@ -101,39 +104,39 @@ export default {
 
     return datiQuery;
   },
-  // Funzione principale per aggiornare la valutazione
-  async aggiornaValutazione() {
-    try {
-      showAlert("Salvataggio in corso...", "info");
-      
-      const datiQuery = DatiWidgetQuery.preparaDatiPerQuery();
-      if (!datiQuery) {
-        return false;
-      }
+	// Funzione principale per aggiornare la valutazione
+	async aggiornaValutazione() {
+		try {
+			showAlert("Salvataggio in corso...", "info");
 
-      console.log("Dati da salvare:", datiQuery);
+			// Esegui la query di update
+			await Settimana1_update.run();
 
-      // Esegui la query di aggiornamento
-      const result = await Settimana1_update.run();
-      
-      if (result) {
-        showAlert("Dati salvati con successo!", "success");
-        
-        // Opzionale: chiudi il modal se esiste
-        if (typeof closeModal !== 'undefined') {
-          closeModal('Settimana_1');
-        }
-        
-        return true;
-      } else {
-        throw new Error("La query non ha restituito un risultato valido");
-      }
-      
-    } catch (error) {
-      console.error("Errore durante il salvataggio:", error);
-      showAlert(`Errore durante il salvataggio: ${error.message}`, "error");
-      return false;
-    }
-  }
+			// Ricarica i dati
+			await Promise.all([
+				DipendentiQuery.run(),
+				Settimana1.run()
+			]);
+
+			// Aggiorna lo store con i nuovi dati
+			if (Settimana1.data && Settimana1.data.length > 0) {
+				await storeValue('selectedWeekDetails', Settimana1.data[0], false);
+			}
+
+			showAlert('Dati salvati con successo!', 'success');
+
+			// Chiudi il modal se esiste
+			if (typeof closeModal !== 'undefined') {
+				closeModal('Settimana_1');
+			}
+
+			return true;
+
+		} catch (error) {
+			console.error("Errore durante il salvataggio:", error);
+			showAlert(`Errore durante il salvataggio: ${error.message}`, "error");
+			return false;
+		}
+	}
 	
 }

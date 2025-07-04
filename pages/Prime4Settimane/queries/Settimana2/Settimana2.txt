@@ -1,0 +1,40 @@
+SELECT
+    vr.IdSettimane,
+    vr.2ConoscenzaGioielleria,
+    vr.2NoteConoscenzaGioielleria,
+    vr.2ConoscenzaOrologi,
+    vr.2NoteConoscenzaOrologi,
+    vr.2TabletPerRicercaComunicazioniOrdini,
+    vr.2NoteTabletPerRicercaComunicazioniOrdini,
+    vr.2MetodoObiettiviRiparazioniPreventiviComproOroGaranzie,
+    vr.2NoteMetodoObiettiviRiparazioniPreventiviComproOroGaranzie,
+    vr.2PlanningSettimanale,
+    vr.2NotePlanningSettimanale,
+    vr.2UsoAgenda,
+    vr.2NoteUsoAgenda,
+    vr.2GestioneRipa,
+    vr.2NoteGestioneRipa,
+    vr.2AllestimentoNegozio,
+    vr.2NoteAllestimentoNegozio,
+    vr.2DisallestimentoNegozio,
+    vr.2NoteDisallestimentoNegozio,
+    vr.2AllarmeAlCollo,
+    vr.2NoteGestioneAllarmeAlCollo,
+    vr.2CellulareAziendale,
+    vr.2NoteCellulareAziendale,
+    vr.2ControlloCassa,
+    vr.2NoteControlloCassa,
+    d.Neg,
+    d.Nome,
+    d.IdDipendenti,
+    d.OreSett,
+    d.Livello,
+    d.DataAssunzione,
+    d.DataFineContratto,
+    ln.Coordinatore
+FROM valutazionerisorse_settimane AS vr
+LEFT JOIN elenco_dip_tab AS d
+ON vr.IdSettimane = d.IdDipendenti
+LEFT JOIN listanegozi AS ln
+ON d.NEG = ln.NEG
+WHERE d.IdDipendenti = '{{appsmith.store.selectedSettimanaId}}';
