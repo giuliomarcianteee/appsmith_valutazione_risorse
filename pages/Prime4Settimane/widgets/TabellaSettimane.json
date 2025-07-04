@@ -100,8 +100,6 @@
     "_3NoteProceduraComproOro",
     "_3TestSulMetallo",
     "_3NoteTestSulMetallo",
-    "_3ConoscenzaOroDaInvestimetno",
-    "_3NoteConoscenzaOroDaInvestimetnol",
     "_3ProcedureGiroMerce",
     "_3NoteProcedureGiroMerce",
     "_3GestioneCambioTurno",
@@ -124,9 +122,11 @@
     "_4MetodoRistampaDocFediSchede",
     "_4NoteMetodoRistampaDocFediSchede",
     "_4MetodoDisimpegnoOggettiPrenotati",
-    "_4NoteMetodoDisimpegnoOggettiPrenotati"
+    "_4NoteMetodoDisimpegnoOggettiPrenotati",
+    "_3ConoscenzaOroDaInvestimento",
+    "_3NoteConoscenzaOroDaInvestimento"
   ],
-  "columnUpdatedAt": 1751637146983,
+  "columnUpdatedAt": 1751638793333,
   "columnWidthMap": {
     "NEG": 76,
     "Nome": 219,
@@ -384,12 +384,6 @@
       "key": "primaryColumns._3NoteTestSulMetallo.computedValue"
     },
     {
-      "key": "primaryColumns._3ConoscenzaOroDaInvestimetno.computedValue"
-    },
-    {
-      "key": "primaryColumns._3NoteConoscenzaOroDaInvestimetnol.computedValue"
-    },
-    {
       "key": "primaryColumns._3ProcedureGiroMerce.computedValue"
     },
     {
@@ -457,6 +451,12 @@
     },
     {
       "key": "primaryColumns._4NoteMetodoDisimpegnoOggettiPrenotati.computedValue"
+    },
+    {
+      "key": "primaryColumns._3ConoscenzaOroDaInvestimento.computedValue"
+    },
+    {
+      "key": "primaryColumns._3NoteConoscenzaOroDaInvestimento.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -2475,20 +2475,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "_3ConoscenzaOroDaInvestimetno": {
-      "alias": "3ConoscenzaOroDaInvestimetno",
+    "_3ConoscenzaOroDaInvestimento": {
+      "alias": "3ConoscenzaOroDaInvestimento",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"3ConoscenzaOroDaInvestimetno\"])) : 3ConoscenzaOroDaInvestimetno })()}}",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"3ConoscenzaOroDaInvestimento\"])) : 3ConoscenzaOroDaInvestimento })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "_3ConoscenzaOroDaInvestimetno",
+      "id": "_3ConoscenzaOroDaInvestimento",
       "index": 55,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -2498,9 +2498,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "3ConoscenzaOroDaInvestimetno",
+      "label": "3ConoscenzaOroDaInvestimento",
       "notation": "standard",
-      "originalId": "3ConoscenzaOroDaInvestimetno",
+      "originalId": "3ConoscenzaOroDaInvestimento",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -2577,20 +2577,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "_3NoteConoscenzaOroDaInvestimetnol": {
-      "alias": "3NoteConoscenzaOroDaInvestimetnol",
+    "_3NoteConoscenzaOroDaInvestimento": {
+      "alias": "3NoteConoscenzaOroDaInvestimento",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"3NoteConoscenzaOroDaInvestimetnol\"])) : 3NoteConoscenzaOroDaInvestimetnol })()}}",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"3NoteConoscenzaOroDaInvestimento\"])) : 3NoteConoscenzaOroDaInvestimento })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "_3NoteConoscenzaOroDaInvestimetnol",
+      "id": "_3NoteConoscenzaOroDaInvestimento",
       "index": 56,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -2600,9 +2600,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "3NoteConoscenzaOroDaInvestimetnol",
+      "label": "3NoteConoscenzaOroDaInvestimento",
       "notation": "standard",
-      "originalId": "3NoteConoscenzaOroDaInvestimetnol",
+      "originalId": "3NoteConoscenzaOroDaInvestimento",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

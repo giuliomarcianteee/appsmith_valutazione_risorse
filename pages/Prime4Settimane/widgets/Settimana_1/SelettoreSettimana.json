@@ -1,0 +1,67 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "Settimana 1",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "9nij2frply",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Label",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{  storeValue('settimanaCorrente', SelettoreSettimana.selectedOptionValue); DatiWidgetQuery.caricaDatiSettimana(SelettoreSettimana.selectedOptionValue);\n}}",
+  "optionLabel": "name",
+  "optionValue": "value",
+  "parentColumnSpace": 14.0625,
+  "parentId": "fiz98bwyop",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 17,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"Settimana 1\",\n    \"value\": \"1\"\n  },\n  {\n    \"name\": \"Settimana 2\",\n    \"value\": \"2\"\n  },\n  {\n    \"name\": \"Settimana 3\",\n    \"value\": \"3\"\n  },\n  {\n    \"name\": \"Settimana 4\",\n    \"value\": \"4\"\n  }\n]",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "9nh9gxzo5h",
+  "widgetName": "SelettoreSettimana"
+}

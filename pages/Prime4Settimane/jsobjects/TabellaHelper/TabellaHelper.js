@@ -3,17 +3,14 @@ export default {
   syncSelection() {
     try {
       if (TabellaSettimane?.triggeredRow) {
-        // Trova l'indice della riga triggeredRow nei dati della tabella
         const data = TabellaSettimane.tableData || [];
         const triggeredRow = TabellaSettimane.triggeredRow;
         
-        // Trova l'indice basandoti su un campo unico (es. IdSettimane)
         const rowIndex = data.findIndex(row => 
           row.IdSettimane === triggeredRow.IdSettimane
         );
         
         if (rowIndex >= 0) {
-          // Imposta la riga come selezionata
           TabellaSettimane.setSelectedRowIndex(rowIndex);
           console.log(`Riga ${rowIndex} selezionata automaticamente`);
         }
@@ -26,24 +23,22 @@ export default {
   // Funzione combinata per aprire la prima settimana
   async apriPrimaSettimana() {
     try {
-      // 1. Sincronizza la selezione
       this.syncSelection();
       
-      // 2. Verifica che ci sia una riga selezionata
       if (!TabellaSettimane.triggeredRow?.IdSettimane) {
         showAlert("Seleziona prima un dipendente", "warning");
         return;
       }
       
-      // 3. Carica i dati per quella specifica settimana
+      // Salva la settimana corrente nello store
+      await storeValue('settimanaCorrente', 1, false);
+      
       await Settimana1.run({
         IdSettimane: TabellaSettimane.triggeredRow.IdSettimane
       });
       
-      // 4. Aspetta un momento per il caricamento
       await new Promise(resolve => setTimeout(resolve, 100));
       
-      // 5. Apri il modal
       showModal('Settimana_1');
       
     } catch (error) {
@@ -62,7 +57,10 @@ export default {
         return;
       }
       
-      await Settimana1.run({
+      // Salva la settimana corrente nello store
+      await storeValue('settimanaCorrente', 2, false);
+      
+      await Settimana2.run({
         IdSettimane: TabellaSettimane.triggeredRow.IdSettimane
       });
       
@@ -75,12 +73,64 @@ export default {
     }
   },
 
+  // Funzione per aprire la terza settimana
+  async apriTerzaSettimana() {
+    try {
+      this.syncSelection();
+      
+      if (!TabellaSettimane.triggeredRow?.IdSettimane) {
+        showAlert("Seleziona prima un dipendente", "warning");
+        return;
+      }
+      
+      // Salva la settimana corrente nello store
+      await storeValue('settimanaCorrente', 3, false);
+      
+      await Settimana3.run({
+        IdSettimane: TabellaSettimane.triggeredRow.IdSettimane
+      });
+      
+      await new Promise(resolve => setTimeout(resolve, 100));
+      showModal('Settimana_3');
+      
+    } catch (error) {
+      console.error("Errore nell'apertura della terza settimana:", error);
+      showAlert("Errore nel caricamento dei dati", "error");
+    }
+  },
+
+  // Funzione per aprire la quarta settimana
+  async apriQuartaSettimana() {
+    try {
+      this.syncSelection();
+      
+      if (!TabellaSettimane.triggeredRow?.IdSettimane) {
+        showAlert("Seleziona prima un dipendente", "warning");
+        return;
+      }
+      
+      // Salva la settimana corrente nello store
+      await storeValue('settimanaCorrente', 4, false);
+      
+      await Settimana4.run({
+        IdSettimane: TabellaSettimane.triggeredRow.IdSettimane
+      });
+      
+      await new Promise(resolve => setTimeout(resolve, 100));
+      showModal('Settimana_4');
+      
+    } catch (error) {
+      console.error("Errore nell'apertura della quarta settimana:", error);
+      showAlert("Errore nel caricamento dei dati", "error");
+    }
+  },
+
   // Funzione generica per debug
   debugSelection() {
     console.log("=== DEBUG SELEZIONE TABELLA ===");
     console.log("triggeredRow:", TabellaSettimane?.triggeredRow);
     console.log("selectedRow:", TabellaSettimane?.selectedRow);
-    console.log("selectedRowIndex:", TabellaSettimane?.selectedRowIndex);
     console.log("tableData length:", TabellaSettimane?.tableData?.length);
+    console.log("settimanaCorrente:", appsmith.store.settimanaCorrente);
   }
 }
