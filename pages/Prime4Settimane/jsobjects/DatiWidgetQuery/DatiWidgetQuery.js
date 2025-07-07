@@ -1,53 +1,57 @@
 export default {
-  // Ottiene tutti i dati dal widget (originali + modificati)
-  getAllData() {
-    // CAMBIA QUESTO: usa il nome corretto del tuo widget
-    // Sostituisci "DettaglioSettimanaWidget" con il nome effettivo del tuo widget
-    const widgetName = "DettaglioSettimanaWidget"; // O il nome che usi effettivamente
-   	const widget = appsmith.store[widgetName] || window[widgetName];
-    
-    if (!widget?.model?.allData) {
-      return {};
-    }
-    
-    console.log("Dati recuperati dal widget:", widget.model.allData);
-    return widget.model.allData;
-  },
-
   // Verifica se il widget è pronto
   isWidgetReady() {
     const widgetName = "DettaglioSettimanaWidget";
     const widget = appsmith.store[widgetName] || window[widgetName];
     return widget?.model?.isReady === true;
   },
-
 	getValore(campo, defaultValue = '') {
 		const allData = DatiWidgetQuery.getAllData();
 		const valore = allData[campo];
 
-		// Restituisce il valore se esiste (anche se è 0, false, o stringa vuota)
-		// Solo se è undefined o null usa il defaultValue
-		return (valore !== undefined && valore !== null) ? valore : defaultValue;
+		// Gestisci NULL e undefined
+		if (valore === null || valore === undefined || valore === '') {
+			return defaultValue;
+		}
+
+		return valore;
 	},
 
   getValoreNumerico(campo, defaultValue = 0) {
-    const valore = DatiWidgetQuery.getValore(campo, defaultValue);
-    const numero = parseInt(valore, 10);
-    return isNaN(numero) ? defaultValue : numero;
-  },
+  const valore = DatiWidgetQuery.getValore(campo, defaultValue);
+  
+  // Se è stringa vuota o null, ritorna defaultValue
+  if (valore === '' || valore === null || valore === undefined) {
+    return defaultValue;
+  }
+  
+  const numero = parseInt(valore, 10);
+  return isNaN(numero) ? defaultValue : numero;
+},
 
-  // Ottiene l'ID settimana
-  getIdSettimane() {
-    // Prima prova dal widget
-    let idSettimane = DatiWidgetQuery.getValore('selectedSettimanaId');
-    
-    // Se non c'è, prova dalla tabella
-    if (!idSettimane && TabellaSettimane?.triggeredRow?.IdDipendenti) {
-      idSettimane = TabellaSettimane.triggeredRow.IdDipendenti;
-    }
-    
-    return idSettimane;
-  },
+		// Ottiene l'ID settimana
+	getIdSettimane() {
+		// Prima prova dal widget
+		let idSettimane = DatiWidgetQuery.getValore('IdSettimane');
+
+		// Se non c'è, prova selectedSettimanaId
+		if (!idSettimane) {
+			idSettimane = DatiWidgetQuery.getValore('selectedSettimanaId');
+		}
+
+		// Se ancora non c'è, prova dalla tabella
+		if (!idSettimane && TabellaSettimane?.triggeredRow?.IdSettimane) {
+			idSettimane = TabellaSettimane.triggeredRow.IdSettimane;
+		}
+
+		// Come ultima risorsa, prova IdDipendenti (nel caso sia lo stesso)
+		if (!idSettimane && TabellaSettimane?.triggeredRow?.IdDipendenti) {
+			idSettimane = TabellaSettimane.triggeredRow.IdDipendenti;
+		}
+
+		console.log("ID Settimane trovato:", idSettimane);
+		return idSettimane;
+	},
 
   // Prepara tutti i dati per la query di aggiornamento
   preparaDatiPerQuery() {
@@ -80,39 +84,130 @@ export default {
 
     return datiQuery;
   },
-	// Funzione principale per aggiornare la valutazione
-	async aggiornaValutazione() {
-		try {
-			showAlert("Salvataggio in corso...", "info");
+	 // Funzione per ottenere i dati dalla tabella filtrati per categoria
+  getTableDataByCategory(categoria) {
+    // Ottieni i dati dalla tabella (come facevi prima)
+    const tableData = TabellaSettimane.triggeredRow;
+    
+    if (!tableData || !categoria) {
+      return tableData; // Restituisce tutti i dati se non c'è categoria
+    }
 
-			// Esegui la query di update
-			await Settimana1_update.run();
+    const filteredData = {};
+    const categoryPrefix = categoria.toString();
 
-			// Ricarica i dati
-			await Promise.all([
-				DipendentiQuery.run(),
-				Settimana1.run()
-			]);
+    // Mantieni sempre i campi essenziali
+    Object.keys(tableData).forEach(key => {
+      // Mantieni i campi che non iniziano con numeri (IdSettimane, etc.)
+      if (!key.match(/^[1-4]/)) {
+        filteredData[key] = tableData[key];
+      }
+      // Mantieni solo i campi della categoria selezionata
+      else if (key.startsWith(categoryPrefix)) {
+        filteredData[key] = tableData[key];
+      }
+    });
 
-			// Aggiorna lo store con i nuovi dati
-			if (Settimana1.data && Settimana1.data.length > 0) {
-				await storeValue('selectedWeekDetails', Settimana1.data[0], false);
-			}
+    return filteredData;
+  },
 
-			showAlert('Dati salvati con successo!', 'success');
+  // Funzione per impostare la categoria corrente
+  setCurrentCategory(categoria) {
+    storeValue('currentCategory', categoria, false);
+  },
 
-			// Chiudi il modal se esiste
-			if (typeof closeModal !== 'undefined') {
-				closeModal('Settimana_1');
-			}
+  // Funzione per ottenere la categoria corrente
+  getCurrentCategory() {
+    return appsmith.store.currentCategory || 1;
+  },
 
-			return true;
+ // Funzione per ottenere i dati filtrati per la categoria corrente
+  getFilteredTableData() {
+    const currentCategory = this.getCurrentCategory();
+    return this.getTableDataByCategory(currentCategory);
+  },
 
-		} catch (error) {
-			console.error("Errore durante il salvataggio:", error);
-			showAlert(`Errore durante il salvataggio: ${error.message}`, "error");
-			return false;
-		}
-	}
+  // Modifica getAllData per usare i dati filtrati se necessario
+  getAllData() {
+    const widgetName = "DettaglioSettimanaWidget";
+    const widget = appsmith.store[widgetName] || window[widgetName];
+    
+    if (!widget?.model?.allData) {
+      // Se il widget non ha dati, usa i dati filtrati della tabella
+      return this.getFilteredTableData();
+    }
+    
+    console.log("Dati recuperati dal widget:", widget.model.allData);
+    return widget.model.allData;
+  },
+
+  // Modifica la funzione di aggiornamento per gestire diverse categorie
+  async aggiornaValutazione() {
+    try {
+      showAlert("Salvataggio in corso...", "info");
+
+      const currentCategory = this.getCurrentCategory();
+      
+      // Seleziona la query corretta in base alla categoria
+      let updateQuery;
+      let dataQuery;
+      let modalName;
+      
+      switch(currentCategory) {
+        case 1:
+          updateQuery = Settimana1_update;
+          dataQuery = Settimana1;
+          modalName = 'Settimana_1';
+          break;
+        case 2:
+          updateQuery = Settimana2_update;
+          dataQuery = Settimana2;
+          modalName = 'Settimana_2';
+          break;
+        case 3:
+          updateQuery = Settimana3_update;
+          dataQuery = Settimana3;
+          modalName = 'Settimana_3';
+          break;
+        case 4:
+          updateQuery = Settimana4_update;
+          dataQuery = Settimana4;
+          modalName = 'Settimana_4';
+          break;
+        default:
+          updateQuery = Settimana1_update;
+          dataQuery = Settimana1;
+          modalName = 'Settimana_1';
+      }
+
+      // Esegui la query di update specifica
+      await updateQuery.run();
+
+      // Ricarica i dati
+      await Promise.all([
+        DipendentiQuery.run(),
+        dataQuery.run()
+      ]);
+
+      // Aggiorna lo store con i nuovi dati
+      if (dataQuery.data && dataQuery.data.length > 0) {
+        await storeValue('selectedWeekDetails', dataQuery.data[0], false);
+      }
+
+      showAlert('Dati salvati con successo!', 'success');
+
+      // Chiudi il modal se esiste
+      if (typeof closeModal !== 'undefined') {
+        closeModal(modalName);
+      }
+
+      return true;
+
+    } catch (error) {
+      console.error("Errore durante il salvataggio:", error);
+      showAlert(`Errore durante il salvataggio: ${error.message}`, "error");
+      return false;
+    }
+  }
 	
 }

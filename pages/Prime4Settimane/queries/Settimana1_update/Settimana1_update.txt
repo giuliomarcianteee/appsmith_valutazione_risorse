@@ -23,5 +23,5 @@ SET
     `1CongedoCliente` = {{ DatiWidgetQuery.getValoreNumerico("1CongedoCliente") }},
     `1NoteCongedoCliente` = '{{ DatiWidgetQuery.getValore("1NoteCongedoCliente") }}',
     `1Vetrine` = {{ DatiWidgetQuery.getValoreNumerico("1Vetrine") }},
-    `1NoteVetrine` = '{{ DatiWidgetQuery.getValore("1NoteVetrine") }}',
+    `1NoteVetrine` = '{{ DatiWidgetQuery.getValore("1NoteVetrine") }}'
 WHERE IdSettimane = '{{ DatiWidgetQuery.getIdSettimane()}}';
