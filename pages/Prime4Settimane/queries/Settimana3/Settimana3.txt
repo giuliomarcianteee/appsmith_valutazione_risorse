@@ -13,6 +13,7 @@ SELECT
     vr.3GestioneCambioTurno,
     vr.3NoteGestioneCambioTurno,
     vr.3MetodoCaricoScaricoComproOroPreventiviOroInvestimento,
+		vr.3NoteMetodoCaricoScaricoComproOroPreventiviOroInvestimento,
     vr.3TabletComproOro,
     vr.3NoteTabletComproOro,
     d.Neg,
