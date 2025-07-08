@@ -3619,7 +3619,7 @@
       "labelColor": "#FFFFFF",
       "menuItemsSource": "STATIC",
       "notation": "standard",
-      "onClick": "{{DatiWidgetQuery.setCurrentCategory(1);\nshowModal(Settimana_1.name);\ndataController.refreshModalData()}}",
+      "onClick": "{{DatiWidgetQuery.setCurrentCategory(2);DatiWidgetQuery.aggiornaWeek();showModal(Settimana_1.name);}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",

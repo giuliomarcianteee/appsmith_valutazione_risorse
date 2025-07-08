@@ -129,8 +129,123 @@ export default {
     console.log("Fallback ai dati della tabella");
     return this.getFilteredTableData();
   },
+	// Funzione dinamica per ricaricare i dati del modal in base alla settimana
+  refreshModalData: async (settimana = 1) => {
+    try {
+      // Sempre ricaricare i dati dei dipendenti
+      await DipendentiQuery.run();
+      
+      // Seleziona la query e il modal in base alla settimana
+      let weekQuery;
+      let modalName;
+      
+      switch(settimana) {
+        case 1:
+          weekQuery = Settimana1;
+          modalName = 'Settimana_1';
+          break;
+        case 2:
+          weekQuery = Settimana2;
+          modalName = 'Settimana_2';
+          break;
+        case 3:
+          weekQuery = Settimana3;
+          modalName = 'Settimana_3';
+          break;
+        case 4:
+          weekQuery = Settimana4;
+          modalName = 'Settimana_4';
+          break;
+        default:
+          weekQuery = Settimana1;
+          modalName = 'Settimana_1';
+          settimana = 1;
+      }
 
+      // Ricarica la query specifica della settimana
+      await weekQuery.run();
+      
+      // Imposta la categoria corrente
+      DatiWidgetQuery.setCurrentCategory(settimana);
+      
+      // Mostra il modal
+      showModal(modalName);
+      
+      // Aggiorna lo store con i dati freschi
+      if (weekQuery.data && weekQuery.data.length > 0) {
+        await storeValue('selectedWeekDetails', weekQuery.data[0], false);
+        
+        // Aggiorna anche il widget con i nuovi dati
+        const widgetName = "DettaglioSettimanaWidget";
+        if (appsmith.store[widgetName] || window[widgetName]) {
+          const widget = appsmith.store[widgetName] || window[widgetName];
+          widget.updateModel({
+            data: JSON.stringify(weekQuery.data[0]),
+            edited: JSON.stringify({}),
+            allData: weekQuery.data[0],
+            isReady: true
+          });
+        }
+      }
+      
+      console.log(`Dati settimana ${settimana} caricati con successo`);
+      
+    } catch (error) {
+      console.error(`Errore nel ricaricare i dati del modal settimana ${settimana}:`, error);
+      showAlert(`Errore nel caricamento dei dati: ${error.message}`, "error");
+    }
+  },
 
+  // Funzioni specifiche per ogni settimana (per facilità d'uso)
+  refreshSettimana1: async () => {
+    return await DatiWidgetQuery.refreshModalData(1);
+  },
+
+  refreshSettimana2: async () => {
+    return await DatiWidgetQuery.refreshModalData(2);
+  },
+
+  refreshSettimana3: async () => {
+    return await DatiWidgetQuery.refreshModalData(3);
+  },
+
+  refreshSettimana4: async () => {
+    return await DatiWidgetQuery.refreshModalData(4);
+  },
+
+  // Funzione per aprire una settimana specifica con validazione
+  openWeekModal: async (settimana) => {
+    // Verifica che ci sia un dipendente selezionato
+    const idSettimane = DatiWidgetQuery.getIdSettimane();
+    
+    if (!idSettimane) {
+      showAlert("Seleziona prima un dipendente dalla tabella.", "warning");
+      return false;
+    }
+    
+    try {
+      showAlert(`Caricamento settimana ${settimana}...`, "info");
+      await DatiWidgetQuery.refreshModalData(settimana);
+      return true;
+    } catch (error) {
+      showAlert(`Errore nell'apertura della settimana ${settimana}: ${error.message}`, "error");
+      return false;
+    }
+  },
+	 aggiornaWeek: async () => {
+    try {
+			await DipendentiQuery.run();
+      // Ricarica la query Settimana1 con i dati aggiornati
+      await Settimana1.run();
+     	
+      // Aggiorna lo store con i dati freschi
+      if (Settimana1.data && Settimana1.data.length > 0) {
+        await storeValue('selectedWeekDetails', Settimana1.data[0], false);
+      }
+    } catch (error) {
+      console.error('Errore nel ricaricare i dati del modal:', error);
+    }
+},
  // Modifica aggiornaValutazione per utilizzare preparaDatiPerQuery
   async aggiornaValutazione() {
     try {
