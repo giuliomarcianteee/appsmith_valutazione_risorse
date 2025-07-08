@@ -5,53 +5,30 @@ export default {
     const widget = appsmith.store[widgetName] || window[widgetName];
     return widget?.model?.isReady === true;
   },
-	getValore(campo, defaultValue = '') {
-		const allData = DatiWidgetQuery.getAllData();
-		const valore = allData[campo];
-
-		// Gestisci NULL e undefined
-		if (valore === null || valore === undefined || valore === '') {
-			return defaultValue;
-		}
-
-		return valore;
-	},
+  // Resto del codice rimane uguale...
+  getValore(campo, defaultValue = '') {
+    const allData = DatiWidgetQuery.getAllData();
+    return allData[campo] !== undefined ? allData[campo] : defaultValue;
+  },
 
   getValoreNumerico(campo, defaultValue = 0) {
-  const valore = DatiWidgetQuery.getValore(campo, defaultValue);
-  
-  // Se è stringa vuota o null, ritorna defaultValue
-  if (valore === '' || valore === null || valore === undefined) {
-    return defaultValue;
-  }
-  
-  const numero = parseInt(valore, 10);
-  return isNaN(numero) ? defaultValue : numero;
-},
+    const valore = DatiWidgetQuery.getValore(campo, defaultValue);
+    const numero = parseInt(valore, 10);
+    return isNaN(numero) ? defaultValue : numero;
+  },
 
-		// Ottiene l'ID settimana
-	getIdSettimane() {
-		// Prima prova dal widget
-		let idSettimane = DatiWidgetQuery.getValore('IdSettimane');
-
-		// Se non c'è, prova selectedSettimanaId
-		if (!idSettimane) {
-			idSettimane = DatiWidgetQuery.getValore('selectedSettimanaId');
-		}
-
-		// Se ancora non c'è, prova dalla tabella
-		if (!idSettimane && TabellaSettimane?.triggeredRow?.IdSettimane) {
-			idSettimane = TabellaSettimane.triggeredRow.IdSettimane;
-		}
-
-		// Come ultima risorsa, prova IdDipendenti (nel caso sia lo stesso)
-		if (!idSettimane && TabellaSettimane?.triggeredRow?.IdDipendenti) {
-			idSettimane = TabellaSettimane.triggeredRow.IdDipendenti;
-		}
-
-		console.log("ID Settimane trovato:", idSettimane);
-		return idSettimane;
-	},
+  // Ottiene l'ID settimana
+  getIdSettimane() {
+    // Prima prova dal widget
+    let idSettimane = DatiWidgetQuery.getValore('selectedWeekSettimana');
+    
+    // Se non c'è, prova dalla tabella
+    if (!idSettimane && TabellaSettimane?.triggeredRow?.IdDipendenti) {
+      idSettimane = TabellaSettimane.triggeredRow.IdDipendenti;
+    }
+    
+    return idSettimane;
+  },
 
   // Prepara tutti i dati per la query di aggiornamento
   preparaDatiPerQuery() {

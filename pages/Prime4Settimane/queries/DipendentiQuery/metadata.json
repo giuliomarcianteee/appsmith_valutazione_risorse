@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    vr.*,  -- Tutti i dati della tabella valutazionerisorse_settimane\n    d.*,   -- Tutti i dati della tabella dipendenti\n    ln.Coordinatore  -- Solo la colonna Coordinatore dalla tabella listanegozi\nFROM valutazionerisorse_settimane AS vr\nLEFT JOIN elenco_dip_tab AS d\nON vr.IdSettimane = d.IdDipendenti\nLEFT JOIN listanegozi AS ln\nON d.Neg= ln.NEG\nWHERE TIMESTAMPDIFF(day,DATE(d.DataAssunzione), CURDATE()) < 35\nAND ln.Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}';\n",
+      "body": "SELECT \n    vr.*,  -- Tutti i dati della tabella valutazionerisorse_settimane\n    d.*,   -- Tutti i dati della tabella dipendenti\n    ln.Coordinatore  -- Solo la colonna Coordinatore dalla tabella listanegozi\nFROM valutazionerisorse_settimane AS vr\nLEFT JOIN elenco_dip_tab AS d\nON vr.IdSettimane = d.IdDipendenti\nLEFT JOIN listanegozi AS ln\nON d.Neg= ln.NEG\nWHERE TIMESTAMPDIFF(day,DATE(d.DataAssunzione), CURDATE()) < 60\nAND ln.Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}';\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
