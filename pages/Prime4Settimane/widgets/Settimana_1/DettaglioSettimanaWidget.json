@@ -3,7 +3,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 179,
+  "bottomRow": 178,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "defaultModel": "{\"data\": \"{{DatiWidgetQuery.getFilteredTableData()}}\"\n}",
   "dynamicBindingPathList": [
@@ -47,7 +47,7 @@
   "mobileRightColumn": 30,
   "mobileTopRow": 82,
   "needsErrorInfo": false,
-  "onInviaClick": "{{DatiWidgetQuery.aggiornaValutazione()}}",
+  "onInviaClick": "{{dataController.updateSettimana()}}",
   "parentColumnSpace": 20.125,
   "parentId": "fiz98bwyop",
   "parentRowSpace": 10,

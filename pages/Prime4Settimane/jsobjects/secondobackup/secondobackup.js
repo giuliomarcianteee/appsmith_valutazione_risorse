@@ -29,32 +29,23 @@ export default {
     
     return idSettimane;
   },
-	// Nuova funzione per verificare se ci sono modifiche pending
-  hasEditedData() {
-			const widgetName = "DettaglioSettimanaWidget";
-			const widget = appsmith.store[widgetName] || window[widgetName];
-			return widget?.model?.edited && 				Object.keys(widget.model.edited).length > 0;
-		},	
 
- // Modifica preparaDatiPerQuery per utilizzare i dati corretti
+  // Prepara tutti i dati per la query di aggiornamento
   preparaDatiPerQuery() {
     if (!DatiWidgetQuery.isWidgetReady()) {
       showAlert("I dati non sono ancora pronti. Riprova.", "warning");
       return null;
     }
 
-    // Usa getAllData che ora prioritizza allData del widget
-    const allData = this.getAllData();
-    const idSettimane = this.getIdSettimane();
+    const allData = DatiWidgetQuery.getAllData();
+    const idSettimane = DatiWidgetQuery.getIdSettimane();
 
     if (!idSettimane) {
       showAlert("ID Settimane mancante. Impossibile salvare.", "error");
       return null;
     }
 
-    console.log("Dati utilizzati per la query:", allData);
-
-// Lista completa dei campi
+    // Lista completa dei campi
     const campi = [
 "IdSettimane", "1ConoscenzaManualeFormativo", "1NoteConoscenzaManualeFormativo", "1ConoscenzaOrganizzazioneMerceologica", "1NoteConoscenzaOrganizzazioneMerceologica", "1AccoglienzaCliente", "1NoteAccoglienzaCliente", "1PresentazioneProdottoeSconti", "1NotePresentazioneProdottoeSconti", "1ConoscenzaBrandOreficeria", "1NoteConoscenzaBrandOreficeria", "1VenditaInSicurezza", "1NoteVenditaInSicurezza", "1FidelizzazioneCliente", "1NoteFidelizzazioneCliente", "1UtilizzoCassaPos", "1NoteUtilizzoCassaPos", "1MetodoScaricoVenditaFidelityOrari", "1NoteMetodoScaricoVenditaFidelityOrari", "1ConfezionamentoProdotto", "1NoteConfezionamentoProdotto", "1CongedoCliente", "1NoteCongedoCliente", "1Vetrine", "1NoteVetrine", "2ConoscenzaGioielleria", "2NoteConoscenzaGioielleria", "2ConoscenzaOrologi", "2NoteConoscenzaOrologi", "2TabletPerRicercaComunicazioniOrdini", "2NoteTabletPerRicercaComunicazioniOrdini", "2MetodoObiettiviRiparazioniPreventiviComproOroGaranzie", "2NoteMetodoObiettiviRiparazioniPreventiviComproOroGaranzie", "2PlanningSettimanale", "2NotePlanningSettimanale", "2UsoAgenda", "2NoteUsoAgenda", "2GestioneRipa", "2NoteGestioneRipa", "2AllestimentoNegozio", "2NoteAllestimentoNegozio", "2DisallestimentoNegozio", "2NoteDisallestimentoNegozio", "2AllarmeAlCollo", "2NoteGestioneAllarmeAlCollo", "2CellulareAziendale", "2NoteCellulareAziendale", "2ControlloCassa", "2NoteControlloCassa", "3PianificazioneLavoroDaSvolgere", "3NotePianificazioneLavoroDaSvolgere", "3ProceduraComproOro", "3NoteProceduraComproOro", "3TestSulMetallo", "3NoteTestSulMetallo", "3ConoscenzaOroDaInvestimento", "3NoteConoscenzaOroDaInvestimento", "3ProcedureGiroMerce", "3NoteProcedureGiroMerce", "3GestioneCambioTurno", "3NoteGestioneCambioTurno", "3MetodoCaricoScaricoComproOroPreventiviOroInvestimento", "3TabletComproOro", "3NoteTabletComproOro", "4AutonomiaAllarmiAperturaChiusura", "4NoteAutonomiaAllarmiAperturaChiusura", "4AutonomiaChiusraContabile", "4NoteAutonomiaChiusraContabile", "4CapacitaConfrontoColleghe", "4NoteCapacitaConfrontoColleghe", "4ConoscenzaCompletaComproOro", "4NoteConoscenzaCompletaComproOro", "4VenditaOroInvestimento", "4NoteVenditaOreInvestimento", "4RicercaProdottiSuTablet", "4NoteRicercaProdottiSuTablet", "4MetodoRistampaDocFediSchede", "4NoteMetodoRistampaDocFediSchede", "4MetodoDisimpegnoOggettiPrenotati", "4NoteMetodoDisimpegnoOggettiPrenotati"
     ];
@@ -64,7 +55,6 @@ export default {
       if (campo === 'IdSettimane') {
         datiQuery[campo] = idSettimane;
       } else {
-        // Usa i dati da allData che contiene le modifiche
         datiQuery[campo] = allData[campo] || '';
       }
     });
@@ -131,19 +121,10 @@ export default {
   },
 
 
- // Modifica aggiornaValutazione per utilizzare preparaDatiPerQuery
+  // Modifica la funzione di aggiornamento per gestire diverse categorie
   async aggiornaValutazione() {
     try {
       showAlert("Salvataggio in corso...", "info");
-
-      // Prepara i dati utilizzando la funzione corretta
-      const datiQuery = this.preparaDatiPerQuery();
-      
-      if (!datiQuery) {
-        return false;
-      }
-
-      console.log("Dati preparati per la query:", datiQuery);
 
       const currentCategory = this.getCurrentCategory();
       
@@ -179,13 +160,8 @@ export default {
           modalName = 'Settimana_1';
       }
 
-      // Assicurati che la query abbia accesso ai dati preparati
-      // Se le query utilizzano parametri, passagli i dati
-      if (updateQuery && typeof updateQuery.run === 'function') {
-        await updateQuery.run(datiQuery);
-      } else {
-        await updateQuery.run();
-      }
+      // Esegui la query di update specifica
+      await updateQuery.run();
 
       // Ricarica i dati
       await Promise.all([
@@ -213,4 +189,5 @@ export default {
       return false;
     }
   }
+	
 }
