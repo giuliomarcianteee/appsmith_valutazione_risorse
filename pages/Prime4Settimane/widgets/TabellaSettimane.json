@@ -465,9 +465,6 @@
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "onRowSelected"
-    },
-    {
       "key": "primaryColumns.customColumn1.onClick"
     },
     {
@@ -519,7 +516,7 @@
   "mobileTopRow": 8,
   "multiRowSelection": false,
   "needsErrorInfo": false,
-  "onRowSelected": "{{dataController.onRowSelect(appsmith.store.selectedSettimanaId)}}",
+  "onRowSelected": "",
   "originalBottomRow": 35,
   "originalTopRow": 7,
   "parentId": "0",
@@ -3619,7 +3616,7 @@
       "labelColor": "#FFFFFF",
       "menuItemsSource": "STATIC",
       "notation": "standard",
-      "onClick": "{{DatiWidgetQuery.setCurrentCategory(2);DatiWidgetQuery.aggiornaWeek();showModal(Settimana_1.name);}}",
+      "onClick": "{{DatiWidgetQuery.modalAggiornamento()}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
@@ -3658,7 +3655,7 @@
       "label": "2° Settimana",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{DatiWidgetQuery.setCurrentCategory(2);\nshowModal(Settimana_1.name);}}",
+      "onClick": "{{DatiWidgetQuery.setCurrentCategory(2);\nDatiWidgetQuery.modalAggiornamento();}}",
       "originalId": "customColumn2",
       "sticky": "",
       "textSize": "0.875rem",
@@ -3749,7 +3746,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 61,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
   "tableData": "{{DipendentiQuery.data}}",

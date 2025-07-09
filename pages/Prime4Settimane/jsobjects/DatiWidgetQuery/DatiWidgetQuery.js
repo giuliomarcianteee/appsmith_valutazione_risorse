@@ -71,10 +71,45 @@ export default {
 
     return datiQuery;
   },
-	 // Funzione per ottenere i dati dalla tabella filtrati per categoria
+	
+	  // Funzione helper per ottenere la configurazione della settimana
+  getWeekConfiguration(categoria = null) {
+    const currentCategory = categoria || this.getCurrentCategory();
+    
+    const configurations = {
+      1: {
+        updateQuery: Settimana1_update,
+        dataQuery: Settimana1,
+        modalName: 'Settimana_1',
+        weekNumber: 1
+      },
+      2: {
+        updateQuery: Settimana2_update,
+        dataQuery: Settimana2,
+        modalName: 'Settimana_2',
+        weekNumber: 2
+      },
+      3: {
+        updateQuery: Settimana3_update,
+        dataQuery: Settimana3,
+        modalName: 'Settimana_3',
+        weekNumber: 3
+      },
+      4: {
+        updateQuery: Settimana4_update,
+        dataQuery: Settimana4,
+        modalName: 'Settimana_4',
+        weekNumber: 4
+      }
+    };
+
+    // Restituisce la configurazione per la categoria richiesta, con fallback alla settimana 1
+    return configurations[currentCategory] || configurations[1];
+  },
+ // Funzione per ottenere i dati da selectedWeekDetails filtrati per categoria
   getTableDataByCategory(categoria) {
-    // Ottieni i dati dalla tabella (come facevi prima)
-    const tableData = TabellaSettimane.triggeredRow;
+    // Ottieni i dati dallo store invece che dalla tabella
+    const tableData = appsmith.store.selectedWeekDetails;
     
     if (!tableData || !categoria) {
       return tableData; // Restituisce tutti i dati se non c'è categoria
@@ -97,7 +132,11 @@ export default {
 
     return filteredData;
   },
-
+	modalAggiornamento(){
+		storeValue("storedIdSettimana",TabellaSettimane.triggeredRow.IdSettimane);
+		this.aggiornaWeek();
+		showModal(Settimana_1.name);
+	},
   // Funzione per impostare la categoria corrente
   setCurrentCategory(categoria) {
     storeValue('currentCategory', categoria, false);
@@ -124,9 +163,6 @@ export default {
       console.log("Dati recuperati dal widget (allData):", widget.model.allData);
       return widget.model.allData;
     }
-    
-    // Fallback ai dati filtrati della tabella
-    console.log("Fallback ai dati della tabella");
     return this.getFilteredTableData();
   },
 	// Funzione dinamica per ricaricare i dati del modal in base alla settimana
@@ -236,11 +272,14 @@ export default {
     try {
 			await DipendentiQuery.run();
       // Ricarica la query Settimana1 con i dati aggiornati
+			if()
       await Settimana1.run();
+			console.log(Settimana1.data);
      	
       // Aggiorna lo store con i dati freschi
       if (Settimana1.data && Settimana1.data.length > 0) {
         await storeValue('selectedWeekDetails', Settimana1.data[0], false);
+				console.log(appsmith.store.selectedWeekDetails)
       }
     } catch (error) {
       console.error('Errore nel ricaricare i dati del modal:', error);

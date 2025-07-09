@@ -37,4 +37,4 @@ LEFT JOIN elenco_dip_tab AS d
 ON vr.IdSettimane = d.IdDipendenti
 LEFT JOIN listanegozi AS ln
 ON d.NEG = ln.NEG
-WHERE d.IdDipendenti = '{{appsmith.store.selectedSettimanaId}}';
+WHERE d.IdDipendenti = '{{appsmith.store.storedIdSettimana}}';

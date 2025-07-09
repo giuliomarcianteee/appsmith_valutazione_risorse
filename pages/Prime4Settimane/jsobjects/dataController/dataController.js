@@ -1,8 +1,4 @@
 export default {
-	  salvaIdSettimana: () => {
-    storeValue("selectedSettimanaId", TabellaSettimane.triggeredRow.IdSettimane);
-    return TabellaSettimane.triggeredRow.IdSettimane;
-		},
 	
  formatObjectForTable: () => {
     const details = appsmith.store.selectedWeekDetails;
@@ -49,16 +45,20 @@ export default {
       // IMPORTANTE: Ricarica anche i dettagli della settimana E aggiorna lo store
       await Settimana1.run();
       
+			closeModal(Settimana_1.name);
+			
       // Aggiorna lo store con i nuovi dati
       if (Settimana1.data && Settimana1.data.length > 0) {
         await storeValue('selectedWeekDetails', Settimana1.data[0], false);
       }
+			
       
     } catch (error) {
       // Gestisci gli errori
       showAlert('Errore durante il salvataggio: ' + error.message, 'error');
       console.error('Errore update:', error);
     }
+		
   },
 
   // Nuova funzione per ricaricare i dati quando si riapre il modal

@@ -24,4 +24,4 @@ SET
     `1NoteCongedoCliente` = '{{ DatiWidgetQuery.getValore("1NoteCongedoCliente") }}',
     `1Vetrine` = {{ DatiWidgetQuery.getValoreNumerico("1Vetrine") }},
     `1NoteVetrine` = '{{ DatiWidgetQuery.getValore("1NoteVetrine") }}'
-WHERE IdSettimane = '{{ DatiWidgetQuery.getIdSettimane()}}';
+WHERE IdSettimane = '{{appsmith.store.storedIdSettimana}}';
