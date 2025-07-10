@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "ValutazioniHelper.getValoriPerQuery",
     "name": "getValoriPerQuery",
     "pageId": "Prime4Settimane",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
