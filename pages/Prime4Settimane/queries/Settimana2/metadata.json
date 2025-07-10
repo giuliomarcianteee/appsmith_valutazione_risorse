@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    vr.IdSettimane,\n    vr.2ConoscenzaGioielleria,\n    vr.2NoteConoscenzaGioielleria,\n    vr.2ConoscenzaOrologi,\n    vr.2NoteConoscenzaOrologi,\n    vr.2TabletPerRicercaComunicazioniOrdini,\n    vr.2NoteTabletPerRicercaComunicazioniOrdini,\n    vr.2MetodoObiettiviRiparazioniPreventiviComproOroGaranzie,\n    vr.2NoteMetodoObiettiviRiparazioniPreventiviComproOroGaranzie,\n    vr.2PlanningSettimanale,\n    vr.2NotePlanningSettimanale,\n    vr.2UsoAgenda,\n    vr.2NoteUsoAgenda,\n    vr.2GestioneRipa,\n    vr.2NoteGestioneRipa,\n    vr.2AllestimentoNegozio,\n    vr.2NoteAllestimentoNegozio,\n    vr.2DisallestimentoNegozio,\n    vr.2NoteDisallestimentoNegozio,\n    vr.2AllarmeAlCollo,\n    vr.2NoteGestioneAllarmeAlCollo,\n    vr.2CellulareAziendale,\n    vr.2NoteCellulareAziendale,\n    vr.2ControlloCassa,\n    vr.2NoteControlloCassa,\n    d.Neg,\n    d.Nome,\n    d.IdDipendenti,\n    d.OreSett,\n    d.Livello,\n    d.DataAssunzione,\n    d.DataFineContratto,\n    ln.Coordinatore\nFROM valutazionerisorse_settimane AS vr\nLEFT JOIN elenco_dip_tab AS d\nON vr.IdSettimane = d.IdDipendenti\nLEFT JOIN listanegozi AS ln\nON d.NEG = ln.NEG\nWHERE d.IdDipendenti = '{{appsmith.store.storedIdSettimana}}';",
+      "body": "SELECT\n    vr.IdSettimane,\n    vr.2ConoscenzaGioielleria,\n    vr.2NoteConoscenzaGioielleria,\n    vr.2ConoscenzaOrologi,\n    vr.2NoteConoscenzaOrologi,\n    vr.2TabletPerRicercaComunicazioniOrdini,\n    vr.2NoteTabletPerRicercaComunicazioniOrdini,\n    vr.2MetodoObiettiviRiparazioniPreventiviComproOroGaranzie,\n    vr.2NoteMetodoObiettiviRiparazioniPreventiviComproOroGaranzie,\n    vr.2PlanningSettimanale,\n    vr.2NotePlanningSettimanale,\n    vr.2UsoAgenda,\n    vr.2NoteUsoAgenda,\n    vr.2GestioneRipa,\n    vr.2NoteGestioneRipa,\n    vr.2AllestimentoNegozio,\n    vr.2NoteAllestimentoNegozio,\n    vr.2DisallestimentoNegozio,\n    vr.2NoteDisallestimentoNegozio,\n    vr.2AllarmeAlCollo,\n    vr.2NoteGestioneAllarmeAlCollo,\n    vr.2CellulareAziendale,\n    vr.2NoteCellulareAziendale,\n    vr.2ControlloCassa,\n    vr.2NoteControlloCassa,\n    d.Neg,\n    d.Nome,\n    d.IdDipendenti,\n    d.OreSett,\n    d.Livello,\n    d.DataAssunzione,\n    d.DataFineContratto,\n    ln.Coordinatore\nFROM valutazionerisorse_settimane AS vr\nLEFT JOIN dipendenti AS d\nON vr.IdSettimane = d.IdDipendenti\nLEFT JOIN listanegozi AS ln\nON d.NEG = ln.NEG\nWHERE d.IdDipendenti = '{{appsmith.store.storedIdSettimana}}';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000

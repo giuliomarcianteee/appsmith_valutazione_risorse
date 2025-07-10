@@ -47,7 +47,7 @@
   "mobileRightColumn": 30,
   "mobileTopRow": 82,
   "needsErrorInfo": false,
-  "onInviaClick": "{{dataController.updateSettimana()}}",
+  "onInviaClick": "{{dataController.updateSettimanaSwitch()}}",
   "parentColumnSpace": 20.125,
   "parentId": "fiz98bwyop",
   "parentRowSpace": 10,

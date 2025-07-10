@@ -25,7 +25,7 @@ SELECT
     d.DataFineContratto,
     ln.Coordinatore
 FROM valutazionerisorse_settimane AS vr
-LEFT JOIN elenco_dip_tab AS d
+LEFT JOIN dipendenti AS d
 ON vr.IdSettimane = d.IdDipendenti
 LEFT JOIN listanegozi AS ln
 ON d.NEG = ln.NEG

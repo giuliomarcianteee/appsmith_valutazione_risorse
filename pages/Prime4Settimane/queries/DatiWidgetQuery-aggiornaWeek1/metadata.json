@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "685e632feeb42977c4dae9eb_bd881fa3-2117-47fc-b469-427ad28f4dde",
-  "id": "Prime4Settimane_DatiWidgetQuery.aggiornaValutazione",
+  "gitSyncId": "686bd266c64b6371685aa9bc_d3c7fd4c-0335-47f9-961d-081e238070ac",
+  "id": "Prime4Settimane_DatiWidgetQuery.aggiornaWeek1",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "DatiWidgetQuery.aggiornaValutazione",
-    "name": "aggiornaValutazione",
+    "fullyQualifiedName": "DatiWidgetQuery.aggiornaWeek1",
+    "name": "aggiornaWeek1",
     "pageId": "Prime4Settimane",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

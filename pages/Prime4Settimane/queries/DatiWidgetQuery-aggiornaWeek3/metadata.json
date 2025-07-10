@@ -1,16 +1,12 @@
 {
-  "gitSyncId": "686e1a4efa59e4232444c959_c0ca5251-4469-4690-b2d4-100cfcc0f28d",
-  "id": "Prime4Settimane_DatiWidgetQuery.modalAggiornamento",
+  "gitSyncId": "686f7d5012ca150b0f49cbef_20e34958-84cd-446a-87ca-1fd2cb054b50",
+  "id": "Prime4Settimane_DatiWidgetQuery.aggiornaWeek3",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [
-        {
-          "name": "parametro"
-        }
-      ],
+      "jsArguments": [],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
@@ -26,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "DatiWidgetQuery.modalAggiornamento",
-    "name": "modalAggiornamento",
+    "fullyQualifiedName": "DatiWidgetQuery.aggiornaWeek3",
+    "name": "aggiornaWeek3",
     "pageId": "Prime4Settimane",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

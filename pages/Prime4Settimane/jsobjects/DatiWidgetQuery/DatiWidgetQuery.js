@@ -71,71 +71,47 @@ export default {
 
     return datiQuery;
   },
-	
-	  // Funzione helper per ottenere la configurazione della settimana
-  getWeekConfiguration(categoria = null) {
-    const currentCategory = categoria || this.getCurrentCategory();
-    
-    const configurations = {
-      1: {
-        updateQuery: Settimana1_update,
-        dataQuery: Settimana1,
-        modalName: 'Settimana_1',
-        weekNumber: 1
-      },
-      2: {
-        updateQuery: Settimana2_update,
-        dataQuery: Settimana2,
-        modalName: 'Settimana_2',
-        weekNumber: 2
-      },
-      3: {
-        updateQuery: Settimana3_update,
-        dataQuery: Settimana3,
-        modalName: 'Settimana_3',
-        weekNumber: 3
-      },
-      4: {
-        updateQuery: Settimana4_update,
-        dataQuery: Settimana4,
-        modalName: 'Settimana_4',
-        weekNumber: 4
-      }
-    };
-
-    // Restituisce la configurazione per la categoria richiesta, con fallback alla settimana 1
-    return configurations[currentCategory] || configurations[1];
-  },
  // Funzione per ottenere i dati da selectedWeekDetails filtrati per categoria
   getTableDataByCategory(categoria) {
     // Ottieni i dati dallo store invece che dalla tabella
     const tableData = appsmith.store.selectedWeekDetails;
-    
-    if (!tableData || !categoria) {
-      return tableData; // Restituisce tutti i dati se non c'è categoria
-    }
-
-    const filteredData = {};
-    const categoryPrefix = categoria.toString();
-
-    // Mantieni sempre i campi essenziali
-    Object.keys(tableData).forEach(key => {
-      // Mantieni i campi che non iniziano con numeri (IdSettimane, etc.)
-      if (!key.match(/^[1-4]/)) {
-        filteredData[key] = tableData[key];
-      }
-      // Mantieni solo i campi della categoria selezionata
-      else if (key.startsWith(categoryPrefix)) {
-        filteredData[key] = tableData[key];
-      }
-    });
-
-    return filteredData;
+		
+		return tableData;
   },
-	modalAggiornamento(){
-		storeValue("storedIdSettimana",TabellaSettimane.triggeredRow.IdSettimane);
-		this.aggiornaWeek();
-		showModal(Settimana_1.name);
+	async clearStoredSettimana() {
+    await storeValue('selectedWeekDetails', null, false);
+    console.log("selectedWeekDetails pulito");
+  },
+	modalAggiornamento(parametro){
+		switch(parametro) {
+        case 1:
+					DatiWidgetQuery.setCurrentCategory(parametro);
+				console.log('SETTAGGIO');
+          this.aggiornaWeek1();
+				console.log('AGGIORNAMENTO');
+				showModal(Settimana_1.name);
+          break;
+        case 2:
+				DatiWidgetQuery.setCurrentCategory(parametro);
+      	 this.aggiornaWeek2();
+				showModal(Settimana_1.name);
+          break;
+        case 3:
+				DatiWidgetQuery.setCurrentCategory(parametro);
+    		 this.aggiornaWeek3();
+				showModal(Settimana_1.name);
+         break;
+        case 4:
+				DatiWidgetQuery.setCurrentCategory(parametro);
+    		 this.aggiornaWeek4();
+				showModal(Settimana_1.name);
+         break;
+				 default:
+       // Gestione caso default (opzionale)
+         console.log("Parametro non valido");
+         break;
+      }
+
 	},
   // Funzione per impostare la categoria corrente
   setCurrentCategory(categoria) {
@@ -248,123 +224,148 @@ export default {
   refreshSettimana4: async () => {
     return await DatiWidgetQuery.refreshModalData(4);
   },
-
-  // Funzione per aprire una settimana specifica con validazione
-  openWeekModal: async (settimana) => {
-    // Verifica che ci sia un dipendente selezionato
-    const idSettimane = DatiWidgetQuery.getIdSettimane();
-    
-    if (!idSettimane) {
-      showAlert("Seleziona prima un dipendente dalla tabella.", "warning");
-      return false;
-    }
-    
-    try {
-      showAlert(`Caricamento settimana ${settimana}...`, "info");
-      await DatiWidgetQuery.refreshModalData(settimana);
-      return true;
-    } catch (error) {
-      showAlert(`Errore nell'apertura della settimana ${settimana}: ${error.message}`, "error");
-      return false;
-    }
-  },
-	 aggiornaWeek: async () => {
+	 aggiornaWeek1: async () => {
     try {
 			await DipendentiQuery.run();
       // Ricarica la query Settimana1 con i dati aggiornati
-			if()
       await Settimana1.run();
-			console.log(Settimana1.data);
-     	
-      // Aggiorna lo store con i dati freschi
-      if (Settimana1.data && Settimana1.data.length > 0) {
-        await storeValue('selectedWeekDetails', Settimana1.data[0], false);
-				console.log(appsmith.store.selectedWeekDetails)
-      }
+
+			await storeValue('selectedWeekDetails', Settimana1.data[0], false);
     } catch (error) {
       console.error('Errore nel ricaricare i dati del modal:', error);
     }
 },
- // Modifica aggiornaValutazione per utilizzare preparaDatiPerQuery
-  async aggiornaValutazione() {
+		aggiornaWeek2: async () => {
     try {
-      showAlert("Salvataggio in corso...", "info");
-
-      // Prepara i dati utilizzando la funzione corretta
-      const datiQuery = this.preparaDatiPerQuery();
-      
-      if (!datiQuery) {
-        return false;
-      }
-
-      console.log("Dati preparati per la query:", datiQuery);
-
-      const currentCategory = this.getCurrentCategory();
-      
-      // Seleziona la query corretta in base alla categoria
-      let updateQuery;
-      let dataQuery;
-      let modalName;
-      
-      switch(currentCategory) {
-        case 1:
-          updateQuery = Settimana1_update;
-          dataQuery = Settimana1;
-          modalName = 'Settimana_1';
-          break;
-        case 2:
-          updateQuery = Settimana2_update;
-          dataQuery = Settimana2;
-          modalName = 'Settimana_2';
-          break;
-        case 3:
-          updateQuery = Settimana3_update;
-          dataQuery = Settimana3;
-          modalName = 'Settimana_3';
-          break;
-        case 4:
-          updateQuery = Settimana4_update;
-          dataQuery = Settimana4;
-          modalName = 'Settimana_4';
-          break;
-        default:
-          updateQuery = Settimana1_update;
-          dataQuery = Settimana1;
-          modalName = 'Settimana_1';
-      }
-
-      // Assicurati che la query abbia accesso ai dati preparati
-      // Se le query utilizzano parametri, passagli i dati
-      if (updateQuery && typeof updateQuery.run === 'function') {
-        await updateQuery.run(datiQuery);
-      } else {
-        await updateQuery.run();
-      }
-
-      // Ricarica i dati
-      await Promise.all([
-        DipendentiQuery.run(),
-        dataQuery.run()
-      ]);
-
-      // Aggiorna lo store con i nuovi dati
-      if (dataQuery.data && dataQuery.data.length > 0) {
-        await storeValue('selectedWeekDetails', dataQuery.data[0], false);
-      }
-
-      showAlert('Dati salvati con successo!', 'success');
-
-      // Chiudi il modal se esiste
-      if (typeof closeModal !== 'undefined') {
-        closeModal(modalName);
-      }
-
-      return true;
-
+			await DipendentiQuery.run();
+      // Ricarica la query Settimana1 con i dati aggiornati
+      await Settimana2.run();
+			console.log(Settimana2.data);
+				await storeValue('selectedWeekDetails', Settimana2.data[0], false);
     } catch (error) {
-      console.error("Errore durante il salvataggio:", error);
-      showAlert(`Errore durante il salvataggio: ${error.message}`, "error");
-      return false;
+      console.error('Errore nel ricaricare i dati del modal:', error);
     }
+},
+	aggiornaWeek3: async () => {
+    try {
+			await DipendentiQuery.run();
+      // Ricarica la query Settimana1 con i dati aggiornati
+      await Settimana3.run();
+			await storeValue('selectedWeekDetails', Settimana3.data[0], false);
+    } catch (error) {
+      console.error('Errore nel ricaricare i dati del modal:', error);
+    }
+},
+	 aggiornaWeek4: async () => {
+    try {
+			await DipendentiQuery.run();
+      // Ricarica la query Settimana1 con i dati aggiornati
+      await Settimana4.run();
+			await storeValue('selectedWeekDetails', Settimana4.data[0], false);
+    } catch (error) {
+      console.error('Errore nel ricaricare i dati del modal:', error);
+    }
+},
+	updateSettimana: async () => {
+  try {
+    const currentCategory = DatiWidgetQuery.getCurrentCategory();
+    
+    switch(currentCategory) {
+      case 1:
+        // Esegui la query di update per la settimana 1
+        await Settimana1_update.run();
+        
+        // Mostra un messaggio di successo
+        showAlert('Dati settimana 1 salvati con successo!', 'success');
+        
+        // Ricarica i dati della tabella principale
+        await DipendentiQuery.run();
+        
+        // Ricarica i dettagli della settimana 1
+        await Settimana1.run();
+        
+        closeModal(Settimana_1.name);
+        
+        // Aggiorna lo store con i nuovi dati
+        if (Settimana1.data && Settimana1.data.length > 0) {
+          await storeValue('selectedWeekDetails', Settimana1.data[0], false);
+        }
+        break;
+        
+      case 2:
+        // Esegui la query di update per la settimana 2
+        await Settimana2_update.run();
+        
+        // Mostra un messaggio di successo
+        showAlert('Dati settimana 2 salvati con successo!', 'success');
+        
+        // Ricarica i dati della tabella principale
+        await DipendentiQuery.run();
+        
+        // Ricarica i dettagli della settimana 2
+        await Settimana2.run();
+        
+        closeModal(Settimana_1.name);
+        
+        // Aggiorna lo store con i nuovi dati
+        if (Settimana2.data && Settimana2.data.length > 0) {
+          await storeValue('selectedWeekDetails', Settimana2.data[0], false);
+        }
+        break;
+        
+      case 3:
+        // Esegui la query di update per la settimana 3
+        await Settimana3_update.run();
+        
+        // Mostra un messaggio di successo
+        showAlert('Dati settimana 3 salvati con successo!', 'success');
+        
+        // Ricarica i dati della tabella principale
+        await DipendentiQuery.run();
+        
+        // Ricarica i dettagli della settimana 3
+        await Settimana3.run();
+        
+        closeModal(Settimana_1.name);
+        
+        // Aggiorna lo store con i nuovi dati
+        if (Settimana3.data && Settimana3.data.length > 0) {
+          await storeValue('selectedWeekDetails', Settimana3.data[0], false);
+        }
+        break;
+        
+      case 4:
+        // Esegui la query di update per la settimana 4
+        await Settimana4_update.run();
+        
+        // Mostra un messaggio di successo
+        showAlert('Dati settimana 4 salvati con successo!', 'success');
+        
+        // Ricarica i dati della tabella principale
+        await DipendentiQuery.run();
+        
+        // Ricarica i dettagli della settimana 4
+        await Settimana4.run();
+        
+        closeModal(Settimana_1.name);
+        
+        // Aggiorna lo store con i nuovi dati
+        if (Settimana4.data && Settimana4.data.length > 0) {
+          await storeValue('selectedWeekDetails', Settimana4.data[0], false);
+        }
+        break;
+        
+      default:
+        // Gestione caso default
+        console.log("Categoria non valida:", currentCategory);
+        showAlert('Errore: categoria settimana non valida', 'error');
+        break;
+    }
+    
+  } catch (error) {
+    // Gestisci gli errori
+    showAlert('Errore durante il salvataggio: ' + error.message, 'error');
+    console.error('Errore update:', error);
   }
+}
 }
