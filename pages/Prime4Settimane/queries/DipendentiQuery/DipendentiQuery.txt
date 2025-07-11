@@ -7,5 +7,5 @@ LEFT JOIN dipendenti AS d
 ON vr.IdSettimane = d.IdDipendenti
 LEFT JOIN listanegozi AS ln
 ON d.Neg= ln.NEG
-WHERE TIMESTAMPDIFF(day,DATE(d.DataAssunzione), CURDATE()) < 60
+WHERE TIMESTAMPDIFF(day,DATE(d.DataAssunzione), CURDATE()) < 31
 AND ln.Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}';
