@@ -21,7 +21,7 @@ export default {
   getIdSettimane() {
     // Prima prova dal widget\
     let idSettimane = DatiWidgetQuery.getValore('selectedWeekSettimana');
-    
+   
     // Se non c'è, prova dalla tabella
     if (!idSettimane && TabellaSettimane?.triggeredRow?.IdDipendenti) {
       idSettimane = TabellaSettimane.triggeredRow.IdDipendenti;
@@ -85,7 +85,7 @@ export default {
 	modalAggiornamento(parametro){
 		switch(parametro) {
         case 1:
-					DatiWidgetQuery.setCurrentCategory(parametro);
+				DatiWidgetQuery.setCurrentCategory(parametro);
 				console.log('SETTAGGIO');
           this.aggiornaWeek1();
 				console.log('AGGIORNAMENTO');
@@ -226,6 +226,7 @@ export default {
   },
 	 aggiornaWeek1: async () => {
     try {
+			storeJS.storeIdSettimana();
 			await DipendentiQuery.run();
       // Ricarica la query Settimana1 con i dati aggiornati
       await Settimana1.run();
@@ -237,17 +238,19 @@ export default {
 },
 		aggiornaWeek2: async () => {
     try {
+			storeJS.storeIdSettimana();
 			await DipendentiQuery.run();
       // Ricarica la query Settimana1 con i dati aggiornati
       await Settimana2.run();
 			console.log(Settimana2.data);
-				await storeValue('selectedWeekDetails', Settimana2.data[0], false);
+			await storeValue('selectedWeekDetails', Settimana2.data[0], false);
     } catch (error) {
       console.error('Errore nel ricaricare i dati del modal:', error);
     }
 },
 	aggiornaWeek3: async () => {
     try {
+			storeJS.storeIdSettimana();
 			await DipendentiQuery.run();
       // Ricarica la query Settimana1 con i dati aggiornati
       await Settimana3.run();
@@ -258,6 +261,7 @@ export default {
 },
 	 aggiornaWeek4: async () => {
     try {
+			storeJS.storeIdSettimana();
 			await DipendentiQuery.run();
       // Ricarica la query Settimana1 con i dati aggiornati
       await Settimana4.run();

@@ -30,8 +30,7 @@ export default {
     await storeValue('selectedWeekDetails', selectedRow, false);
   },
 
-    // Nuova funzione per gestire l'update
-  updateSettimana1: async () => {
+	updateSettimana1: async () => {
     try {
       // Esegui la query di update
       await Settimana1_update.run();
@@ -60,10 +59,11 @@ export default {
     }
 		
   },
+
 	  updateSettimana2: async () => {
     try {
       // Esegui la query di update
-      await Settimana1_update.run();
+      await Settimana2_update.run();
       
       // Mostra un messaggio di successo
       showAlert('Dati salvati con successo!', 'success');
@@ -121,7 +121,7 @@ export default {
 	  updateSettimana4: async () => {
     try {
       // Esegui la query di update
-      await Settimana1_update.run();
+      await Settimana4_update.run();
       
       // Mostra un messaggio di successo
       showAlert('Dati salvati con successo!', 'success');
@@ -152,16 +152,16 @@ export default {
   
   switch(category) {
     case 1:
-      await this.updateSettimana1();
+      this.updateSettimana1();
       break;
     case 2:
-      await this.updateSettimana2();
+      this.updateSettimana2();
       break;
     case 3:
-      await this.updateSettimana3();
+      this.updateSettimana3();
       break;
     case 4:
-      await this.updateSettimana4();
+      this.updateSettimana4();
       break;
     default:
       console.log("Categoria non valida:", category);
@@ -169,6 +169,19 @@ export default {
       break;
   }
 },
+	updateSettimanaSwitch2: async () => {
+		const category = appsmith.store.currentCategory;
+		
+		if(category === 1){
+			this.updateSettimana1();
+		}else if (category === 2){
+			this.updateSettimana2();
+		}else if (category === 3){
+			this.updateSettimana3();
+		}else if (category === 4){
+			this.updateSettimana4();
+		}else {showAlert('Errore: update fallito. Riprovare','error')}
+	},
 
   // Nuova funzione per ricaricare i dati quando si riapre il modal
   refreshModalData: async () => {

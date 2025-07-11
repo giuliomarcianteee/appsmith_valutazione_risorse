@@ -12,7 +12,7 @@ export default {
     }
     
     // Ottieni IdSettimana dalla riga selezionata
-    const idSettimana = triggeredRow.IdSettimana;
+    const idSettimana = triggeredRow.IdSettimane;
     
     // Verifica che IdSettimana esista
     if (!idSettimana) {
