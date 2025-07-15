@@ -15,18 +15,12 @@
     },
     {
       "key": "sourceData"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -41,7 +35,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{ SelectCoord.data.some((obj) => obj.Email === appsmith.user.email && obj.Ruolo === \"Admin\") }}\n",
+  "isVisible": true,
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
