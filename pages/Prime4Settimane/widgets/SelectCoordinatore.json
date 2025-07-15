@@ -5,7 +5,7 @@
   "bottomRow": 7,
   "bottomRowBeforeCollapse": 7,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  SelectCoord.data.find((obj) => obj.Email === appsmith.user.email)?.Nome || \"\" ))(SelectCoordinatore.options, SelectCoordinatore.serverSideFiltering) }}",
+  "defaultOptionValue": "Ida DAntonio",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -18,9 +18,6 @@
     },
     {
       "key": "isVisible"
-    },
-    {
-      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
