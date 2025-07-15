@@ -149,6 +149,7 @@ export default {
   },
 	updateSettimanaSwitch: async () => {
   const category = appsmith.store.currentCategory;
+	
   
   switch(category) {
     case 1:

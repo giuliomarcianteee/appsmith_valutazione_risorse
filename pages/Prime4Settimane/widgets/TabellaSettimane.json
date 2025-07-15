@@ -125,9 +125,13 @@
     "_4MetodoRistampaDocFediSchede",
     "_4NoteMetodoRistampaDocFediSchede",
     "_4MetodoDisimpegnoOggettiPrenotati",
-    "_4NoteMetodoDisimpegnoOggettiPrenotati"
+    "_4NoteMetodoDisimpegnoOggettiPrenotati",
+    "ModificatoDa1",
+    "ModificatoDa2",
+    "ModificatoDa3",
+    "ModificatoDa4"
   ],
-  "columnUpdatedAt": 1752502151996,
+  "columnUpdatedAt": 1752575186242,
   "columnWidthMap": {
     "NEG": 76,
     "Neg": 85,
@@ -465,6 +469,30 @@
     },
     {
       "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn2.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.customColumn2.isDisabled"
+    },
+    {
+      "key": "primaryColumns.ModificatoDa1.computedValue"
+    },
+    {
+      "key": "primaryColumns.ModificatoDa2.computedValue"
+    },
+    {
+      "key": "primaryColumns.ModificatoDa3.computedValue"
+    },
+    {
+      "key": "primaryColumns.ModificatoDa4.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn3.isDisabled"
+    },
+    {
+      "key": "primaryColumns.customColumn4.isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -494,6 +522,18 @@
     },
     {
       "key": "primaryColumns.customColumn4.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn2.isDisabled"
+    },
+    {
+      "key": "primaryColumns.customColumn2.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.customColumn3.isDisabled"
+    },
+    {
+      "key": "primaryColumns.customColumn4.isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -740,6 +780,142 @@
       "label": "Livello",
       "notation": "standard",
       "originalId": "Livello",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "ModificatoDa1": {
+      "alias": "ModificatoDa1",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ModificatoDa1\"])) : ModificatoDa1 })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "ModificatoDa1",
+      "index": 81,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "ModificatoDa1",
+      "notation": "standard",
+      "originalId": "ModificatoDa1",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "ModificatoDa2": {
+      "alias": "ModificatoDa2",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ModificatoDa2\"])) : ModificatoDa2 })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "ModificatoDa2",
+      "index": 82,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "ModificatoDa2",
+      "notation": "standard",
+      "originalId": "ModificatoDa2",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "ModificatoDa3": {
+      "alias": "ModificatoDa3",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ModificatoDa3\"])) : ModificatoDa3 })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "ModificatoDa3",
+      "index": 83,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "ModificatoDa3",
+      "notation": "standard",
+      "originalId": "ModificatoDa3",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "ModificatoDa4": {
+      "alias": "ModificatoDa4",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"ModificatoDa4\"])) : ModificatoDa4 })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "ModificatoDa4",
+      "index": 84,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "ModificatoDa4",
+      "notation": "standard",
+      "originalId": "ModificatoDa4",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -3632,9 +3808,9 @@
       "id": "customColumn2",
       "index": 10,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (true)) : true })()}}",
       "isDerived": true,
-      "isDisabled": false,
+      "isDisabled": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (!currentRow.ModificatoDa1)) : !currentRow.ModificatoDa1 })()}}",
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
@@ -3673,7 +3849,7 @@
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": true,
-      "isDisabled": false,
+      "isDisabled": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (!currentRow.ModificatoDa2)) : !currentRow.ModificatoDa2 })()}}",
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
@@ -3713,7 +3889,7 @@
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": true,
-      "isDisabled": false,
+      "isDisabled": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (!currentRow.ModificatoDa3)) : !currentRow.ModificatoDa3 })()}}",
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,

@@ -16,6 +16,7 @@ SELECT
 		vr.3NoteMetodoCaricoScaricoComproOroPreventiviOroInvestimento,
     vr.3TabletComproOro,
     vr.3NoteTabletComproOro,
+		vr.ModificatoDa3,
     d.Neg,
     d.Nome,
     d.IdDipendenti,

@@ -23,5 +23,6 @@ SET
     `2CellulareAziendale` = {{ DatiWidgetQuery.getValoreNumerico("2CellulareAziendale") }},
     `2NoteCellulareAziendale` = '{{ DatiWidgetQuery.getValore("2NoteCellulareAziendale") }}',
     `2ControlloCassa` = {{ DatiWidgetQuery.getValoreNumerico("2ControlloCassa") }},
-    `2NoteControlloCassa` = '{{ DatiWidgetQuery.getValore("2NoteControlloCassa") }}'
+    `2NoteControlloCassa` = '{{ DatiWidgetQuery.getValore("2NoteControlloCassa") }}',
+		`ModificatoDa2` = '{{appsmith.user.name + " - " + moment().format("DD-MM-YYYY HH:mm:ss")}}'
 WHERE IdSettimane = '{{appsmith.store.storedIdSettimana}}';

@@ -15,5 +15,6 @@ SET
     `3MetodoCaricoScaricoComproOroPreventiviOroInvestimento` = {{ DatiWidgetQuery.getValoreNumerico("3MetodoCaricoScaricoComproOroPreventiviOroInvestimento") }},
 		`3NoteMetodoCaricoScaricoComproOroPreventiviOroInvestimento` = '{{ DatiWidgetQuery.getValore("3NoteMetodoCaricoScaricoComproOroPreventiviOroInvestimento") }}',
     `3TabletComproOro` = {{ DatiWidgetQuery.getValoreNumerico("3TabletComproOro") }},
-    `3NoteTabletComproOro` = '{{ DatiWidgetQuery.getValore("3NoteTabletComproOro") }}'
+    `3NoteTabletComproOro` = '{{ DatiWidgetQuery.getValore("3NoteTabletComproOro") }}',
+		`ModificatoDa3` = '{{appsmith.user.name + " - " + moment().format("DD-MM-YYYY HH:mm:ss")}}'
 WHERE IdSettimane = '{{appsmith.store.storedIdSettimana}}';

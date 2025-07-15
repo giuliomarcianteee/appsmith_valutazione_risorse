@@ -371,5 +371,8 @@ export default {
     showAlert('Errore durante il salvataggio: ' + error.message, 'error');
     console.error('Errore update:', error);
   }
-}
+},
+	funzioneprova(){
+		storeValue()
+	}
 }

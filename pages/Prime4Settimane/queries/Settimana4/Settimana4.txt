@@ -16,6 +16,7 @@ SELECT
     vr.4NoteMetodoRistampaDocFediSchede,
     vr.4MetodoDisimpegnoOggettiPrenotati,
     vr.4NoteMetodoDisimpegnoOggettiPrenotati,
+		vr.ModificatoDa4,
     d.Neg,
     d.Nome,
     d.IdDipendenti,

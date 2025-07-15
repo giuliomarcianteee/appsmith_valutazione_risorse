@@ -15,5 +15,6 @@ SET
     `4MetodoRistampaDocFediSchede` = {{ DatiWidgetQuery.getValoreNumerico("4MetodoRistampaDocFediSchede") }},
     `4NoteMetodoRistampaDocFediSchede` = '{{ DatiWidgetQuery.getValore("4NoteMetodoRistampaDocFediSchede") }}',
     `4MetodoDisimpegnoOggettiPrenotati` = {{ DatiWidgetQuery.getValoreNumerico("4MetodoDisimpegnoOggettiPrenotati") }},
-    `4NoteMetodoDisimpegnoOggettiPrenotati` = '{{ DatiWidgetQuery.getValore("4NoteMetodoDisimpegnoOggettiPrenotati") }}'
+    `4NoteMetodoDisimpegnoOggettiPrenotati` = '{{ DatiWidgetQuery.getValore("4NoteMetodoDisimpegnoOggettiPrenotati") }}',
+		`ModificatoDa4` = '{{appsmith.user.name + " - " + moment().format("DD-MM-YYYY HH:mm:ss")}}'
 WHERE IdSettimane = '{{appsmith.store.storedIdSettimana}}';

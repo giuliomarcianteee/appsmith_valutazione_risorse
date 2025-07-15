@@ -24,6 +24,7 @@ SELECT
     vr.1NoteCongedoCliente,
     vr.1Vetrine,
     vr.1NoteVetrine,
+		vr.ModificatoDa1,
     d.Neg,
     d.Nome,
     d.IdDipendenti,
