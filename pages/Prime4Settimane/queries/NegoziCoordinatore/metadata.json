@@ -29,7 +29,7 @@
     ],
     "name": "NegoziCoordinatore",
     "pageId": "Prime4Settimane",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }

@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 1864,
+  "bottomRow": 1814,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 1850,
+      "bottomRow": 1800,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -30,7 +30,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 1850,
+      "minHeight": 1800,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -60,7 +60,7 @@
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
-  "height": 1850,
+  "height": 1800,
   "isCanvas": true,
   "isLoading": false,
   "key": "kcgadl3d8u",
@@ -73,7 +73,7 @@
   "mobileRightColumn": 40,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "originalBottomRow": 374,
+  "originalBottomRow": 1814,
   "originalTopRow": 14,
   "parentColumnSpace": 20.125,
   "parentId": "0",
@@ -86,5 +86,5 @@
   "version": 2,
   "widgetId": "5iv8iqv3aj",
   "widgetName": "Settimana_1",
-  "width": 912
+  "width": 1102
 }

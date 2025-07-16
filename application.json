@@ -18,11 +18,15 @@
   "collapseInvisibleWidgets": true,
   "color": "#F4FFDE",
   "evaluationVersion": 2,
-  "icon": "plant",
+  "icon": "shake-hands",
   "pages": [
     {
       "id": "Prime4Settimane",
       "isDefault": true
+    },
+    {
+      "id": "OltreIlMese",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

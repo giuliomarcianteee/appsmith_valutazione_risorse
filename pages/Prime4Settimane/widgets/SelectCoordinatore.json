@@ -5,7 +5,7 @@
   "bottomRow": 7,
   "bottomRowBeforeCollapse": 7,
   "boxShadow": "none",
-  "defaultOptionValue": "Ida DAntonio",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  SelectCoord.data.find((obj) => obj.Email === appsmith.user.email)?.Nome || \"\" ))(SelectCoordinatore.options, SelectCoordinatore.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,12 +15,21 @@
     },
     {
       "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -35,14 +44,14 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "{{ SelectCoord.data.find(item => item.Email === appsmith.user.email)?.Ruolo !== \"Coordinatore\" }}\n",
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelText": "Seleziona Coordiantore",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 5,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -54,7 +63,7 @@
   "onDropdownOpen": "{{SelectCoord.run()}}",
   "onOptionChange": "{{DipendentiQuery.run()}}",
   "optionLabel": "label",
-  "optionValue": "label",
+  "optionValue": "value",
   "originalBottomRow": 7,
   "originalTopRow": 3,
   "parentColumnSpace": 20.125,
@@ -63,7 +72,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 25,
+  "rightColumn": 22,
   "serverSideFiltering": false,
   "sourceData": "{{SelectCoord.data.map( (obj) =>{ return  {'label': obj.Nome, 'value': obj.Email } })}}",
   "topRow": 3,

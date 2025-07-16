@@ -8,4 +8,4 @@ ON vr.IdSettimane = d.IdDipendenti
 LEFT JOIN listanegozi AS ln
 ON d.Neg= ln.NEG
 WHERE TIMESTAMPDIFF(day,DATE(d.DataAssunzione), CURDATE()) < 60
-AND ln.Coordinatore = 'Ida DAntonio';
+AND ln.Coordinatore = '{{SelectCoordinatore.selectedOptionLabel}}';

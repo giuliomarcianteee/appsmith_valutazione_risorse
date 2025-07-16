@@ -1,2 +1,2 @@
 SELECT * FROM usermanager
-WHERE Ruolo = 'Coordinatore'
+WHERE	Ruolo = 'Coordinatore'
