@@ -14,13 +14,13 @@
       "key": "borderRadius"
     },
     {
-      "key": "sourceData"
+      "key": "isVisible"
     },
     {
       "key": "defaultOptionValue"
     },
     {
-      "key": "isVisible"
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
