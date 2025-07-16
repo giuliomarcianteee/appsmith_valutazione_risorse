@@ -170,8 +170,6 @@ export default {
     const evaluations = [];
     const processedFields = new Set();
     
-    console.log("Dati grezzi per estrazione valutazioni:", data);
-    
     Object.keys(data).forEach(key => {
       const match = key.match(/^([1234])(.+)/);
       if (match && !processedFields.has(key)) {
@@ -188,61 +186,21 @@ export default {
         
         if (!isNote) {
           const displayName = this.formatFieldName(fieldName);
-          
-          // Prova diverse varianti per trovare la nota
-          const possibleNoteKeys = [
-            week + fieldName + 'Note',
-            week + fieldName + 'note',
-            week + fieldName + 'NOTE',
-            week + fieldName + 'Notes',
-            week + fieldName + 'notes'
-          ];
-          
-          let noteValue = '';
-          let foundNoteKey = '';
-          
-          // Cerca la nota tra le possibili chiavi
-          for (const noteKey of possibleNoteKeys) {
-            if (data[noteKey]) {
-              noteValue = data[noteKey];
-              foundNoteKey = noteKey;
-              break;
-            }
-          }
-          
-          // Se non trova con il pattern esatto, cerca in modo più flessibile
-          if (!noteValue) {
-            const flexibleNoteKey = Object.keys(data).find(k => 
-              k.toLowerCase().includes(week.toLowerCase()) && 
-              k.toLowerCase().includes(fieldName.toLowerCase()) && 
-              k.toLowerCase().includes('note')
-            );
-            
-            if (flexibleNoteKey) {
-              noteValue = data[flexibleNoteKey];
-              foundNoteKey = flexibleNoteKey;
-            }
-          }
-          
-          console.log(`Campo ${key}: cercando nota con chiavi ${possibleNoteKeys.join(', ')}`);
-          console.log(`Nota trovata: "${noteValue}" con chiave: ${foundNoteKey}`);
+          const noteKey = week + fieldName + 'Note';
           
           const fieldData = {
             name: displayName,
             rating: parseInt(data[key]) || 0,
             ratingText: this.getRatingText(parseInt(data[key]) || 0),
             ratingColor: this.getRatingColor(parseInt(data[key]) || 0),
-            note: noteValue || '',
+            note: data[noteKey] || '',
             originalKey: key,
-            noteKey: foundNoteKey || possibleNoteKeys[0]
+            noteKey: noteKey
           };
           
           weekGroup.fields.push(fieldData);
           processedFields.add(key);
-          
-          // Aggiungi tutte le possibili chiavi note ai campi processati
-          possibleNoteKeys.forEach(nk => processedFields.add(nk));
-          if (foundNoteKey) processedFields.add(foundNoteKey);
+          processedFields.add(noteKey);
         }
       }
     });
@@ -251,8 +209,6 @@ export default {
     evaluations.forEach(week => {
       week.fields.sort((a, b) => a.name.localeCompare(b.name));
     });
-    
-    console.log("Valutazioni estratte:", evaluations);
     
     return evaluations;
   },
@@ -266,7 +222,7 @@ export default {
     const ratings = ratingFields.map(key => parseInt(data[key]) || 0);
     const validRatings = ratings.filter(r => r > 0);
     const totalScore = ratings.reduce((sum, rating) => sum + rating, 0);
-    const maxScore = ratingFields.length * 4; // Cambiato da 5 a 4
+    const maxScore = ratingFields.length * 5;
     const averageScore = validRatings.length > 0 ? totalScore / validRatings.length : 0;
     
     const halfMaxScore = maxScore / 2;
@@ -298,9 +254,9 @@ export default {
 
   // Funzione per calcolare la distribuzione dei rating
   calculateRatingDistribution(ratings) {
-    const distribution = { 1: 0, 2: 0, 3: 0, 4: 0 }; // Cambiato da 5 a 4
+    const distribution = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
     ratings.forEach(rating => {
-      if (rating >= 1 && rating <= 4) { // Cambiato da 5 a 4
+      if (rating >= 1 && rating <= 5) {
         distribution[rating]++;
       }
     });
@@ -354,48 +310,37 @@ export default {
     });
   },
 
-  // Funzione per ottenere il testo descrittivo del rating (4 stelle)
+  // Funzione per ottenere il testo descrittivo del rating
   getRatingText(rating) {
     const ratingTexts = {
-      1: "Non lo sa fare",
+      1: "Non idonea",
       2: "Sta ancora imparando", 
-      3: "Lo sa fare",
-      4: "Lo sa insegnare"
+      3: "Ha bisogno di supporto",
+      4: "Lo sa fare",
+      5: "Lo sa insegnare"
     };
     return ratingTexts[rating] || 'Non valutato';
   },
 
-  // Funzione per ottenere il colore del rating (4 stelle)
+  // Funzione per ottenere il colore del rating
   getRatingColor(rating) {
-    if (rating === 1) return '#dc3545'; // Rosso
-    if (rating === 2) return '#fd7e14'; // Arancione
-    if (rating === 3 || rating === 4) return '#28a745'; // Verde
+    if (rating === 1 || rating === 2) return '#dc3545';
+    if (rating === 3) return '#ffc107';
+    if (rating === 4 || rating === 5) return '#28a745';
     return '#dee2e6';
   },
 
-  // Funzione per generare le stelle HTML (4 stelle)
+  // Funzione per generare le stelle HTML
   generateStarsHTML(rating) {
     let starsHTML = '';
-    for (let i = 1; i <= 4; i++) { // Cambiato da 5 a 4
+    for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
-        starsHTML += '<span style="color: ' + this.getRatingColor(rating) + ';">&#9733;</span>';
+        starsHTML += '<span style="color: ' + this.getRatingColor(rating) + ';">★</span>';
       } else {
-        starsHTML += '<span style="color: #dee2e6;">&#9734;</span>';
+        starsHTML += '<span style="color: #dee2e6;">☆</span>';
       }
     }
     return starsHTML;
-  },
-
-  // Funzione per escaping HTML (senza usare document)
-  escapeHtml(text) {
-    if (!text) return '';
-    
-    return String(text)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
   },
 
   // Funzione per generare l'HTML del PDF
@@ -405,7 +350,7 @@ export default {
         if (count > 0) {
           return `<div style="display: flex; align-items: center; margin: 5px 0;">
             <span style="margin-right: 10px;">${rating} stelle:</span>
-            <span style="color: ${this.getRatingColor(parseInt(rating))}; font-size: 16px;">${'&#9733;'.repeat(parseInt(rating))}${'&#9734;'.repeat(4-parseInt(rating))}</span>
+            <span style="color: ${this.getRatingColor(parseInt(rating))}; font-size: 16px;">${'★'.repeat(parseInt(rating))}${'☆'.repeat(5-parseInt(rating))}</span>
             <span style="margin-left: 10px; font-weight: bold;">${count} valutazioni</span>
           </div>`;
         }
@@ -413,34 +358,28 @@ export default {
       }).join('');
 
     const evaluationsHTML = data.valutazioni.map(week => {
-      const weekFields = week.fields.map(field => {
-        const noteText = field.note && field.note.trim() !== '' ? this.escapeHtml(field.note) : '<em style="color: #999;">Nessuna nota</em>';
-        
-        return `
+      const weekFields = week.fields.map(field => `
         <tr>
-          <td style="font-weight: 500; padding: 12px 15px; border-bottom: 1px solid #dee2e6; vertical-align: top;">
-            ${this.escapeHtml(field.name)}
-          </td>
-          <td style="text-align: center; padding: 12px 15px; border-bottom: 1px solid #dee2e6; vertical-align: top;">
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
+          <td style="font-weight: 500; padding: 12px 15px; border-bottom: 1px solid #dee2e6;">${field.name}</td>
+          <td style="text-align: center; padding: 12px 15px; border-bottom: 1px solid #dee2e6;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
               <span style="font-size: 18px;">${this.generateStarsHTML(field.rating)}</span>
               <span style="font-size: 12px; color: ${field.ratingColor}; font-weight: bold; 
                          background: ${field.ratingColor}20; padding: 2px 8px; border-radius: 12px;">
-                ${this.escapeHtml(field.ratingText)}
+                ${field.ratingText}
               </span>
             </div>
           </td>
-          <td style="font-style: italic; color: #666; max-width: 300px; padding: 12px 15px; border-bottom: 1px solid #dee2e6; vertical-align: top; word-wrap: break-word;">
-            ${noteText}
+          <td style="font-style: italic; color: #666; max-width: 300px; padding: 12px 15px; border-bottom: 1px solid #dee2e6;">
+            ${field.note || '-'}
           </td>
         </tr>
-        `;
-      }).join('');
+      `).join('');
 
       return `
         <div style="margin-bottom: 30px; page-break-inside: avoid;">
           <h3 style="color: #495057; border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-bottom: 15px;">
-            ${week.week}&deg; Settimana di Valutazione
+            ${week.week}° Settimana di Valutazione
           </h3>
           <table style="width: 100%; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
             <thead>
@@ -463,7 +402,7 @@ export default {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valutazione ${this.escapeHtml(data.header.nome)} - ${data.header.settimana}&deg; Settimana</title>
+  <title>Valutazione ${data.header.nome} - ${data.header.settimana}° Settimana</title>
   <style>
     @page { size: A4; margin: 20mm; }
     * { box-sizing: border-box; }
@@ -510,16 +449,16 @@ export default {
   
   <div class="container">
     <div class="header">
-      <h1>Valutazione ${data.header.settimana}&deg; Settimana</h1>
-      <h2>${this.escapeHtml(data.header.nome)}</h2>
-      <p><strong>Negozio:</strong> ${this.escapeHtml(data.header.neg)} | <strong>Assunzione:</strong> ${data.header.dataAssunzione} | <strong>Scadenza:</strong> ${data.header.dataFineContratto}</p>
+      <h1>Valutazione ${data.header.settimana}° Settimana</h1>
+      <h2>${data.header.nome}</h2>
+      <p><strong>Negozio:</strong> ${data.header.neg} | <strong>Assunzione:</strong> ${data.header.dataAssunzione} | <strong>Scadenza:</strong> ${data.header.dataFineContratto}</p>
     </div>
     
     <div class="info-grid">
       <div class="info-box">
-        <h3>Statistiche Generali</h3>
+        <h3>📊 Statistiche Generali</h3>
         <p><strong>Punteggio Totale:</strong> ${data.statistiche.totalScore}/${data.statistiche.maxScore} punti</p>
-        <p><strong>Punteggio Medio:</strong> ${data.statistiche.averageScore}/4.0</p>
+        <p><strong>Punteggio Medio:</strong> ${data.statistiche.averageScore}/5.0</p>
         <p><strong>Completamento:</strong> ${data.statistiche.completedFields}/${data.statistiche.totalFields} campi</p>
         <div class="progress-bar"><div class="progress-fill"></div></div>
         <p style="text-align: center; margin: 5px 0; font-size: 12px; color: #666;">${data.statistiche.percentageComplete}% completato</p>
@@ -540,7 +479,7 @@ export default {
     <div class="evaluations">${evaluationsHTML}</div>
     
     <div class="footer">
-      <p><strong>Documento generato il ${data.header.dataGenerazione}</strong></p>
+      <p><strong>📄 Documento generato il ${data.header.dataGenerazione}</strong></p>
       <p>Generato da: ${data.generatedBy}</p>
       <p>Sistema di valutazione aziendale - Versione PDF</p>
     </div>
@@ -553,7 +492,7 @@ export default {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'valutazione_${this.escapeHtml(data.header.nome)}_settimana_${data.header.settimana}.html';
+      a.download = 'valutazione_${data.header.nome}_settimana_${data.header.settimana}.html';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

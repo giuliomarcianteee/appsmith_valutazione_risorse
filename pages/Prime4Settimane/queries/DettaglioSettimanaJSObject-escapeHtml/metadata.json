@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_ea6acfd0-1a83-4622-a9b0-fd7dedfd5958",
-  "id": "Prime4Settimane_DettaglioSettimanaJSObject.detectWeek",
+  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_74c0b4ce-dcc1-45be-a64c-df78e7a4092d",
+  "id": "Prime4Settimane_DettaglioSettimanaJSObject.escapeHtml",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -8,7 +8,7 @@
       "encodeParamsToggle": true,
       "jsArguments": [
         {
-          "name": "data"
+          "name": "text"
         }
       ],
       "paginationType": "NONE",
@@ -26,8 +26,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "DettaglioSettimanaJSObject.detectWeek",
-    "name": "detectWeek",
+    "fullyQualifiedName": "DettaglioSettimanaJSObject.escapeHtml",
+    "name": "escapeHtml",
     "pageId": "Prime4Settimane",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
