@@ -20,9 +20,6 @@
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "isVisible"
-    },
-    {
       "key": "sourceData"
     }
   ],
@@ -38,7 +35,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "",
+  "isVisible": true,
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
