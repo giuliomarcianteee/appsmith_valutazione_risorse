@@ -1,16 +1,3 @@
 SELECT Nome
 FROM usermanager
-WHERE 
-  (
-    Ruolo = 'Coordinatore' AND Email = '{{appsmith.user.email}}'
-  )
-  OR
-  (
-    Ruolo = 'Coordinatore' AND EXISTS (
-      SELECT 1
-      FROM usermanager AS u
-      WHERE 
-        u.Email = '{{appsmith.user.email}}' AND 
-        u.Ruolo = 'Admin'
-    )
-  )
+WHERE Nome = 'Federica Carbonaro'
