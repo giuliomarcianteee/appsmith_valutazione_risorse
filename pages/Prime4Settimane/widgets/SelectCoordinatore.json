@@ -5,7 +5,7 @@
   "bottomRow": 7,
   "bottomRowBeforeCollapse": 7,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  SelectCoord.data.length === 1 \n    ? SelectCoord.data[0].Nome \n    : \"\"\n))(SelectCoordinatore.options, SelectCoordinatore.serverSideFiltering) }}",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,13 +14,7 @@
       "key": "borderRadius"
     },
     {
-      "key": "isVisible"
-    },
-    {
       "key": "sourceData"
-    },
-    {
-      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -44,7 +38,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{ \n  SelectCoord.data.length > 1 \n}}",
+  "isVisible": "",
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
