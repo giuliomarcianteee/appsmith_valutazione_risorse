@@ -61,7 +61,7 @@
   "mobileTopRow": 10,
   "needsErrorInfo": false,
   "onDropdownOpen": "{{SelectCoord.run()}}",
-  "onOptionChange": "{{DipendentiQuery.run()}}",
+  "onOptionChange": "{{DipendentiQuery.run();}}",
   "optionLabel": "value",
   "optionValue": "value",
   "originalBottomRow": 7,

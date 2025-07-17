@@ -203,8 +203,8 @@ export default {
           
           // Cerca la nota tra le possibili chiavi
           for (const noteKey of possibleNoteKeys) {
-            if (data[noteKey]) {
-              noteValue = data[noteKey];
+            if (data[noteKey] !== null && data[noteKey] !== undefined && data[noteKey] !== 'null') {
+              noteValue = String(data[noteKey]);
               foundNoteKey = noteKey;
               break;
             }
@@ -218,8 +218,8 @@ export default {
               k.toLowerCase().includes('note')
             );
             
-            if (flexibleNoteKey) {
-              noteValue = data[flexibleNoteKey];
+            if (flexibleNoteKey && data[flexibleNoteKey] !== null && data[flexibleNoteKey] !== undefined && data[flexibleNoteKey] !== 'null') {
+              noteValue = String(data[flexibleNoteKey]);
               foundNoteKey = flexibleNoteKey;
             }
           }
@@ -398,6 +398,26 @@ export default {
       .replace(/'/g, '&#39;');
   },
 
+  // Funzione per generare la legenda delle stelline
+  generateStarLegend() {
+    const legends = [
+      { stars: 1, text: "Non lo sa fare", color: "#dc3545" },
+      { stars: 2, text: "Sta ancora imparando", color: "#fd7e14" },
+      { stars: 3, text: "Lo sa fare", color: "#28a745" },
+      { stars: 4, text: "Lo sa insegnare", color: "#28a745" }
+    ];
+
+    return legends.map(legend => {
+      const starsHTML = '&#9733;'.repeat(legend.stars) + '&#9734;'.repeat(4 - legend.stars);
+      return `
+        <div style="display: flex; align-items: center; margin: 8px 0; justify-content: flex-start;">
+          <span style="color: ${legend.color}; font-size: 16px; margin-right: 12px; min-width: 80px;">${starsHTML}</span>
+          <span style="color: #495057; font-size: 14px; font-weight: 500;">${legend.text}</span>
+        </div>
+      `;
+    }).join('');
+  },
+
   // Funzione per generare l'HTML del PDF
   generatePDFHTML(data) {
     const distributionHTML = Object.entries(data.statistiche.ratingDistribution)
@@ -480,9 +500,33 @@ export default {
     .info-box { padding: 20px; background: #f8f9fa; border-radius: 8px; border: 1px solid #dee2e6; }
     .info-box h3 { margin: 0 0 15px 0; color: #495057; font-size: 16px; font-weight: 600; border-bottom: 2px solid #007bff; padding-bottom: 5px; }
     .info-box p { margin: 8px 0; font-size: 14px; }
-    .stats { background: ${data.statistiche.statusColor}; color: white; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 30px; }
+    .stats { 
+      background: ${data.statistiche.statusColor}; 
+      color: white; 
+      padding: 20px; 
+      border-radius: 8px; 
+      margin-bottom: 30px; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
     .stats h3 { margin: 0 0 10px 0; font-size: 16px; font-weight: 600; opacity: 0.9; }
-    .stats h2 { margin: 0; font-size: 24px; font-weight: 700; }
+    .stats h2 { margin: 0 0 15px 0; font-size: 24px; font-weight: 700; }
+    .stats-legend { 
+      background: rgba(255,255,255,0.1); 
+      padding: 15px; 
+      border-radius: 8px; 
+      margin-top: 15px; 
+      width: 100%;
+    }
+    .stats-legend h4 { 
+      margin: 0 0 12px 0; 
+      font-size: 14px; 
+      font-weight: 600; 
+      color: rgba(255,255,255,0.9); 
+      text-align: center; 
+    }
     .progress-bar { width: 100%; height: 20px; background: #e9ecef; border-radius: 10px; overflow: hidden; margin: 10px 0; }
     .progress-fill { height: 100%; background: linear-gradient(90deg, #28a745, #20c997); width: ${data.statistiche.percentageComplete}%; }
     .distribution { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 15px; }
@@ -529,11 +573,16 @@ export default {
       <div class="stats">
         <h3>ESITO FINALE</h3>
         <h2>${data.statistiche.status}</h2>
-        <p style="margin: 10px 0 0 0; font-size: 14px; opacity: 0.9;">
+        <p style="margin: 10px 0; font-size: 14px; opacity: 0.9;">
           ${data.statistiche.status === 'IDONEO' ? 'Il dipendente ha superato la valutazione' : 
             data.statistiche.status === 'NON IDONEO' ? 'Il dipendente non ha superato la valutazione' : 
             'Valutazione non ancora completata'}
         </p>
+        
+        <div class="stats-legend">
+          <h4>Legenda Valutazioni</h4>
+          ${this.generateStarLegend()}
+        </div>
       </div>
     </div>
     
