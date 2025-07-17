@@ -5,7 +5,7 @@
   "bottomRow": 7,
   "bottomRowBeforeCollapse": 7,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  SelectCoord.data.find((obj) => obj.Email === appsmith.user.email)?.Nome || \"\" ))(SelectCoordinatore.options, SelectCoordinatore.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  SelectCoord.data.length === 1 \n    ? SelectCoord.data[0].Nome \n    : \"\"\n))(SelectCoordinatore.options, SelectCoordinatore.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -17,19 +17,19 @@
       "key": "isVisible"
     },
     {
-      "key": "defaultOptionValue"
+      "key": "sourceData"
     },
     {
-      "key": "sourceData"
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "sourceData"
+      "key": "isVisible"
     },
     {
-      "key": "isVisible"
+      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [
@@ -44,7 +44,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{ SelectCoord.data.find(item => item.Email === appsmith.user.email)?.Ruolo !== \"Coordinatore\" }}\n",
+  "isVisible": "{{ \n  SelectCoord.data.length > 1 \n}}",
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
@@ -62,7 +62,7 @@
   "needsErrorInfo": false,
   "onDropdownOpen": "{{SelectCoord.run()}}",
   "onOptionChange": "{{DipendentiQuery.run()}}",
-  "optionLabel": "label",
+  "optionLabel": "value",
   "optionValue": "value",
   "originalBottomRow": 7,
   "originalTopRow": 3,
@@ -74,7 +74,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 22,
   "serverSideFiltering": false,
-  "sourceData": "{{SelectCoord.data.map( (obj) =>{ return  {'label': obj.Nome, 'value': obj.Email } })}}",
+  "sourceData": "{{SelectCoord.data.map( (obj) =>{ return  {'label': obj.Nome, 'value': obj.Nome } })}}",
   "topRow": 3,
   "topRowBeforeCollapse": 3,
   "type": "SELECT_WIDGET",
