@@ -18,9 +18,6 @@
     },
     {
       "key": "defaultOptionValue"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -44,7 +41,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{ \n  SelectCoord.data.length > 1 \n}}",
+  "isVisible": "",
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
