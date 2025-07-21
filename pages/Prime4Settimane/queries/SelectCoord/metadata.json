@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT Nome\nFROM usermanager\nWHERE Ruolo = 'Coordinatore'\n",
+      "body": "SELECT Nome\nFROM usermanager\nWHERE \n  (\n    Ruolo = 'Coordinatore' AND Email = '{{appsmith.user.email}}'\n  )\n  OR\n  (\n    Ruolo = 'Coordinatore' AND EXISTS (\n      SELECT 1\n      FROM usermanager AS u\n      WHERE \n        u.Email = '{{appsmith.user.email}}' AND \n        u.Ruolo = 'Admin'\n    )\n  )",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,7 +22,11 @@
       "name": "Metabase",
       "pluginId": "mysql-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "SelectCoord",
     "pageId": "Prime4Settimane",
     "runBehaviour": "ON_PAGE_LOAD",

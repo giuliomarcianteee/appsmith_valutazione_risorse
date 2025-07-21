@@ -24,6 +24,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -38,7 +41,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "",
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
