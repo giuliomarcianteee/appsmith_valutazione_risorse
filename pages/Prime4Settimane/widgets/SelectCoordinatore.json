@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 9,
   "bottomRowBeforeCollapse": 7,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  SelectCoord.data.length === 1 \n    ? SelectCoord.data[0].Nome \n    : \"\"\n))(SelectCoordinatore.options, SelectCoordinatore.serverSideFiltering) }}",
@@ -24,9 +24,6 @@
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -41,14 +38,14 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "",
+  "isVisible": true,
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelText": "Seleziona Coordiantore",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 1,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -69,10 +66,10 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
+  "rightColumn": 20,
   "serverSideFiltering": false,
   "sourceData": "{{SelectCoord.data.map( (obj) =>{ return  {'label': obj.Nome, 'value': obj.Nome } })}}",
-  "topRow": 3,
+  "topRow": 4,
   "topRowBeforeCollapse": 3,
   "type": "SELECT_WIDGET",
   "version": 1,

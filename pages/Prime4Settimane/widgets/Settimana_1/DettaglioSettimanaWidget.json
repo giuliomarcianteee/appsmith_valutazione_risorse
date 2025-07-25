@@ -3,7 +3,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 155,
+  "bottomRow": 292,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "defaultModel": "{\"data\": \"{{DatiWidgetQuery.getFilteredTableData()}}\"\n}",
   "dynamicBindingPathList": [
