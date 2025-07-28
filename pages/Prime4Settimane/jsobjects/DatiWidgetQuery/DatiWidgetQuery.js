@@ -5,11 +5,14 @@ export default {
     const widget = appsmith.store[widgetName] || window[widgetName];
     return widget?.model?.isReady === true;
   },
-  // Resto del codice rimane uguale...
-  getValore(campo, defaultValue = '') {
-    const allData = DatiWidgetQuery.getAllData();
-    return allData[campo] !== undefined ? allData[campo] : defaultValue;
-  },
+	getValore(campo, defaultValue = '') {
+			const allData = DatiWidgetQuery.getAllData();
+			const valore = allData[campo];
+
+			// Restituisce il valore se esiste (anche se è 0, false, o stringa vuota)
+			// Solo se è undefined o null usa il defaultValue
+			return (valore !== undefined && valore !== null) ? valore : defaultValue;
+	},
 
   getValoreNumerico(campo, defaultValue = 0) {
     const valore = DatiWidgetQuery.getValore(campo, defaultValue);
