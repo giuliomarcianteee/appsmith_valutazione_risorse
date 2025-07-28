@@ -15,12 +15,18 @@
     },
     {
       "key": "defaultOptionValue"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -35,7 +41,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": false,
+  "isVisible": "{{ Ruolo.data.Ruolo !== \"Coordinatrice\" }}\n",
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
