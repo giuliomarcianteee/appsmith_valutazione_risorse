@@ -41,7 +41,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{ Ruolo.data[0].Ruolo\n !== \"Coordinatrice\" }}\n",
+  "isVisible": "{{ Ruolo.data[0].Ruolo\n == \"Admin\" }}\n",
   "key": "b6objgcs3z",
   "labelAlignment": "left",
   "labelPosition": "Top",
