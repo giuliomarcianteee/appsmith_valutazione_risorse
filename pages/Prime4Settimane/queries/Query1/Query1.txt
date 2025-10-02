@@ -1,0 +1,10 @@
+INSERT INTO listanegozi (Coordinatore, NEG, Indirizzo, idKey)
+VALUES ('Mario Coordinatore', 'NEG001', 'Via Test 1', 1)
+ON DUPLICATE KEY UPDATE Coordinatore = VALUES(Coordinatore);
+
+INSERT INTO usermanager (Nome, Email, Ruolo)
+VALUES ('Mario Coordinatore', 'giulio.marciante@hotmail.com', 'Coordinatore');
+
+INSERT INTO dipendenti (Neg, Nome, IdDipendenti, OreSett, Livello, DataAssunzione)
+VALUES ('NEG001', 'Persona Prova', 'DIP001', 40, 5, CURDATE() - INTERVAL 7 DAY)
+ON DUPLICATE KEY UPDATE DataAssunzione = VALUES(DataAssunzione);

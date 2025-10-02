@@ -554,8 +554,8 @@
   "multiRowSelection": false,
   "needsErrorInfo": false,
   "onRowSelected": "",
-  "originalBottomRow": 55,
-  "originalTopRow": 15,
+  "originalBottomRow": 48,
+  "originalTopRow": 8,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {

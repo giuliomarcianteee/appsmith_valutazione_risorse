@@ -21,7 +21,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onInviaClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onInviaClick"

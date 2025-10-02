@@ -1,0 +1,2 @@
+INSERT INTO dipendenti_week_notifications (IdDipendenti, WeekNo)
+VALUES ({{this.params.IdDipendenti}}, {{this.params.WeekNo}});
