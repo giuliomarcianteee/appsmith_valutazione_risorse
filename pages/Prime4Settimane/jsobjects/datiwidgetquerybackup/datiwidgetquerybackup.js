@@ -70,7 +70,7 @@ export default {
       "1ConoscenzaManualeFormativo", "1NoteConoscenzaManualeFormativo",
       "1ConoscenzaOrganizzazioneMerceologica", "1NoteConoscenzaOrganizzazioneMerceologica",
       "1AccoglienzaCliente", "1NoteAccoglienzaCliente",
-      "1PresentazioneProdottoeSconti", "1NotePresentazioneProdottoeSconti",
+      "1PresentazioneProdottoESconti", "1NotePresentazioneProdottoESconti",
       "1ConoscenzaBrandOreficeria", "1NoteConoscenzaBrandOreficeria",
       "1VenditaInSicurezza", "1NoteVenditaInSicurezza",
       "1FidelizzazioneCliente", "1NoteFidelizzazioneCliente",

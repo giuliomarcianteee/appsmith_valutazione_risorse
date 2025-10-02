@@ -47,8 +47,6 @@
     "_1NoteConoscenzaOrganizzazioneMerceologica",
     "_1AccoglienzaCliente",
     "_1NoteAccoglienzaCliente",
-    "_1PresentazioneProdottoeSconti",
-    "_1NotePresentazioneProdottoeSconti",
     "_1ConoscenzaBrandOreficeria",
     "_1NoteConoscenzaBrandOreficeria",
     "_1VenditaInSicurezza",
@@ -129,9 +127,11 @@
     "ModificatoDa1",
     "ModificatoDa2",
     "ModificatoDa3",
-    "ModificatoDa4"
+    "ModificatoDa4",
+    "_1PresentazioneProdottoESconti",
+    "_1NotePresentazioneProdottoESconti"
   ],
-  "columnUpdatedAt": 1753793887511,
+  "columnUpdatedAt": 1759394259098,
   "columnWidthMap": {
     "DataAssunzione": 173,
     "DataFineContratto": 193,
@@ -183,12 +183,6 @@
     },
     {
       "key": "primaryColumns._1NoteAccoglienzaCliente.computedValue"
-    },
-    {
-      "key": "primaryColumns._1PresentazioneProdottoeSconti.computedValue"
-    },
-    {
-      "key": "primaryColumns._1NotePresentazioneProdottoeSconti.computedValue"
     },
     {
       "key": "primaryColumns._1ConoscenzaBrandOreficeria.computedValue"
@@ -483,6 +477,12 @@
     },
     {
       "key": "primaryColumns.ModificatoDa4.computedValue"
+    },
+    {
+      "key": "primaryColumns._1PresentazioneProdottoESconti.computedValue"
+    },
+    {
+      "key": "primaryColumns._1NotePresentazioneProdottoESconti.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1548,20 +1548,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "_1NotePresentazioneProdottoeSconti": {
-      "alias": "1NotePresentazioneProdottoeSconti",
+    "_1NotePresentazioneProdottoESconti": {
+      "alias": "1NotePresentazioneProdottoESconti",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"1NotePresentazioneProdottoESconti\"])) : 1NotePresentazioneProdottoESconti })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "_1NotePresentazioneProdottoeSconti",
+      "id": "_1NotePresentazioneProdottoESconti",
       "index": 8,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -1570,10 +1570,10 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
-      "label": "1NotePresentazioneProdottoeSconti",
+      "isVisible": true,
+      "label": "1NotePresentazioneProdottoESconti",
       "notation": "standard",
-      "originalId": "1NotePresentazioneProdottoeSconti",
+      "originalId": "1NotePresentazioneProdottoESconti",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -1684,20 +1684,20 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "_1PresentazioneProdottoeSconti": {
-      "alias": "1PresentazioneProdottoeSconti",
+    "_1PresentazioneProdottoESconti": {
+      "alias": "1PresentazioneProdottoESconti",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"1PresentazioneProdottoESconti\"])) : 1PresentazioneProdottoESconti })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "_1PresentazioneProdottoeSconti",
+      "id": "_1PresentazioneProdottoESconti",
       "index": 7,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -1706,10 +1706,10 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
-      "label": "1PresentazioneProdottoeSconti",
+      "isVisible": true,
+      "label": "1PresentazioneProdottoESconti",
       "notation": "standard",
-      "originalId": "1PresentazioneProdottoeSconti",
+      "originalId": "1PresentazioneProdottoESconti",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
