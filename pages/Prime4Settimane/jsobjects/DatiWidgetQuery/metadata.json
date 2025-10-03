@@ -6,6 +6,11 @@
     "pageId": "Prime4Settimane",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": []
+    "variables": [
+      {
+        "name": "_logNS",
+        "value": "\"[DatiWidgetQuery]\""
+      }
+    ]
   }
 }
