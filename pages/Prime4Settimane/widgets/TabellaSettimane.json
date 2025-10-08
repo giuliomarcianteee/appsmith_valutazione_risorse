@@ -487,9 +487,6 @@
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "primaryColumns.customColumn1.onClick"
-    },
-    {
       "key": "primaryColumns.customColumn3.onClick"
     },
     {
@@ -512,6 +509,9 @@
     },
     {
       "key": "primaryColumns.customColumn4.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
