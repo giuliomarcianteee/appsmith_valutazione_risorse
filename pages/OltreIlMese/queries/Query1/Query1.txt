@@ -1,7 +1,0 @@
-SELECT *
-FROM dipendenti
-WHERE NEG IN (
-  SELECT NEG
-  FROM listanegozi
-  WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
-);
