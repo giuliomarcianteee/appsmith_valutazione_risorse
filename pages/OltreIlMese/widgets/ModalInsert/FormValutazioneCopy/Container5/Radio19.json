@@ -1,0 +1,60 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ undefined }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "wo2yamndqo",
+  "label": "Spiegazione articolo",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 53,
+  "mobileLeftColumn": 5,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 47,
+  "needsErrorInfo": false,
+  "options": [
+    {
+      "label": "Sì",
+      "value": "1"
+    },
+    {
+      "label": "No",
+      "value": "0"
+    }
+  ],
+  "originalBottomRow": 22,
+  "originalTopRow": 16,
+  "parentColumnSpace": 4.23828125,
+  "parentId": "wll0t4weys",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 22,
+  "topRow": 16,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "6l7w663vf6",
+  "widgetName": "Radio19"
+}
