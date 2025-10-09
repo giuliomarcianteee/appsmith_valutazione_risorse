@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 54,
+  "bottomRow": 144,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,9 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -23,31 +20,33 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "129xbka9t7",
-  "leftColumn": 5,
+  "key": "l0ii8ec6en",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 58,
-  "mobileLeftColumn": 8,
-  "mobileRightColumn": 24,
-  "mobileTopRow": 54,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "originalBottomRow": 142,
+  "originalTopRow": 138,
   "overflow": "NONE",
-  "parentColumnSpace": 16.6875,
-  "parentId": "0",
+  "parentColumnSpace": 13.24609375,
+  "parentId": "bdiltvgmxi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
+  "rightColumn": 24,
   "shouldTruncate": false,
-  "text": "{{ appsmith.store.IdMesiSelezionato}}\n",
+  "text": "Conoscenze strategiche & promozioni",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 50,
+  "topRow": 140,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "jxopvh8o17",
-  "widgetName": "StoredValue"
+  "widgetId": "kixtpdbnzu",
+  "widgetName": "TextPromozioni"
 }

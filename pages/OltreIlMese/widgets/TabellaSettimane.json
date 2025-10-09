@@ -2869,7 +2869,7 @@
       "labelColor": "#FFFFFF",
       "menuItemsSource": "STATIC",
       "notation": "standard",
-      "onClick": "{{storeValue(\"IdMesiSelezionato\", currentRow.IdMesi);\nshowModal(ModalValutazione.name);}}",
+      "onClick": "{{storeValue(\"IdMesiSelezionato\", currentRow.IdMesi);\nNomeRisorsa.run();}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
