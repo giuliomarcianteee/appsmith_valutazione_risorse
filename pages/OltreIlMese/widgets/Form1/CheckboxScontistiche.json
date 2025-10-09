@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 32,
+  "defaultSelectedValues": "[\n]",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "5l81ohfi6o",
+  "labelAlignment": "left",
+  "labelPosition": "Auto",
+  "labelText": "Illustrare posizionamento negozio e scontistiche",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "options": [
+    {
+      "label": "Sì",
+      "value": "1"
+    },
+    {
+      "label": "No",
+      "value": "0"
+    }
+  ],
+  "originalBottomRow": 32,
+  "originalTopRow": 25,
+  "parentColumnSpace": 13.24609375,
+  "parentId": "bdiltvgmxi",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 24,
+  "topRow": 25,
+  "type": "CHECKBOX_GROUP_WIDGET",
+  "version": 2,
+  "widgetId": "pz4pq5jn0c",
+  "widgetName": "CheckboxScontistiche"
+}

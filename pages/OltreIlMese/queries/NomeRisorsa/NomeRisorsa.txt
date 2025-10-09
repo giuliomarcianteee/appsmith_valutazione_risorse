@@ -1,0 +1,2 @@
+SELECT Nome from dipendenti
+WHERE IdDipendenti = {{appsmith.store.IdMesiSelezionato}}
