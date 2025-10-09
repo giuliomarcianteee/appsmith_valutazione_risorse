@@ -378,7 +378,7 @@
       "labelColor": "#FFFFFF",
       "menuItemsSource": "STATIC",
       "notation": "standard",
-      "onClick": "{{storeValue(\"IdMesiSelezionato\", currentRow.IdDipendenti);\nNomeRisorsa.run();\nshowModal(ModalInsert.name);}}",
+      "onClick": "{{GestioneForm.openModal();}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
