@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 168,
+  "bottomRow": 208,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "originalBottomRow": 166,
-  "originalTopRow": 162,
+  "originalBottomRow": 204,
+  "originalTopRow": 200,
   "overflow": "NONE",
   "parentColumnSpace": 13.24609375,
   "parentId": "bdiltvgmxi",
@@ -43,7 +43,7 @@
   "text": "Gestione obiezioni e dubbi",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 164,
+  "topRow": 204,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

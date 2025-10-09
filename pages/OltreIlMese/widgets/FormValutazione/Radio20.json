@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignment": "left",
   "animateLoading": true,
-  "bottomRow": 136,
+  "bottomRow": 168,
   "boxShadow": "none",
   "defaultOptionValue": "{{ undefined }}",
   "dynamicBindingPathList": [
@@ -45,15 +45,15 @@
       "value": "0"
     }
   ],
-  "originalBottomRow": 134,
-  "originalTopRow": 130,
+  "originalBottomRow": 166,
+  "originalTopRow": 162,
   "parentColumnSpace": 13.24609375,
   "parentId": "bdiltvgmxi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 22,
   "shouldScrollContents": true,
-  "topRow": 132,
+  "topRow": 162,
   "type": "RADIO_GROUP_WIDGET",
   "version": 1,
   "widgetId": "z1iqriaxro",

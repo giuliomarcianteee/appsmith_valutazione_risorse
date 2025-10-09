@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignment": "left",
   "animateLoading": true,
-  "bottomRow": 212,
+  "bottomRow": 264,
   "boxShadow": "none",
   "defaultOptionValue": "{{ undefined }}",
   "dynamicBindingPathList": [
@@ -22,7 +22,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "wo2yamndqo",
-  "label": "Comprensioni / obiezioni",
+  "label": "Tecniche di chiusura vendita",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelTextSize": "0.875rem",
@@ -45,16 +45,16 @@
       "value": "0"
     }
   ],
-  "originalBottomRow": 210,
-  "originalTopRow": 204,
+  "originalBottomRow": 264,
+  "originalTopRow": 258,
   "parentColumnSpace": 13.24609375,
   "parentId": "bdiltvgmxi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 22,
-  "topRow": 206,
+  "topRow": 258,
   "type": "RADIO_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "jdzbfw20ab",
-  "widgetName": "Radio25Copy3"
+  "widgetId": "lv9481bh1r",
+  "widgetName": "Radio32"
 }

@@ -46,7 +46,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "shouldAllowAutofill": false,
   "shouldScrollContents": true,
   "showStepArrows": false,

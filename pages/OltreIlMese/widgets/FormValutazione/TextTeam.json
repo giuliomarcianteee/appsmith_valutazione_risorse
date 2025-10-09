@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 78,
+  "bottomRow": 272,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "originalBottomRow": 74,
-  "originalTopRow": 70,
+  "originalBottomRow": 235,
+  "originalTopRow": 231,
   "overflow": "NONE",
   "parentColumnSpace": 13.24609375,
   "parentId": "bdiltvgmxi",
@@ -40,13 +40,13 @@
   "responsiveBehavior": "fill",
   "rightColumn": 24,
   "shouldTruncate": false,
-  "text": "Conoscenza prodotti GdV",
+  "text": "Lavoro in team",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 74,
+  "topRow": 268,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "t74781g37f",
-  "widgetName": "TextProdottiGdv"
+  "widgetId": "7x38fv9p6i",
+  "widgetName": "TextTeam"
 }

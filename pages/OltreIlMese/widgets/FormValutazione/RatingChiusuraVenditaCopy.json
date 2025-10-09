@@ -1,8 +1,8 @@
 {
   "activeColor": "#fde047",
   "animateLoading": true,
-  "bottomRow": 78,
-  "defaultRate": "{{ Number(Radio9.selectedOptionValue || 0) +\n  Number(Radio10.selectedOptionValue || 0) +\n  Number(Radio11.selectedOptionValue || 0) +\n  Number(Radio12.selectedOptionValue || 0)\n}}\n",
+  "bottomRow": 272,
+  "defaultRate": "{{ Number(Radio29.selectedOptionValue || 0) +\n  Number(Radio30.selectedOptionValue || 0) +\n  Number(Radio31.selectedOptionValue || 0) +\n  Number(Radio32.selectedOptionValue || 0)\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "defaultRate"
@@ -19,7 +19,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "5l267tgsg7",
-  "leftColumn": 44,
+  "leftColumn": 43,
   "maxCount": "4",
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -34,11 +34,11 @@
   "parentId": "bdiltvgmxi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 64,
+  "rightColumn": 63,
   "size": "LARGE",
   "tooltips": "",
-  "topRow": 74,
+  "topRow": 268,
   "type": "RATE_WIDGET",
-  "widgetId": "3l4gdwt9b5",
-  "widgetName": "RatingProdottiGdV"
+  "widgetId": "kippebgckn",
+  "widgetName": "RatingChiusuraVenditaCopy"
 }

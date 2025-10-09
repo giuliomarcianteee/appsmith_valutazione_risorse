@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 144,
+  "bottomRow": 176,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "originalBottomRow": 142,
-  "originalTopRow": 138,
+  "originalBottomRow": 176,
+  "originalTopRow": 172,
   "overflow": "NONE",
   "parentColumnSpace": 13.24609375,
   "parentId": "bdiltvgmxi",
@@ -43,7 +43,7 @@
   "text": "Conoscenze strategiche & promozioni",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 140,
+  "topRow": 172,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

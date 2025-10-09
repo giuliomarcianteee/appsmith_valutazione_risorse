@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 192,
+  "bottomRow": 240,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "originalBottomRow": 190,
-  "originalTopRow": 186,
+  "originalBottomRow": 235,
+  "originalTopRow": 231,
   "overflow": "NONE",
   "parentColumnSpace": 13.24609375,
   "parentId": "bdiltvgmxi",
@@ -40,10 +40,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 24,
   "shouldTruncate": false,
-  "text": "Gestione obiezioni e dubbi",
+  "text": "Chiusura vendita",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 188,
+  "topRow": 236,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
