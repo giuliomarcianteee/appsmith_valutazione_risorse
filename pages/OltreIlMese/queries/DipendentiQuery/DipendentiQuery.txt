@@ -1,12 +1,12 @@
 SELECT 
-    vr.*,  -- Tutti i dati della tabella valutazionerisorse_settimane
-    d.*,   -- Tutti i dati della tabella dipendenti
-    ln.Coordinatore  -- Solo la colonna Coordinatore dalla tabella listanegozi
-FROM valutazionerisorse_mesi AS vr
-LEFT JOIN dipendenti AS d
-ON vr.IdMesi = d.IdDipendenti
-LEFT JOIN listanegozi AS ln
-ON d.Neg= ln.NEG
-WHERE TIMESTAMPDIFF(day,DATE(d.DataAssunzione), CURDATE()) < 180
-AND ln.Coordinatore = '{{SelectCoordinatore.selectedOptionLabel}}'
-ORDER BY DataFineContratto ASC;
+  *,
+  CASE 
+    WHEN DataFineContratto = '2099-12-31' THEN 'indeterminato'
+    ELSE TO_CHAR(DataFineContratto, 'DD/MM/YYYY')
+  END AS DataFineContrattoFormattata
+FROM dipendenti
+WHERE NEG IN (
+  SELECT NEG
+  FROM listanegozi
+  WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
+);

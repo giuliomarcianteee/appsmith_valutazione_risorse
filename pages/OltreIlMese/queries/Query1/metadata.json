@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_b9167333-0ae5-4d17-b724-bc56cd4a3ec2",
-  "id": "OltreIlMese_DipendentiQuery",
+  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_e3dc07b4-b49a-405c-8e64-178158c94157",
+  "id": "OltreIlMese_Query1",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  *,\n  CASE \n    WHEN DataFineContratto = '2099-12-31' THEN 'indeterminato'\n    ELSE TO_CHAR(DataFineContratto, 'DD/MM/YYYY')\n  END AS DataFineContrattoFormattata\nFROM dipendenti\nWHERE NEG IN (\n  SELECT NEG\n  FROM listanegozi\n  WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'\n);\n",
+      "body": "SELECT *\nFROM dipendenti\nWHERE NEG IN (\n  SELECT NEG\n  FROM listanegozi\n  WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "DipendentiQuery",
+    "name": "Query1",
     "pageId": "OltreIlMese",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

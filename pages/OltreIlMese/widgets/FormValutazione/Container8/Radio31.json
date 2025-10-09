@@ -45,13 +45,13 @@
       "value": "0"
     }
   ],
-  "originalBottomRow": 22,
+  "originalBottomRow": 20,
   "originalTopRow": 16,
   "parentColumnSpace": 4.23828125,
   "parentId": "4usoaxwxeq",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 21.677419354838708,
+  "rightColumn": 22,
   "topRow": 16,
   "type": "RADIO_GROUP_WIDGET",
   "version": 1,
