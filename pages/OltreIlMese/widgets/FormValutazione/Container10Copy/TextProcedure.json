@@ -34,19 +34,19 @@
   "originalTopRow": 291,
   "overflow": "NONE",
   "parentColumnSpace": 4.23828125,
-  "parentId": "wzqs96a73y",
+  "parentId": "hkzgsr643x",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 23.741935483870968,
   "shouldTruncate": false,
-  "text": "Organizzazione attività nel turno",
+  "text": "Conoscenza procedure",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "t32r0o7f0s",
-  "widgetName": "TextOrganizzazione"
+  "widgetId": "vp7wqvemgo",
+  "widgetName": "TextProcedure"
 }

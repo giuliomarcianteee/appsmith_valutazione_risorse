@@ -22,7 +22,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "wo2yamndqo",
-  "label": "Collaborazione",
+  "label": "Comprensione",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelTextSize": "0.875rem",
@@ -45,16 +45,16 @@
       "value": "0"
     }
   ],
-  "originalBottomRow": 22,
-  "originalTopRow": 16,
+  "originalBottomRow": 16,
+  "originalTopRow": 10,
   "parentColumnSpace": 4.23828125,
-  "parentId": "wzqs96a73y",
+  "parentId": "hkzgsr643x",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 21.677419354838708,
-  "topRow": 12,
+  "rightColumn": 22,
+  "topRow": 10,
   "type": "RADIO_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "ojwg6gofzj",
-  "widgetName": "Radio36Copy2"
+  "widgetId": "as3jwz1vxo",
+  "widgetName": "Radio42"
 }

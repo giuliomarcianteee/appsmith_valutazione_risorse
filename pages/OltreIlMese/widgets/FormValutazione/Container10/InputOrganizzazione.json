@@ -23,7 +23,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "jg35etdnbe",
-  "label": "Note su Chiusura vendita",
+  "label": "Note su Organizzazione attività nel turno",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
@@ -54,5 +54,5 @@
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "w0ruw6xxry",
-  "widgetName": "InputTeamCopy"
+  "widgetName": "InputOrganizzazione"
 }
