@@ -2,7 +2,7 @@
   "activeColor": "#fde047",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "{{ Number(Radio21.selectedOptionValue || 0) +\n  Number(Radio22.selectedOptionValue || 0) +\n  Number(Radio23.selectedOptionValue || 0) +\n  Number(Radio24.selectedOptionValue || 0)\n}}\n",
+  "defaultRate": "{{ Number(Radio21Copy.selectedOptionValue || 0) +\n  Number(Radio22Copy.selectedOptionValue || 0) +\n  Number(Radio23Copy.selectedOptionValue || 0) +\n  Number(Radio24Copy.selectedOptionValue || 0)\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "defaultRate"

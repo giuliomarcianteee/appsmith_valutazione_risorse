@@ -4,7 +4,7 @@
   "animateLoading": true,
   "bottomRow": 23,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ undefined }}",
+  "defaultOptionValue": "{{ValutazioneSelect.data[0].GestioneObiezioniEDubbiCircoscrivereDubbiObiezioni.toString()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

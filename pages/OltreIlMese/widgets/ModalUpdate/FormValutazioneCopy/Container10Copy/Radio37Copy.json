@@ -4,7 +4,7 @@
   "animateLoading": true,
   "bottomRow": 10,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ undefined }}",
+  "defaultOptionValue": "{{ValutazioneSelect.data[0].OrganizzazioneAttivitaNelTurnoPuliziaNegozio.toString()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

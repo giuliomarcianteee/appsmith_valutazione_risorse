@@ -4,7 +4,7 @@
   "animateLoading": true,
   "bottomRow": 22,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ undefined }}",
+  "defaultOptionValue": "{{ValutazioneSelect.data[0].LavoroInTeamFormazioneStudiareProcedure.toString()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
