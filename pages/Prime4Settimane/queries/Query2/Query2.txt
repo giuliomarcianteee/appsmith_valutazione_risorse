@@ -1,0 +1,1 @@
+SELECT * FROM usermanager LIMIT 10;
