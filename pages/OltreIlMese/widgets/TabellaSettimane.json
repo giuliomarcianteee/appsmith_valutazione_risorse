@@ -427,7 +427,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 53,
+  "rightColumn": 56,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
   "tableData": "{{DipendentiQuery.data}}",

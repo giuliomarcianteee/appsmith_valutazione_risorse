@@ -14,11 +14,6 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "isVisible"
-    }
-  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -27,16 +22,16 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": "",
-  "key": "xq3p5sqra0",
-  "leftColumn": 47,
+  "isVisible": true,
+  "key": "j8g4jjlxzl",
+  "leftColumn": 40,
   "minWidth": 120,
-  "mobileBottomRow": 58,
-  "mobileLeftColumn": 2,
-  "mobileRightColumn": 18,
-  "mobileTopRow": 54,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 40,
+  "mobileRightColumn": 56,
+  "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('OltreIlMese', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{navigateTo('Prime4Settimane', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -45,11 +40,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 63,
-  "text": "Oltre il mese",
+  "rightColumn": 56,
+  "text": "Prime 4 settimane",
   "topRow": 3,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "ubjuvpdb2f",
-  "widgetName": "Button2"
+  "widgetId": "3hffn9me9z",
+  "widgetName": "Button4"
 }
