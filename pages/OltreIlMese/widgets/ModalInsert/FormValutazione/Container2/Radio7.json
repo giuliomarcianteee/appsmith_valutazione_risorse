@@ -19,7 +19,7 @@
   "isDisabled": false,
   "isInline": true,
   "isLoading": false,
-  "isRequired": false,
+  "isRequired": true,
   "isVisible": true,
   "key": "wo2yamndqo",
   "label": "Domande finalizzate all'acquisto",
