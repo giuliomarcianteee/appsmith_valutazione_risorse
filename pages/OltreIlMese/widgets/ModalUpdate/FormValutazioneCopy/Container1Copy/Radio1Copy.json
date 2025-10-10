@@ -4,7 +4,7 @@
   "animateLoading": true,
   "bottomRow": 10,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ undefined }}",
+  "defaultOptionValue": "{{ValutazioneSelect.data[0].AccoglienzaSaluto.toString()}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,6 +14,11 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "options"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "isDisabled": false,
@@ -35,16 +40,7 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 47,
   "needsErrorInfo": false,
-  "options": [
-    {
-      "label": "Sì",
-      "value": "1"
-    },
-    {
-      "label": "No",
-      "value": "0"
-    }
-  ],
+  "options": "[\n  {\n    \"label\": \"Sì\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"No\",\n    \"value\": \"0\"\n  }\n]",
   "originalBottomRow": 10,
   "originalTopRow": 4,
   "parentColumnSpace": 4.23828125,

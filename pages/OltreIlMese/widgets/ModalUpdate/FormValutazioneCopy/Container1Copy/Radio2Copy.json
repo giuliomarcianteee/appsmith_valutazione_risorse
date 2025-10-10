@@ -4,7 +4,7 @@
   "animateLoading": true,
   "bottomRow": 16,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ undefined }}",
+  "defaultOptionValue": "{{ValutazioneSelect.data[0].AccoglienzaProporreAssistenza.toString()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

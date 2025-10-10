@@ -1,0 +1,2 @@
+SELECT * FROM valutazionerisorse_mesi
+where IdMesi = {{TableValutazioni.triggeredRow.IdMesi}}
