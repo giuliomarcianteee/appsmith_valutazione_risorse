@@ -9,4 +9,5 @@ WHERE NEG IN (
   SELECT NEG
   FROM listanegozi
   WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
-);
+)
+ORDER BY DataFineContratto ASC;
