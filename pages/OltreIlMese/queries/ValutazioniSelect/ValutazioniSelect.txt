@@ -1,0 +1,2 @@
+SELECT * FROM valutazionerisorse_mesi
+WHERE CodiceDipendente = {{appsmith.store.IdMesiSelezionato}}

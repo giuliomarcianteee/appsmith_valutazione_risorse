@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 347,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "zno6xzms6h",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 37,
+  "mobileLeftColumn": 48,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 33,
+  "needsErrorInfo": false,
+  "onClick": "{{ValutazioneInsert.run().then(() => {\n  closeModal(ModalUpdate.name);\n  showAlert('Valutazione salvata con successo', 'success');\n}).catch(() => {\n  showAlert('Errore di salvataggio', 'error');\n});}}",
+  "originalBottomRow": 347,
+  "originalTopRow": 343,
+  "parentColumnSpace": 14.7333984375,
+  "parentId": "hifgjzzr2g",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Salva Valutazione",
+  "topRow": 343,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "45qundc2cr",
+  "widgetName": "ButtonInsertCopy"
+}

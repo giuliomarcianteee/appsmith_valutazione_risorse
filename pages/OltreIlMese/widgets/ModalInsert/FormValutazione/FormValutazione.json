@@ -4,12 +4,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 348,
+  "bottomRow": 321,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 3480,
+      "bottomRow": 3470,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -85,5 +85,5 @@
   "topRow": 0,
   "type": "FORM_WIDGET",
   "widgetId": "m7hyzxxo1o",
-  "widgetName": "FormValutazioneCopy"
+  "widgetName": "FormValutazione"
 }

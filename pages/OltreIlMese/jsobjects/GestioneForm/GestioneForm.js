@@ -1,5 +1,5 @@
 export default {
-  openModal() {
+  async openModal() {
     const nuovoId = TabellaSettimane.triggeredRow.IdDipendenti;
     const precedenteId = appsmith.store.IdMesiSelezionato;
 
@@ -7,11 +7,17 @@ export default {
     storeValue("IdMesiSelezionato", nuovoId);
 
     if (nuovoId !== precedenteId) {
-      NomeRisorsa.run();
+      await NomeRisorsa.run();
       ResetForm.resetForm();
     }
 
-    showModal("ModalInsert");
+    // Esegui ValutazioniSelect e controlla se ha almeno una riga
+    await ValutazioniSelect.run();
+
+    if (ValutazioniSelect.data && ValutazioniSelect.data.length > 0) {
+      showModal("ModalChoose");
+    } else {
+      showModal("ModalInsert");
+    }
   }
 }
-
