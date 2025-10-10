@@ -10,4 +10,5 @@ WHERE NEG IN (
   FROM listanegozi
   WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
 )
+AND CURRENT_DATE - DataAssunzione >= 28
 ORDER BY DataFineContratto ASC;

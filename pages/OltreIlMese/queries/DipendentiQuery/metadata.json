@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  *,\n  CASE \n    WHEN DataFineContratto = '2099-12-31' THEN 'indeterminato'\n    ELSE TO_CHAR(DataFineContratto, 'DD/MM/YYYY')\n  END AS DataFineContrattoFormattata\nFROM dipendenti\nWHERE NEG IN (\n  SELECT NEG\n  FROM listanegozi\n  WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'\n)\nORDER BY DataFineContratto ASC;\n",
+      "body": "SELECT \n  *,\n  CASE \n    WHEN DataFineContratto = '2099-12-31' THEN 'indeterminato'\n    ELSE TO_CHAR(DataFineContratto, 'DD/MM/YYYY')\n  END AS DataFineContrattoFormattata\nFROM dipendenti\nWHERE NEG IN (\n  SELECT NEG\n  FROM listanegozi\n  WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'\n)\nAND CURRENT_DATE - DataAssunzione >= 28\nORDER BY DataFineContratto ASC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -15,7 +15,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -28,6 +32,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
+  "onClick": "{{ResetForm.resetForm();\ncloseModal(ModalChoose.name);\nshowModal(ModalInsert.name);}}",
   "originalBottomRow": 22,
   "originalTopRow": 18,
   "parentId": "dxo1v0m6hq",
