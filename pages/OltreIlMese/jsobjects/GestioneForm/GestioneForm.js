@@ -1,12 +1,17 @@
 export default {
   openModal() {
-    if (currentRow.IdDipendenti === StoredValue.text) {
-      storeValue("IdMesiSelezionato", currentRow.IdDipendenti);
+    const nuovoId = TabellaSettimane.triggeredRow.IdDipendenti;
+    const precedenteId = appsmith.store.IdMesiSelezionato;
+
+    // Aggiorna sempre lo store
+    storeValue("IdMesiSelezionato", nuovoId);
+
+    if (nuovoId !== precedenteId) {
       NomeRisorsa.run();
-      showModal("ModalInsert");
-    } else {
       ResetForm.resetForm();
-      showModal("ModalInsert");
     }
+
+    showModal("ModalInsert");
   }
 }
+

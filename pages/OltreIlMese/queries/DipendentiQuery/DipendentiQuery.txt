@@ -1,4 +1,9 @@
-SELECT *
+SELECT 
+  *,
+  CASE 
+    WHEN DataFineContratto = '2099-12-31' THEN 'indeterminato'
+    ELSE TO_CHAR(DataFineContratto, 'DD/MM/YYYY')
+  END AS DataFineContrattoFormattata
 FROM dipendenti
 WHERE NEG IN (
   SELECT NEG
