@@ -29,7 +29,7 @@
     ],
     "name": "ValutazioniSelect",
     "pageId": "OltreIlMese",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
