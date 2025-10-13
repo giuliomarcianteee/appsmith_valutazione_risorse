@@ -1,0 +1,21 @@
+SELECT l.NEG
+FROM listanegozi l
+WHERE l.NEG = '{{appsmith.user.name}}'
+AND l.NEG NOT IN ('SEDE', 'SMART WORKING')
+
+UNION
+
+SELECT l.NEG
+FROM listanegozi l
+WHERE l.Coordinatore = '{{appsmith.user.name}}'
+AND l.NEG NOT IN ('SEDE', 'SMART WORKING')
+
+UNION
+
+SELECT l.NEG
+FROM listanegozi l
+JOIN usermanager u ON u.Email = '{{appsmith.user.email}}'
+WHERE u.ruolo IN ('Admin', 'Visual')
+AND l.NEG NOT IN ('SEDE', 'SMART WORKING')
+
+ORDER BY Neg;

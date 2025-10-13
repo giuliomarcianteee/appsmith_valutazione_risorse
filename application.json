@@ -36,6 +36,10 @@
     {
       "id": "OltreIlMese",
       "isDefault": false
+    },
+    {
+      "id": "ValutazioneNegozio",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
