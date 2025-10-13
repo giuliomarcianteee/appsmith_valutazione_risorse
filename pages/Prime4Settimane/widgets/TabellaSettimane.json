@@ -141,7 +141,7 @@
     "customColumn1": 66,
     "customColumn2": 78,
     "customColumn3": 66,
-    "customColumn4": 69,
+    "customColumn4": 74.3125,
     "customColumn5": 371
   },
   "customIsLoading": false,
@@ -3721,7 +3721,7 @@
       "width": 150
     },
     "customColumn1": {
-      "alias": "1° Settimana",
+      "alias": "1°",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -3749,7 +3749,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "1° Settimana",
+      "label": "1°",
       "labelColor": "#FFFFFF",
       "menuItemsSource": "STATIC",
       "notation": "standard",
@@ -3763,7 +3763,7 @@
       "width": 150
     },
     "customColumn2": {
-      "alias": "2° Settimana",
+      "alias": "2°",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -3789,7 +3789,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "2° Settimana",
+      "label": "2°",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{DatiWidgetQuery.modalAggiornamento(2);}}",
@@ -3802,7 +3802,7 @@
       "width": 150
     },
     "customColumn3": {
-      "alias": "3° Settimana",
+      "alias": "3°",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -3828,7 +3828,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "3° Settimana",
+      "label": "3°",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{DatiWidgetQuery.modalAggiornamento(3);}}",
@@ -3841,7 +3841,7 @@
       "width": 150
     },
     "customColumn4": {
-      "alias": "4° Settimana",
+      "alias": "4°",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -3868,7 +3868,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "4° Settimana",
+      "label": "4°",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{DatiWidgetQuery.modalAggiornamento(4);}}",
