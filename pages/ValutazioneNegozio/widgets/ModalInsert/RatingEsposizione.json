@@ -1,7 +1,7 @@
 {
   "activeColor": "#fde047",
   "animateLoading": true,
-  "bottomRow": 108,
+  "bottomRow": 126,
   "defaultRate": "",
   "dynamicBindingPathList": [],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -30,8 +30,8 @@
   "rightColumn": 27,
   "size": "LARGE",
   "tooltips": "",
-  "topRow": 104,
+  "topRow": 122,
   "type": "RATE_WIDGET",
-  "widgetId": "m73a908pa5",
-  "widgetName": "RatingPulizia"
+  "widgetId": "lghcqylnhh",
+  "widgetName": "RatingEsposizione"
 }

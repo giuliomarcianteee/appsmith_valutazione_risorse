@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 139,
+  "bottomRow": 103,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -47,9 +47,9 @@
   "rightColumn": 63,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 127,
+  "topRow": 91,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "unxorg8tm5",
-  "widgetName": "InputVenditaMerceologicaCopyCopyCopy"
+  "widgetId": "0gx4nnsrih",
+  "widgetName": "InputAnalisiNegozio"
 }

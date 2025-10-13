@@ -1,7 +1,7 @@
 {
   "activeColor": "#fde047",
   "animateLoading": true,
-  "bottomRow": 126,
+  "bottomRow": 108,
   "defaultRate": "",
   "dynamicBindingPathList": [],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -30,8 +30,8 @@
   "rightColumn": 27,
   "size": "LARGE",
   "tooltips": "",
-  "topRow": 122,
+  "topRow": 104,
   "type": "RATE_WIDGET",
-  "widgetId": "lghcqylnhh",
-  "widgetName": "RatingVenditaMerceologicaCopyCopy"
+  "widgetId": "m73a908pa5",
+  "widgetName": "RatingPuliziaNegozio"
 }

@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 103,
+  "bottomRow": 161,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -47,9 +47,9 @@
   "rightColumn": 63,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 91,
+  "topRow": 149,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "0gx4nnsrih",
-  "widgetName": "InputVenditaMerceologicaCopy"
+  "widgetId": "kyqlu9b3u8",
+  "widgetName": "InputAltro"
 }

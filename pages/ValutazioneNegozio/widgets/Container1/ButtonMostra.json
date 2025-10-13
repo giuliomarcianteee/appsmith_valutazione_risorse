@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 22,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -12,34 +12,21 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "isDisabled"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "isDisabled"
-    }
-  ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicTriggerPathList": [],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{!DatePassaggio.selectedDate||!SelectNegozio.selectedOptionValue}}",
+  "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "vsrq68kcbl",
+  "key": "bxqpjxccjj",
   "leftColumn": 0,
   "minWidth": 120,
-  "mobileBottomRow": 11,
+  "mobileBottomRow": 23,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 16,
-  "mobileTopRow": 7,
+  "mobileTopRow": 19,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(ModalInsert.name);}}",
   "parentColumnSpace": 16.375,
   "parentId": "xxdf7pqnoe",
   "parentRowSpace": 10,
@@ -49,10 +36,10 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 13,
-  "text": "Compila Valutazione",
-  "topRow": 14,
+  "text": "Mostra Relazioni Negozio",
+  "topRow": 18,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "yoqrqjl178",
-  "widgetName": "ButtonCompila"
+  "widgetId": "4qi8t5c50k",
+  "widgetName": "ButtonMostra"
 }
