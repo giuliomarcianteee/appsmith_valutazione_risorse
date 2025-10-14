@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_2386ae9d-fb00-4b6e-977c-2c81cfee6a89",
+  "id": "ValutazioneNegozio_ResetPassaggiNegozi",
+  "unpublishedCollection": {
+    "name": "ResetPassaggiNegozi",
+    "pageId": "ValutazioneNegozio",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

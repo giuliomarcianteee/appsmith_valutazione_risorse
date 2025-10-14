@@ -1,0 +1,5 @@
+SELECT *
+FROM passaggi_negozi
+WHERE Negozio = '{{SelectNegozio.selectedOptionValue}}'
+  AND DataPassaggio = '{{moment(DatePassaggio.selectedDate).format("YYYY-MM-DD")}}'
+order by DataCompilazione limit 1

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 22,
+  "bottomRow": 26,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -14,7 +14,6 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -24,15 +23,15 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "bxqpjxccjj",
+  "key": "n8777ozjlu",
   "leftColumn": 0,
   "minWidth": 120,
-  "mobileBottomRow": 23,
+  "mobileBottomRow": 26,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 16,
-  "mobileTopRow": 19,
+  "mobileTopRow": 22,
   "needsErrorInfo": false,
-  "onClick": "{{SelectPassaggi1Negozio.run().then(() => {\n  showModal(Modal1Negozio.name);\n});}}",
+  "onClick": "{{SelectRelazioneChoose.run().then(() => {\n  showModal(ModalChoose.name);\n});\ncloseModal(ModalChoose.name);}}",
   "parentColumnSpace": 16.375,
   "parentId": "xxdf7pqnoe",
   "parentRowSpace": 10,
@@ -42,10 +41,10 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 13,
-  "text": "Mostra Relazioni Negozio",
-  "topRow": 18,
+  "text": "Mostra Tutte le relazioni",
+  "topRow": 22,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "4qi8t5c50k",
-  "widgetName": "ButtonMostra"
+  "widgetId": "jn2tzsor0x",
+  "widgetName": "Button1"
 }

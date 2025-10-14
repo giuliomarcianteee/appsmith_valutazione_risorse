@@ -1,0 +1,2 @@
+SELECT * FROM passaggi_negozi
+where IdPassaggiNegozi = {{Table1Negozio.triggeredRow.IdPassaggiNegozi}}

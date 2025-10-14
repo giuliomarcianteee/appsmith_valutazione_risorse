@@ -352,6 +352,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -2587,7 +2590,7 @@
       "label": "Mostra o Modifica Valutazione",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{closeModal(ModalSelect.name);\nshowModal(ModalUpdate.name);}}",
+      "onClick": "{{ValutazioneSelect.run();closeModal(ModalSelect.name);\nshowModal(ModalUpdate.name);\n}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",

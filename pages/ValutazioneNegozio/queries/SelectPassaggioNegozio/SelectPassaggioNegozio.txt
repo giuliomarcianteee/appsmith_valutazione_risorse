@@ -1,2 +1,0 @@
-SELECT * FROM passaggi_negozi
-WHERE Negozio = {{SelectNegozio.selectedOptionValue}}

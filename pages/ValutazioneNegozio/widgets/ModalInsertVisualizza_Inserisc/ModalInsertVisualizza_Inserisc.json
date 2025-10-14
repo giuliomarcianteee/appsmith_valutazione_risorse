@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 277,
+  "bottomRow": 410,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -37,7 +37,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "1u4177a037",
+      "parentId": "ux7an7kpxo",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "g73w1tgsv6",
-      "widgetName": "Canvas2"
+      "widgetId": "sv7f3d0frt",
+      "widgetName": "Canvas2CopyCopyCopy"
     }
   ],
   "detachFromLayout": true,
@@ -76,10 +76,10 @@
   "renderMode": "CANVAS",
   "rightColumn": 41,
   "shouldScrollContents": true,
-  "topRow": 37,
+  "topRow": 170,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "1u4177a037",
-  "widgetName": "ModalInsert",
+  "widgetId": "ux7an7kpxo",
+  "widgetName": "ModalInsertVisualizza_Inserisc",
   "width": 904
 }

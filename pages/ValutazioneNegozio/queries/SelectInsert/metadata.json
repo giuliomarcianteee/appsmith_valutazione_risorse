@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_8f43305b-719b-4c6f-8061-05cb6425046b",
-  "id": "ValutazioneNegozio_SelectPassaggioNegozio",
+  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_5d6df213-2f3e-473c-b548-c85b35580b51",
+  "id": "ValutazioneNegozio_SelectInsert",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM passaggi_negozi\nWHERE Negozio = {{SelectNegozio.selectedOptionValue}}",
+      "body": "",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,12 +22,8 @@
       "name": "Metabase",
       "pluginId": "mysql-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "SelectPassaggioNegozio",
+    "dynamicBindingPathList": [],
+    "name": "SelectInsert",
     "pageId": "ValutazioneNegozio",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

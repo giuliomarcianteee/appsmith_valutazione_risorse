@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 277,
+  "bottomRow": 402,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -37,7 +37,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "1u4177a037",
+      "parentId": "zrzxysec7k",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "g73w1tgsv6",
-      "widgetName": "Canvas2"
+      "widgetId": "ldy2oxlola",
+      "widgetName": "Canvas2CopyCopy"
     }
   ],
   "detachFromLayout": true,
@@ -76,10 +76,10 @@
   "renderMode": "CANVAS",
   "rightColumn": 41,
   "shouldScrollContents": true,
-  "topRow": 37,
+  "topRow": 162,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "1u4177a037",
-  "widgetName": "ModalInsert",
+  "widgetId": "zrzxysec7k",
+  "widgetName": "ModalInsertChoose",
   "width": 904
 }

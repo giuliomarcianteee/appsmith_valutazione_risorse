@@ -1,0 +1,2 @@
+SELECT DataPassaggio,IdPassaggiNegozi FROM passaggi_negozi
+WHERE Negozio = {{SelectNegozio.selectedOptionValue}}

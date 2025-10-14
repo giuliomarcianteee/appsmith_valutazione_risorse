@@ -1,0 +1,43 @@
+{
+  "activeColor": "#fde047",
+  "animateLoading": true,
+  "bottomRow": 28,
+  "defaultRate": "{{SelectChooseModal.data[0].RatingAffluenza}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultRate"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "inactiveColor": "#E0DEDE",
+  "isAllowHalf": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isReadOnly": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "sxkduce46n",
+  "leftColumn": 17,
+  "maxCount": "4",
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 11,
+  "mobileLeftColumn": 17,
+  "mobileRightColumn": 37,
+  "mobileTopRow": 7,
+  "needsErrorInfo": false,
+  "originalBottomRow": 32,
+  "originalTopRow": 28,
+  "parentColumnSpace": 13.9375,
+  "parentId": "ldy2oxlola",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 27,
+  "size": "LARGE",
+  "tooltips": "",
+  "topRow": 24,
+  "type": "RATE_WIDGET",
+  "widgetId": "khmgeyo8op",
+  "widgetName": "RatingAffluenzaCopyCopy"
+}
