@@ -32,7 +32,7 @@
   "mobileRightColumn": 47,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(ModalVisualizza_Inserisci.name);}}",
+  "onClick": "{{closeModal(ModalVisualizza_Inserisci.name);\nshowModal(ModalInsertVisualizza_Inserisc.name);}}",
   "originalBottomRow": 19,
   "originalTopRow": 13,
   "parentId": "z7b82z25lt",

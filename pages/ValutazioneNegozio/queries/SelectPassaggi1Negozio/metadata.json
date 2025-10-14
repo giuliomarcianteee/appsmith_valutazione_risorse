@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT DataPassaggio,IdPassaggiNegozi FROM passaggi_negozi\nWHERE Negozio = {{SelectNegozio.selectedOptionValue}}",
+      "body": "SELECT DataPassaggio,IdPassaggiNegozi,Negozio FROM passaggi_negozi\nWHERE Negozio = {{SelectNegozio.selectedOptionValue}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

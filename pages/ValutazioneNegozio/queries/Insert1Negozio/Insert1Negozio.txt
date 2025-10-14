@@ -1,5 +1,5 @@
 INSERT INTO passaggi_negozi SET
-  Negozio = '{{SelectNegozio.selectedOptionValue}}',
+  Negozio = '{{Table1Negozio.triggeredRow.}}',
   DataPassaggio = '{{moment(DatePassaggio.selectedDate).format("YYYY-MM-DD")}}',
   Posizione = '{{InputPosizioneCopy.text}}',
   RatingPosizione = {{RatingPosizioneCopy.value}},
