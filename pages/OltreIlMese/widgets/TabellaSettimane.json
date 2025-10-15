@@ -37,17 +37,16 @@
     "DataAssunzione",
     "DataFineContrattoFormattata",
     "customColumn1",
-    "customColumn2",
     "IdDipendenti",
     "OreSett",
     "Livello",
     "DataFineContratto"
   ],
-  "columnUpdatedAt": 1760364767295,
+  "columnUpdatedAt": 1760529648665,
   "columnWidthMap": {
-    "DataAssunzione": 159,
+    "DataAssunzione": 205,
     "DataFineContratto": 199,
-    "DataFineContrattoFormattata": 174,
+    "DataFineContrattoFormattata": 224,
     "Neg": 97,
     "Nome": 231,
     "customColumn1": 126
@@ -99,9 +98,6 @@
     },
     {
       "key": "primaryColumns.DataFineContrattoFormattata.computedValue"
-    },
-    {
-      "key": "primaryColumns.customColumn2.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -423,39 +419,6 @@
       "notation": "standard",
       "onClick": "{{GestioneForm.openModal();}}",
       "originalId": "customColumn1",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "customColumn2": {
-      "alias": "Media Valutazione",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "buttonStyle": "rgb(3, 179, 101)",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "customColumn2",
-      "index": 74,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Media Valutazione",
-      "labelColor": "#FFFFFF",
-      "notation": "standard",
-      "originalId": "customColumn2",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
