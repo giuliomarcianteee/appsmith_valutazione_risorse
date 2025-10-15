@@ -16,7 +16,7 @@
       "key": "defaultOptionValue"
     },
     {
-      "key": "isVisible"
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -25,7 +25,7 @@
       "key": "sourceData"
     },
     {
-      "key": "isVisible"
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -33,11 +33,11 @@
       "key": "onOptionChange"
     }
   ],
-  "isDisabled": false,
+  "isDisabled": "{{![\"Admin\", \"HR\"].includes(Ruolo.data[0].Ruolo)\n}}",
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{[\"Admin\", \"HR\"].includes(Ruolo.data[0].Ruolo)\n}}",
+  "isVisible": false,
   "key": "ke95z49gvw",
   "labelAlignment": "left",
   "labelPosition": "Top",

@@ -37,7 +37,7 @@
       "key": "onDropdownOpen"
     }
   ],
-  "isDisabled": "{{[\"Admin\", \"HR\"].includes(Ruolo.data[0].Ruolo)\n}}",
+  "isDisabled": "{{![\"Admin\", \"HR\"].includes(Ruolo.data[0].Ruolo)\n}}",
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
