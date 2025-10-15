@@ -28,7 +28,7 @@
   "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{\n  Radio37.selectedOptionValue !== undefined &&\n  Radio38.selectedOptionValue !== undefined &&\n  Radio39.selectedOptionValue !== undefined &&\n  Radio40.selectedOptionValue !== undefined &&\n  (\n    Number(Radio37.selectedOptionValue || 0) +\n    Number(Radio38.selectedOptionValue || 0) +\n    Number(Radio39.selectedOptionValue || 0) +\n    Number(Radio40.selectedOptionValue || 0)\n  ) === 0\n}}\n",
+  "isVisible": "{{\n  Radio37Copy.selectedOptionValue !== undefined &&\n  Radio38Copy.selectedOptionValue !== undefined &&\n  Radio39Copy.selectedOptionValue !== undefined &&\n  Radio40Copy.selectedOptionValue !== undefined &&\n  (\n    Number(Radio37Copy.selectedOptionValue || 0) +\n    Number(Radio38Copy.selectedOptionValue || 0) +\n    Number(Radio39Copy.selectedOptionValue || 0) +\n    Number(Radio40Copy.selectedOptionValue || 0)\n  ) === 0\n}}\n",
   "key": "qezmg1ihgz",
   "leftColumn": 23.741935483870968,
   "maxDynamicHeight": 9000,

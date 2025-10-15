@@ -45,12 +45,12 @@
   ],
   "columnUpdatedAt": 1760364767295,
   "columnWidthMap": {
-    "DataAssunzione": 154,
+    "DataAssunzione": 159,
     "DataFineContratto": 199,
-    "DataFineContrattoFormattata": 168,
-    "Neg": 108,
-    "Nome": 205,
-    "customColumn1": 128
+    "DataFineContrattoFormattata": 174,
+    "Neg": 97,
+    "Nome": 231,
+    "customColumn1": 126
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -99,6 +99,9 @@
     },
     {
       "key": "primaryColumns.DataFineContrattoFormattata.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn2.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -433,7 +436,7 @@
       "allowSameOptionsInNewRow": true,
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "text",
-      "computedValue": "",
+      "computedValue": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('')) : '' })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,

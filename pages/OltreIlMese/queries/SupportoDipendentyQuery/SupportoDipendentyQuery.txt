@@ -1,0 +1,57 @@
+SELECT 
+    v.CodiceDipendente,
+    CONCAT(
+        (
+            IFNULL(v.AccoglienzaSaluto, 0) +
+            IFNULL(v.AccoglienzaProporreAssistenza, 0) +
+            IFNULL(v.AccoglienzaIllustrarePosizionamentoNegozioEScontistiche, 0) +
+            IFNULL(v.AccoglienzaUscireDallaPenisola, 0) +
+            IFNULL(v.AnalisiBisognoClienteDomandeAperte, 0) +
+            IFNULL(v.AnalisiBisognoClienteDomandeDiApprofondimento, 0) +
+            IFNULL(v.AnalisiBisognoClienteDomandeFinalizzateAllAcquisto, 0) +
+            IFNULL(v.AnalisiBisognoClienteRiformulareBisognoCliente, 0) +
+            IFNULL(v.ConoscenzaProdottiGdvGioielleria, 0) +
+            IFNULL(v.ConoscenzaProdottiGdvOreficeria, 0) +
+            IFNULL(v.ConoscenzaProdottiGdvLingottiSterlina, 0) +
+            IFNULL(v.ConoscenzaProdottiGdvDiamantiIgi, 0) +
+            IFNULL(v.ConoscenzaProdottiOrologi, 0) +
+            IFNULL(v.ConoscenzaProdottiBrand, 0) +
+            IFNULL(v.ConoscenzaProdottiDaveri, 0) +
+            IFNULL(v.ConoscenzaProdottiOro9Kt, 0) +
+            IFNULL(v.ConsulenzaSullAcquistoConsigli, 0) +
+            IFNULL(v.ConsulenzaSullAcquistoRisaltoCaratteristicheEBenefici, 0) +
+            IFNULL(v.ConsulenzaSullAcquistoVerificareSpiegazioneArticolo, 0) +
+            IFNULL(v.ConsulenzaSullAcquistoCollegareCarattProdConIlBeneficio, 0) +
+            IFNULL(v.ConoscenzeStrategichePromozioniPromozioniSaltuarie, 0) +
+            IFNULL(v.ConoscenzeStrategichePromozioniFidelity, 0) +
+            IFNULL(v.ConoscenzeStratPromoOrdinePropostaGioielOrefDaVeriBrandOrologi, 0) +
+            IFNULL(v.ConoscenzeStrategichePromozioniScontistiche30Percento50Percento, 0) +
+            IFNULL(v.GestioneObiezioniEDubbiComprensioniObiezioni, 0) +
+            IFNULL(v.GestioneObiezioniEDubbiFareDomande, 0) +
+            IFNULL(v.GestioneObiezioniEDubbiCircoscrivereDubbiObiezioni, 0) +
+            IFNULL(v.GestioneObiezioniEDubbiEsporreSoluzione, 0) +
+            IFNULL(v.ChiusuraVenditaUsoStrumentiTecnici, 0) +
+            IFNULL(v.ChiusuraVenditaUsoStrumentiMarketing, 0) +
+            IFNULL(v.ChiusuraVenditaVenditaAggiuntaCrossSallingUpSalling, 0) +
+            IFNULL(v.ChiusuraVenditaTecnicheChiusuraVendita, 0) +
+            IFNULL(v.LavoroInTeamConfrontoConCollega, 0) +
+            IFNULL(v.LavoroInTeamRispettoDelPlanning, 0) +
+            IFNULL(v.LavoroInTeamFormazioneStudiareProcedure, 0) +
+            IFNULL(v.LavoroInTeamCollaborazioneCambioTurnoProblemiInNegozio, 0) +
+            IFNULL(v.OrganizzazioneAttivitaNelTurnoPuliziaNegozio, 0) +
+            IFNULL(v.OrganizzazioneAttivitaNelTurnoPuliziaProdotti, 0) +
+            IFNULL(v.OrganizzazioneAttivitaNelTurnoRimpiazzi, 0) +
+            IFNULL(v.OrganizzazioneAttivitaNelTurnoMailComunicazione, 0) +
+            IFNULL(v.ConoscenzaProceduraLettura, 0) +
+            IFNULL(v.ConoscenzaProceduraComprensione, 0) +
+            IFNULL(v.ConoscenzaProceduraRispettoProcedure, 0) +
+            IFNULL(v.ConoscenzaProceduraAiutoAFareRispettareLeProcedure, 0)
+        ) / 11.0,
+        '/4'
+    ) AS MediaValutazione
+FROM valutazionerisorse_mesi v
+WHERE v.DataInserimento = (
+    SELECT MAX(v2.DataInserimento)
+    FROM valutazionerisorse_mesi v2
+    WHERE v2.CodiceDipendente = v.CodiceDipendente
+);

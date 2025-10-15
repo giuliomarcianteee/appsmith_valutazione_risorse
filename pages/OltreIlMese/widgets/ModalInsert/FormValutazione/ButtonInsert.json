@@ -12,6 +12,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -20,7 +28,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{\n[\n  Radio1.selectedOptionValue,\n  Radio2.selectedOptionValue,\n  Radio3.selectedOptionValue,\n  Radio4.selectedOptionValue,\n  Radio5.selectedOptionValue,\n  Radio6.selectedOptionValue,\n  Radio7.selectedOptionValue,\n  Radio8.selectedOptionValue,\n  Radio9.selectedOptionValue,\n  Radio10.selectedOptionValue,\n  Radio11.selectedOptionValue,\n  Radio12.selectedOptionValue,\n  Radio13.selectedOptionValue,\n  Radio14.selectedOptionValue,\n  Radio15.selectedOptionValue,\n  Radio16.selectedOptionValue,\n  Radio17.selectedOptionValue,\n  Radio18.selectedOptionValue,\n  Radio19.selectedOptionValue,\n  Radio20.selectedOptionValue,\n  Radio21.selectedOptionValue,\n  Radio22.selectedOptionValue,\n  Radio23.selectedOptionValue,\n  Radio24.selectedOptionValue,\n  Radio25.selectedOptionValue,\n  Radio26.selectedOptionValue,\n  Radio27.selectedOptionValue,\n  Radio28.selectedOptionValue,\n  Radio29.selectedOptionValue,\n  Radio30.selectedOptionValue,\n  Radio31.selectedOptionValue,\n  Radio32.selectedOptionValue,\n  Radio33.selectedOptionValue,\n  Radio34.selectedOptionValue,\n  Radio35.selectedOptionValue,\n  Radio36.selectedOptionValue,\n  Radio37.selectedOptionValue,\n  Radio38.selectedOptionValue,\n  Radio39.selectedOptionValue,\n  Radio40.selectedOptionValue,\n  Radio41.selectedOptionValue,\n  Radio42.selectedOptionValue,\n  Radio43.selectedOptionValue,\n  Radio44.selectedOptionValue\n].some(val => val === null || val === undefined || val === \"\")\n}}\n",
   "isLoading": false,
   "isVisible": true,
   "key": "zno6xzms6h",
