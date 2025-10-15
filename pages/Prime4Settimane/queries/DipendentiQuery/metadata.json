@@ -29,7 +29,7 @@
     ],
     "name": "DipendentiQuery",
     "pageId": "Prime4Settimane",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }
 }
