@@ -67,7 +67,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 40,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Arianna Paltan\",\n    \"code\": \"Arianna Paltan\"\n  },\n  {\n    \"name\": \"Federica Carbonaro\",\n    \"code\": \"Federica Carbonaro\"\n  },\n  {\n    \"name\": \"Federica Guerini\",\n    \"code\": \"Federica Guerini\"\n  }\n,\n  {\n    \"name\": \"Sonia Zanin\",\n    \"code\": \"Sonia Zanin\"\n  },\n  {\n    \"name\": \"Ida DAntonio\",\n    \"code\": \"Ida DAntonio\"\n  }\n,\n  {\n    \"name\": \"David Bacis\",\n    \"code\": \"David Bacis\"\n  },\n  {\n    \"name\": \"Elisa Del Grosso\",\n    \"code\": \"Elisa Del Grosso\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"name\": \"Arianna Paltan\",\n    \"code\": \"Arianna Paltan\"\n  },\n  {\n    \"name\": \"Federica Carbonaro\",\n    \"code\": \"Federica Carbonaro\"\n  },\n  {\n    \"name\": \"Federica Guerini\",\n    \"code\": \"Federica Guerini\"\n  }\n,\n  {\n    \"name\": \"Sonia Zanin\",\n    \"code\": \"Sonia Zanin\"\n  },\n  {\n    \"name\": \"Ida DAntonio\",\n    \"code\": \"Ida DAntonio\"\n  }\n,\n  {\n    \"name\": \"David Bacis\",\n    \"code\": \"David Bacis\"\n  },\n\t  {\n    \"name\": \"Michele Pestillo\",\n    \"code\": \"Michele Pestillo\"\n  },\n  {\n    \"name\": \"Elisa Del Grosso\",\n    \"code\": \"Elisa Del Grosso\"\n  }\n]",
   "topRow": 0,
   "topRowBeforeCollapse": 0,
   "type": "SELECT_WIDGET",
