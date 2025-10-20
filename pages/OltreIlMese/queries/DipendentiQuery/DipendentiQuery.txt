@@ -1,14 +1,20 @@
 SELECT 
-  *,
+  d.*,
   CASE 
-    WHEN DataFineContratto = '2099-12-31' THEN 'indeterminato'
-    ELSE TO_CHAR(DataFineContratto, 'DD/MM/YYYY')
-  END AS DataFineContrattoFormattata
-FROM dipendenti
-WHERE NEG IN (
+    WHEN d.DataFineContratto = '2099-12-31' THEN 'indeterminato'
+    ELSE TO_CHAR(d.DataFineContratto, 'DD/MM/YYYY')
+  END AS DataFineContrattoFormattata,
+  COALESCE(v.nRelazioni, 0) AS nRelazioni
+FROM dipendenti d
+LEFT JOIN (
+  SELECT CodiceDipendente, COUNT(*) AS nRelazioni
+  FROM valutazionerisorse_mesi
+  GROUP BY CodiceDipendente
+) v ON v.CodiceDipendente = d.IdDipendenti
+WHERE d.NEG IN (
   SELECT NEG
   FROM listanegozi
   WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
 )
-AND CURRENT_DATE - DataAssunzione >= 28
-ORDER BY DataFineContratto ASC;
+AND CURRENT_DATE - d.DataAssunzione >= 28
+ORDER BY d.DataFineContratto ASC;
