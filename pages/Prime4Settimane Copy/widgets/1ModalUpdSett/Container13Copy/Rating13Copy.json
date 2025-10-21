@@ -2,7 +2,7 @@
   "activeColor": "{{\n  Rating13Copy.value === 1 ? \"red\" :\n  Rating13Copy.value === 2 ? \"Orange\" :\n  Rating13Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "{{ _1SelectSett.data[0][\"1ControlloCassa\"] }}",
+  "defaultRate": "{{\n  _1SelectSett.data[0][\"1ControlloCassa\"] !== null \n    ? _1SelectSett.data[0][\"1ControlloCassa\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"

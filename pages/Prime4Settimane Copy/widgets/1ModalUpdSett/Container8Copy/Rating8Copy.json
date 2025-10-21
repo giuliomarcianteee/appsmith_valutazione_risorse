@@ -2,7 +2,7 @@
   "activeColor": "{{\n  Rating8Copy.value === 1 ? \"red\" :\n  Rating8Copy.value === 2 ? \"Orange\" :\n  Rating8Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "{{ _1SelectSett.data[0][\"1CassaPos\"] }}",
+  "defaultRate": "{{\n  _1SelectSett.data[0][\"1CassaPos\"] !== null \n    ? _1SelectSett.data[0][\"1CassaPos\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"

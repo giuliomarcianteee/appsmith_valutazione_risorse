@@ -2,7 +2,7 @@
   "activeColor": "{{\n  Rating3Copy.value === 1 ? \"red\" :\n  Rating3Copy.value === 2 ? \"Orange\" :\n  Rating3Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "{{ _1SelectSett.data[0][\"1Saluto\"] }}\n",
+  "defaultRate": "{{\n  _1SelectSett.data[0][\"1Saluto\"] !== null \n    ? _1SelectSett.data[0][\"1Saluto\"] \n    : \"\"\n}}\n\n\n\n",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"

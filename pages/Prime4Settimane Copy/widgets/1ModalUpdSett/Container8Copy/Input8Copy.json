@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 15,
   "boxShadow": "none",
-  "defaultText": "{{ _1SelectSett.data[0][\"1NoteCassaPos\"] }}",
+  "defaultText": "{{\n  _1SelectSett.data[0][\"1NoteCassaPos\"] !== null \n    ? _1SelectSett.data[0][\"1NoteCassaPos\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

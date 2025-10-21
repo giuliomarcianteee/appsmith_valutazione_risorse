@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 16,
   "boxShadow": "none",
-  "defaultText": "{{ _1SelectSett.data[0][\"1NoteAllarmeAlCollo\"] }}",
+  "defaultText": "{{\n  _1SelectSett.data[0][\"1NoteAllarmeAlCollo\"] !== null \n    ? _1SelectSett.data[0][\"1NoteAllarmeAlCollo\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

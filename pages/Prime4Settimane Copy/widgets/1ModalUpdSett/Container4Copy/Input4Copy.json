@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 15,
   "boxShadow": "none",
-  "defaultText": "{{ _1SelectSett.data[0][\"1NoteProdottoeSconti\"] }}",
+  "defaultText": "{{\n  _1SelectSett.data[0][\"1NoteProdottoeSconti\"] !== null \n    ? _1SelectSett.data[0][\"1NoteProdottoeSconti\"] \n    : \"\"\n}}\n\n\n\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

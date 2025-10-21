@@ -2,7 +2,7 @@
   "activeColor": "{{\n  Rating17Copy.value === 1 ? \"red\" :\n  Rating17Copy.value === 2 ? \"Orange\" :\n  Rating17Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "{{ _1SelectSett.data[0][\"1CambioTurno\"] }}",
+  "defaultRate": "{{\n  _1SelectSett.data[0][\"1CambioTurno\"] !== null \n    ? _1SelectSett.data[0][\"1CambioTurno\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"

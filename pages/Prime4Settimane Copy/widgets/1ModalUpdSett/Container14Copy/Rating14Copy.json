@@ -2,7 +2,7 @@
   "activeColor": "{{\n  Rating14Copy.value === 1 ? \"red\" :\n  Rating14Copy.value === 2 ? \"Orange\" :\n  Rating14Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "{{ _1SelectSett.data[0][\"1Tablet\"] }}",
+  "defaultRate": "{{\n  _1SelectSett.data[0][\"1Tablet\"] !== null \n    ? _1SelectSett.data[0][\"1Tablet\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"

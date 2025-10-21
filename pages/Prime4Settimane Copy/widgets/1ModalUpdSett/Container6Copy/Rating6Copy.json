@@ -2,7 +2,7 @@
   "activeColor": "{{\n  Rating6Copy.value === 1 ? \"red\" :\n  Rating6Copy.value === 2 ? \"Orange\" :\n  Rating6Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "{{ _1SelectSett.data[0][\"1VenditaInSicurezza\"] }}",
+  "defaultRate": "{{\n  _1SelectSett.data[0][\"1VenditaInSicurezza\"] !== null \n    ? _1SelectSett.data[0][\"1VenditaInSicurezza\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"
