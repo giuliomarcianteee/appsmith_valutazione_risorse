@@ -1,5 +1,5 @@
 {
-  "activeColor": "{{\n  Rating15.value === 1 ? \"red\" :\n  Rating15.value === 2 ? \"Orange\" :\n  Rating15.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
+  "activeColor": "{{\n  Rating32.value === 1 ? \"red\" :\n  Rating32.value === 2 ? \"Orange\" :\n  Rating32.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
   "defaultRate": "",

@@ -1,0 +1,63 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 149,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n  [\n    Rating29Copy.value,\n    Rating30Copy.value,\n    Rating31Copy.value,\n    Rating32Copy.value,\n    Rating33Copy.value,\n    Rating34Copy.value,\n    Rating35Copy.value,\n    Rating36Copy.value\n  ].some(r => r === 0)\n}}\n",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "q3s0tpqxiy",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 309,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 305,
+  "needsErrorInfo": false,
+  "onClick": "{{_3UpdSett.run().then(() => {\n DipendentiQuery.run(); closeModal(3ModalUpdSett.name);\n  showAlert('Relazione salvata correttamente', 'success');\n  \n}).catch(() => {\n  showAlert('Errore nel salvataggio', 'error');\n});}}",
+  "originalBottomRow": 149,
+  "originalTopRow": 145,
+  "parentColumnSpace": 13.5625,
+  "parentId": "x7o2zj3mzm",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Salva",
+  "topRow": 145,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "826gir406t",
+  "widgetName": "Button3SaveCopy"
+}

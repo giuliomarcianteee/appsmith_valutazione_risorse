@@ -1,0 +1,13 @@
+SELECT 
+   IdSettimane,
+  `3Comprensione`, `3NoteComprensione`,
+  `3Allestimento`, `3NoteAllestimento`,
+  `3Disallestimento`, `3NoteDisallestimento`,
+  `3PianificazioneColleghe`, `3NotePianificazioneColleghe`,
+  `3ComproOro`, `3NoteComproOro`,
+  `3TestMetallo`, `3NoteTestMetallo`,
+  `3OroInvestimento`, `3NoteOroInvestimento`,
+  `3TabletComproOro`, `3NoteTabletComproOro`,
+  ModificatoDa3
+FROM new_settimane
+WHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};

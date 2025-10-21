@@ -5006,7 +5006,7 @@
       "label": "3°",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{DatiWidgetQuery.modalAggiornamento(3);}}",
+      "onClick": "{{_3SelectSett.run(() => {\n  const n = _2SelectSett.data.length;\n\n  ResetForm.resetForm2();\n\n  if (n === 0) {\n    showModal(\"3ModalInsSett\");\n  } else if (n === 1) {\n    showModal(\"3ModalUpdSett\");\n  }\n});}}\n",
       "originalId": "customColumn3",
       "sticky": "",
       "textSize": "0.875rem",

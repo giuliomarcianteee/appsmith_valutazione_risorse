@@ -1,0 +1,69 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "{{\n  [\n    Rating29Copy,\n    Rating30Copy,\n    Rating31Copy,\n    Rating32Copy,\n    Rating33Copy,\n    Rating34Copy,\n    Rating35Copy,\n    Rating36Copy\n  ].every(r => r >= 1)\n}}\n",
+  "key": "r3otbom5we",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 42,
+  "mobileLeftColumn": 6,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 38,
+  "needsErrorInfo": false,
+  "originalBottomRow": 41,
+  "originalTopRow": 37,
+  "overflow": "NONE",
+  "parentColumnSpace": 12.59375,
+  "parentId": "x7o2zj3mzm",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 17,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    const somma =\n      Rating29Copy.value +\n      Rating30Copy.value +\n      Rating31Copy.value +\n      Rating32Copy.value +\n      Rating33Copy.value +\n      Rating34Copy.value +\n      Rating35Copy.value +\n      Rating36Copy.value;\n\n    return somma === 0 ? \"\" : (somma === 33 ? \"IDONEO\" : \"NON IDONEO\");\n  })()\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "{{\n  (() => {\n    const somma =\n      Rating29Copy.value +\n      Rating30Copy.value +\n      Rating31Copy.value +\n      Rating32Copy.value +\n      Rating33Copy.value +\n      Rating34Copy.value +\n      Rating35Copy.value +\n      Rating36Copy.value;\n\n    return somma === 0 ? \"\" : (somma === 33 ? \"green\" : \"red\");\n  })()\n}}\n",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "a0280qm44c",
+  "widgetName": "Text38Copy"
+}

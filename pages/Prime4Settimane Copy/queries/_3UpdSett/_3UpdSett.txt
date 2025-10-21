@@ -1,0 +1,19 @@
+UPDATE new_settimane SET
+  `3Comprensione` = {{Rating29Copy.value}},
+  `3NoteComprensione` = '{{Input29Copy.text}}',
+  `3Allestimento` = {{Rating30Copy.value}},
+  `3NoteAllestimento` = '{{Input30Copy.text}}',
+  `3Disallestimento` = {{Rating31Copy.value}},
+  `3NoteDisallestimento` = '{{Input31Copy.text}}',
+  `3PianificazioneColleghe` = {{Rating32Copy.value}},
+  `3NotePianificazioneColleghe` = '{{Input32Copy.text}}',
+  `3ComproOro` = {{Rating33Copy.value}},
+  `3NoteComproOro` = '{{Input33Copy.text}}',
+  `3TestMetallo` = {{Rating34Copy.value}},
+  `3NoteTestMetallo` = '{{Input34Copy.text}}',
+  `3OroInvestimento` = {{Rating35Copy.value}},
+  `3NoteOroInvestimento` = '{{Input35Copy.text}}',
+  `3TabletComproOro` = {{Rating36Copy.value}},
+  `3NoteTabletComproOro` = '{{Input36Copy.text}}',
+   ModificatoDa3 = '{{appsmith.user.name + "_" + moment().format("YYYYMMDD_HHmmss")}}'
+WHERE IdSettimane = '{{TabellaSettimane.triggeredRow.IdDipendenti}}';
