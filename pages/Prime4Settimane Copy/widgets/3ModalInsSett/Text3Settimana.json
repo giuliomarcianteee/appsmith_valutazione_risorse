@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 51,
   "shouldTruncate": false,
-  "text": "Prima settimana di {{TabellaSettimane.triggeredRow.Nome}} assunta il {{moment(TabellaSettimane.triggeredRow.DataAssunzione).format(\"DD/MM/YYYY\")}}",
+  "text": "Terza settimana di {{TabellaSettimane.triggeredRow.Nome}} assunta il {{moment(TabellaSettimane.triggeredRow.DataAssunzione).format(\"DD/MM/YYYY\")}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,

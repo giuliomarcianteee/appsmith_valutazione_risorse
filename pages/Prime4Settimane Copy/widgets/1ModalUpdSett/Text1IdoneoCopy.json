@@ -17,12 +17,18 @@
     },
     {
       "key": "textColor"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "textColor"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -30,7 +36,7 @@
   "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{\n  [\n    Rating1Copy.value,\n    Rating2Copy.value,\n    Rating3Copy.value,\n    Rating4Copy.value,\n    Rating5Copy.value,\n    Rating6Copy.value,\n    Rating7Copy.value,\n    Rating8Copy.value,\n    Rating9Copy.value,\n    Rating10Copy.value,\n    Rating11Copy.value,\n    Rating12Copy.value,\n    Rating13Copy.value,\n    Rating14Copy.value,\n    Rating15Copy.value,\n    Rating16Copy.value,\n    Rating17Copy.value\n  ].every(r => r >= 1)\n}}\n",
   "key": "r3otbom5we",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,

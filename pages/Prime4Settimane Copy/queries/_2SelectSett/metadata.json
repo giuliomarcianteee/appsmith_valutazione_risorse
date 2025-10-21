@@ -30,6 +30,6 @@
     "name": "_2SelectSett",
     "pageId": "Prime4Settimane Copy",
     "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

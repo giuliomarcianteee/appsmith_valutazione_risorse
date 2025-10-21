@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "textColor"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "textColor"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "{{\n  [\n    Rating1.value,\n    Rating2.value,\n    Rating3.value,\n    Rating4.value,\n    Rating5.value,\n    Rating6.value,\n    Rating7.value,\n    Rating8.value,\n    Rating9.value,\n    Rating10.value,\n    Rating11.value,\n    Rating12.value,\n    Rating13.value,\n    Rating14.value,\n    Rating15.value,\n    Rating16.value,\n    Rating17.value\n  ].every(r => r >= 1)\n}}\n",
+  "key": "r3otbom5we",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentColumnSpace": 12.59375,
+  "parentId": "tsya0cto8j",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 17,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    const somma =\nRating1.value +\nRating2.value +\nRating3.value +\nRating4.value +\nRating5.value +\nRating6.value +\nRating7.value +\nRating8.value +\nRating9.value +\nRating10.value +\nRating11.value +\nRating12.value +\nRating13.value +\nRating14.value +\nRating15.value +\nRating16.value + Rating17.value;\n    return somma === 0 ? \"\" : (somma === 51 ? \"IDONEO\" : \"NON IDONEO\");\n  })()\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "{{\n  (() => {\n    const somma =\nRating1.value +\nRating2.value +\nRating3.value +\nRating4.value +\nRating5.value +\nRating6.value +\nRating7.value +\nRating8.value +\nRating9.value +\nRating10.value +\nRating11.value +\nRating12.value +\nRating13.value +\nRating14.value +\nRating15.value +\nRating16.value + Rating17.value;\n    return somma === 0 ? \"\" : (somma === 51 ? \"green\" : \"red\");\n  })()\n}}\n",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "y6lbulqlpe",
+  "widgetName": "Text1Idoneo"
+}
