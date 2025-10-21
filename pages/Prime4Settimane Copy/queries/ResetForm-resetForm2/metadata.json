@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_29265331-6a32-41e5-b75e-f77ef65c9961",
-  "id": "Prime4Settimane Copy_ResetForm.resetForm",
+  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_ae9ff5a7-a126-4eb7-9ac7-adfbce85c99e",
+  "id": "Prime4Settimane Copy_ResetForm.resetForm2",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "ResetForm.resetForm",
-    "name": "resetForm",
+    "fullyQualifiedName": "ResetForm.resetForm2",
+    "name": "resetForm2",
     "pageId": "Prime4Settimane Copy",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

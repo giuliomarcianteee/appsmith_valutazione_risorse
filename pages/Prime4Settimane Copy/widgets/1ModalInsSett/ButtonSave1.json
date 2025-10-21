@@ -19,9 +19,6 @@
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "onClick"
-    },
-    {
       "key": "isDisabled"
     }
   ],
@@ -42,7 +39,7 @@
   "mobileRightColumn": 61,
   "mobileTopRow": 305,
   "needsErrorInfo": false,
-  "onClick": "{{_1InsertSett.run().then(() => {\n DipendentiQuery.run(); closeModal(1ModalInsSett.name);\n  showAlert('Relazione salvata correttamente', 'success');\n  \n}).catch(() => {\n  showAlert('Errore nel salvataggio', 'error');\n});}}",
+  "onClick": "{{_1InsertSett.run().then(() => {\n  showAlert('Valutazione salvata correttamente', 'success');\n  DipendentiQuery.run();\n  closeModal('1ModalInsSett');\n}).catch(() => {\n  showAlert('Errore nel salvataggio', '');\n});}}",
   "originalBottomRow": 306,
   "originalTopRow": 302,
   "parentColumnSpace": 13.5625,
