@@ -1,0 +1,24 @@
+SELECT 
+  d.IdDipendenti,
+  d.Nome AS NomeDipendente,
+  d.Neg,
+  d.DataAssunzione,
+  DATEDIFF(CURDATE(), d.DataAssunzione) AS DaysDiff,
+  (DATEDIFF(CURDATE(), d.DataAssunzione) / 7) AS WeekNo,
+  ln.Coordinatore AS CoordinatorName,
+  COALESCE(um.Email, 
+           -- fallback: se il campo Coordinatore sembra già un'email (contiene @), lo riuso
+           CASE WHEN ln.Coordinatore LIKE '%@%' THEN ln.Coordinatore ELSE NULL END
+          ) AS CoordinatorEmail
+FROM dipendenti d
+JOIN listanegozi ln 
+     ON ln.NEG = d.Neg
+LEFT JOIN usermanager um 
+       ON um.Nome = ln.Coordinatore
+LEFT JOIN dipendenti_week_notifications n
+       ON n.IdDipendenti = d.IdDipendenti
+      AND n.WeekNo = FLOOR(DATEDIFF(CURDATE(), d.DataAssunzione)/7)
+WHERE d.DataAssunzione IS NOT NULL
+  AND DATEDIFF(CURDATE(), d.DataAssunzione) IN (7,14,21,28)
+  AND n.IdDipendenti IS NULL
+ORDER BY d.IdDipendenti;

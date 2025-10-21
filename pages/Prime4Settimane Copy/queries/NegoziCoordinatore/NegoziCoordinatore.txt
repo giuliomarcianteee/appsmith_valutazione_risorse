@@ -1,0 +1,14 @@
+SELECT NEG
+FROM listanegozi
+WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
+AND NEG NOT IN ('SEDE', 'SMART WORKING')
+UNION
+SELECT NEG
+FROM listanegozi
+WHERE NOT EXISTS (
+    SELECT 1 
+    FROM listanegozi 
+    WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
+)
+AND NEG NOT IN ('SEDE', 'SMART WORKING')
+ORDER BY NEG;

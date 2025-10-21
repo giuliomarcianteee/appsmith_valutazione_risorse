@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "home",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "k64o6nn6cz",
+  "leftColumn": 41,
+  "minWidth": 50,
+  "mobileBottomRow": 58,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 12,
+  "mobileTopRow": 54,
+  "needsErrorInfo": false,
+  "onClick": "{{navigateTo('https://appsmith.gioiellidivalenza.com/applications', {}, 'SAME_WINDOW');}}",
+  "parentColumnSpace": 16.6875,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 45,
+  "topRow": 1,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "wyr51s9u2d",
+  "widgetName": "IconHome"
+}

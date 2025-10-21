@@ -1,0 +1,14 @@
+SELECT 
+  d.*,
+  ns.*
+FROM dipendenti d
+LEFT JOIN new_settimane ns ON ns.IdSettimane = d.IdDipendenti
+WHERE d.NEG IN (
+  SELECT NEG
+  FROM listanegozi
+  WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
+)
+AND CURRENT_DATE - d.DataAssunzione < 28
+ORDER BY d.DataFineContratto ASC;
+
+

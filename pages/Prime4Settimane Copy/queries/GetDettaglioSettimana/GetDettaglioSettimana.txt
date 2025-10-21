@@ -1,0 +1,2 @@
+SELECT * FROM valutazionerisorse_settimane 
+WHERE IdSettimane = '{{ TabellaSettimane.selectedRow.IdSettimane }}'

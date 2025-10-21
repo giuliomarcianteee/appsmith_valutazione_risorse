@@ -1,0 +1,46 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 25,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "home",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "zhbkt0vcuz",
+  "leftColumn": 60,
+  "minWidth": 50,
+  "mobileBottomRow": 11,
+  "mobileLeftColumn": 55,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 7,
+  "needsErrorInfo": false,
+  "onClick": "{{navigateTo('https://appsmith.gioiellidivalenza.com/applications', {}, 'SAME_WINDOW');}}",
+  "parentColumnSpace": 16.375,
+  "parentId": "xxdf7pqnoe",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "topRow": 21,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "mulkd6f43s",
+  "widgetName": "IconMenu"
+}

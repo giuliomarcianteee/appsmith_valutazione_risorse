@@ -1,0 +1,2 @@
+SELECT Ruolo FROM usermanager
+where Email = '{{appsmith.user.email}}'

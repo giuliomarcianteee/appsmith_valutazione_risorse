@@ -1,0 +1,38 @@
+export default {
+  resetForm() {
+    resetWidget("Rating1");
+    resetWidget("Rating2");
+    resetWidget("Rating3");
+    resetWidget("Rating4");
+    resetWidget("Rating5");
+    resetWidget("Rating6");
+    resetWidget("Rating7");
+    resetWidget("Rating8");
+    resetWidget("Rating9");
+    resetWidget("Rating10");
+    resetWidget("Rating11");
+    resetWidget("Rating12");
+    resetWidget("Rating13");
+    resetWidget("Rating14");
+    resetWidget("Rating15");
+    resetWidget("Rating16");
+    resetWidget("Rating17");
+	  resetWidget("Input1");
+    resetWidget("Input2");
+    resetWidget("Input3");
+    resetWidget("Input4");
+    resetWidget("Input5");
+    resetWidget("Input6");
+    resetWidget("Input7");
+    resetWidget("Input8");
+    resetWidget("Input9");
+    resetWidget("Input10");
+    resetWidget("Input11");
+    resetWidget("Input12");
+    resetWidget("Input13");
+    resetWidget("Input14");
+    resetWidget("Input15");
+    resetWidget("Input16");
+    resetWidget("Input17")
+  }
+}

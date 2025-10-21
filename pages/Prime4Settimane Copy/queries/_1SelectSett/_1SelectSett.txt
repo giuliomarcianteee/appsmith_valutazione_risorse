@@ -1,0 +1,22 @@
+SELECT 
+  IdSettimane,
+  `1ManualeFormativo`, `1NoteManualeFormativo`,
+  `1OrganizzazioneMerceologica`, `1NoteOrganizzazioneMerceologica`,
+  `1Saluto`, `1NoteSaluto`,
+  `1ProdottoeSconti`, `1NoteProdottoeSconti`,
+  `1ConoscenzaBrandOreficeria`, `1NoteConoscenzaBrandOreficeria`,
+  `1VenditaInSicurezza`, `1NoteVenditaInSicurezza`,
+  `1Fidelity`, `1NoteFidelity`,
+  `1CassaPos`, `1NoteCassaPos`,
+  `1Metodo`, `1NoteMetodo`,
+  `1Pacchetto`, `1NotePacchetto`,
+  `1Congedo`, `1NoteCongedo`,
+  `1Vetrine`, `1NoteVetrine`,
+  `1ControlloCassa`, `1NoteControlloCassa`,
+  `1Tablet`, `1NoteTablet`,
+  `1Agenda`, `1NoteAgenda`,
+  `1AllarmeAlCollo`, `1NoteAllarmeAlCollo`,
+  `1CambioTurno`, `1NoteCambioTurno`,
+  ModificatoDa1
+FROM new_settimane
+Where IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}}

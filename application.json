@@ -40,6 +40,10 @@
     {
       "id": "ValutazioneNegozio",
       "isDefault": false
+    },
+    {
+      "id": "Prime4Settimane Copy",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
