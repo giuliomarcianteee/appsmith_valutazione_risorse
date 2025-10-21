@@ -5,13 +5,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 15,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{\n  _3SelectSett.data[0][\"3NoteAllestimento\"] !== null \n    ? _3SelectSett.data[0][\"3NoteAllestimento\"] \n    : \"\"\n}}\n\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
