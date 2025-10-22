@@ -5046,7 +5046,7 @@
       "label": "4°",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{DatiWidgetQuery.modalAggiornamento(4);}}",
+      "onClick": "{{_4SelectSett.run(() => {\n  const n = _4SelectSett.data.length;\n\n  ResetForm.resetForm4();\n\n  if (n === 0) {\n    showModal(\"4ModalInsSett\");\n  } else if (n === 1) {\n    showModal(\"4ModalUpdSett\");\n  }\n});}}",
       "originalId": "customColumn4",
       "sticky": "",
       "textSize": "0.875rem",

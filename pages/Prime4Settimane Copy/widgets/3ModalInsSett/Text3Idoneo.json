@@ -36,7 +36,7 @@
   "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{\n  [\n    Rating29,\n    Rating30,\n    Rating31,\n    Rating32,\n    Rating33,\n    Rating34,\n    Rating35,\n    Rating36\n  ].every(r => r >= 1)\n}}\n",
+  "isVisible": "{{\n  [\n    Rating29.value,\n    Rating30.value,\n    Rating31.value,\n    Rating32.value,\n    Rating33.value,\n    Rating34.value,\n    Rating35.value,\n    Rating36.value\n  ].every(r => r >= 1)\n}}\n",
   "key": "r3otbom5we",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
