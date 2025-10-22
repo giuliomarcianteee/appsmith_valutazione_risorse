@@ -1,11 +1,14 @@
 {
-  "activeColor": "{{\n  Rating36.value === 1 ? \"red\" :\n  Rating36.value === 2 ? \"Orange\" :\n  Rating36.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
+  "activeColor": "{{\n  Rating36Copy.value === 1 ? \"red\" :\n  Rating36Copy.value === 2 ? \"Orange\" :\n  Rating36Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "",
+  "defaultRate": "{{\n  _3SelectSett.data[0][\"3TabletComproOro\"] !== null \n    ? _3SelectSett.data[0][\"3TabletComproOro\"] \n    : \"\"\n}}\n\n",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"
+    },
+    {
+      "key": "defaultRate"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",

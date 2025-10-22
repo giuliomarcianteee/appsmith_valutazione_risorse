@@ -1,11 +1,14 @@
 {
-  "activeColor": "{{\n  Rating34.value === 1 ? \"red\" :\n  Rating34.value === 2 ? \"Orange\" :\n  Rating34.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
+  "activeColor": "{{\n  Rating34Copy.value === 1 ? \"red\" :\n  Rating34Copy.value === 2 ? \"Orange\" :\n  Rating34Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "",
+  "defaultRate": "{{\n  _3SelectSett.data[0][\"3TestMetallo\"] !== null \n    ? _3SelectSett.data[0][\"3TestMetallo\"] \n    : \"\"\n}}\n\n",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"
+    },
+    {
+      "key": "defaultRate"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",

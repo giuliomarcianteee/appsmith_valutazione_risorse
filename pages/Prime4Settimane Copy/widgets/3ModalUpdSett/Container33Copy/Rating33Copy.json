@@ -1,11 +1,14 @@
 {
-  "activeColor": "{{\n  Rating33.value === 1 ? \"red\" :\n  Rating33.value === 2 ? \"Orange\" :\n  Rating33.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
+  "activeColor": "{{\n  Rating33Copy.value === 1 ? \"red\" :\n  Rating33Copy.value === 2 ? \"Orange\" :\n  Rating33Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "",
+  "defaultRate": "{{\n  _3SelectSett.data[0][\"3ComproOro\"] !== null \n    ? _3SelectSett.data[0][\"3ComproOro\"] \n    : \"\"\n}}\n\n",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"
+    },
+    {
+      "key": "defaultRate"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",

@@ -1,5 +1,5 @@
 {
-  "activeColor": "{{\n  Rating30.value === 1 ? \"red\" :\n  Rating30.value === 2 ? \"Orange\" :\n  Rating30.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
+  "activeColor": "{{\n  Rating30Copy.value === 1 ? \"red\" :\n  Rating30Copy.value === 2 ? \"Orange\" :\n  Rating30Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
   "defaultRate": "{{\n  _3SelectSett.data[0][\"3Allestimento\"] !== null \n    ? _3SelectSett.data[0][\"3Allestimento\"] \n    : \"\"\n}}\n\n",
