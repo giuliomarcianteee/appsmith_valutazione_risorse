@@ -1,0 +1,15 @@
+SELECT 
+  IdSettimane,
+  `4Comprensione`, `4NoteComprensione`,
+  `4AutonomiaAperturaChiusura`, `4NoteAutonomiaAperturaChiusura`,
+  `4ChiusuraContabile`, `4NoteChiusuraContabile`,
+  `4ConfrontoColleghe`, `4NoteConfrontoColleghe`,
+  `4ComproOroTutto`, `4NoteComproOroTutto`,
+  `4Acconti`, `4NoteAcconti`,
+  `4Resi`, `4NoteResi`,
+  `4CambiInGaranzia`, `4NoteCambiInGaranzia`,
+  `4GiroMerceIn`, `4NoteGiroMerceIn`,
+  `4GiroMerceOut`, `4NoteGiroMerceOut`,
+  ModificatoDa4
+FROM new_settimane
+WHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};

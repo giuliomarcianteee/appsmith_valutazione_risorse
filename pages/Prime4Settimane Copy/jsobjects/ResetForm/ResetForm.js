@@ -21,5 +21,13 @@ export default {
       resetWidget(`Rating${i}`);
       resetWidget(`Input${i}`);
     }
+  },
+	
+	  resetForm4() {
+    // Rating da 37 a 46
+    for (let i = 37; i <= 46; i++) {
+      resetWidget(`Rating${i}`);
+      resetWidget(`Input${i}`);
+    }
   }
 }
