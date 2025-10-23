@@ -1,0 +1,12 @@
+UPDATE new_settimane
+SET
+  `5Diamanti` = {{Rating47Copy.value}},
+  `5NoteDiamanti` = '{{Input47Copy.text}}',
+  `5Pietre` = {{Rating48Copy.value}},
+  `5NotePietre` = '{{Input48Copy.text}}',
+  `5Fedi` = {{Rating49Copy.value}},
+  `5NoteFedi` = '{{Input49Copy.text}}',
+  `5SchedeOro` = {{Rating50Copy.value}},
+  `5NoteSchedeOro` = '{{Input50Copy.text}}',
+  ModificatoDa5 = '{{appsmith.user.name + "_" + moment().format("YYYYMMDD_HHmmss")}}'
+WHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};

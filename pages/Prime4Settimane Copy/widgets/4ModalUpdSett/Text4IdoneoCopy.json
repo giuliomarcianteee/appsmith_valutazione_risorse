@@ -1,0 +1,69 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "{{\n  [\n    Rating37Copy.value,\n    Rating38Copy.value,\n    Rating39Copy.value,\n    Rating40Copy.value,\n    Rating41Copy.value,\n    Rating42Copy.value,\n    Rating43Copy.value,\n\t\tRating44Copy.value,\n\t\tRating45Copy.value,\n    Rating46Copy.value\n  ].every(r => r >= 1)\n}}",
+  "key": "r3otbom5we",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 42,
+  "mobileLeftColumn": 6,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 38,
+  "needsErrorInfo": false,
+  "originalBottomRow": 41,
+  "originalTopRow": 37,
+  "overflow": "NONE",
+  "parentColumnSpace": 12.59375,
+  "parentId": "7pmt8ann5r",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 17,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    const somma =\n      Rating37Copy.value +\n      Rating38Copy.value +\n      Rating39Copy.value +\n      Rating40Copy.value +\n      Rating41Copy.value +\n      Rating42Copy.value +\n      Rating43Copy.value +\n\t\t\tRating44Copy.value +\n\t\t\tRating45Copy.value +\n      Rating46Copy.value;\n\n    return somma === 0 ? \"\" : (somma === 30 ? \"IDONEO\" : \"NON IDONEO\");\n  })()\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "{{\n  (() => {\n    const somma =\n      Rating37Copy.value +\n      Rating38Copy.value +\n      Rating39Copy.value +\n      Rating40Copy.value +\n      Rating41Copy.value +\n      Rating42Copy.value +\n      Rating43Copy.value +\n\t\t\tRating44Copy.value +\n\t\t\tRating45Copy.value +\n      Rating46Copy.value;\n\n    return somma === 0 ? \"\" : (somma === 30 ? \"green\" : \"red\");\n  })()\n}}\n",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "kybjofyuxo",
+  "widgetName": "Text4IdoneoCopy"
+}

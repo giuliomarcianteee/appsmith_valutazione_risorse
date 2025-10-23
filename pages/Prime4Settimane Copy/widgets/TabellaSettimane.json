@@ -42,6 +42,8 @@
     "customColumn2",
     "customColumn3",
     "customColumn4",
+    "customColumn5",
+    "customColumn6",
     "IdDipendenti",
     "IdSettimane",
     "_1ManualeFormativo",
@@ -161,20 +163,21 @@
     "ModificatoDa5",
     "ModificatoDa6"
   ],
-  "columnUpdatedAt": 1761038551905,
+  "columnUpdatedAt": 1761204783224,
   "columnWidthMap": {
     "DataAssunzione": 154,
-    "DataFineContratto": 193,
+    "DataFineContratto": 175,
     "Livello": 83,
     "NEG": 76,
     "Neg": 85,
-    "Nome": 176,
+    "Nome": 157,
     "OreSett": 96,
     "customColumn1": 60,
     "customColumn2": 60,
     "customColumn3": 60,
-    "customColumn4": 74.3125,
-    "customColumn5": 371
+    "customColumn4": 60,
+    "customColumn5": 60,
+    "customColumn6": 60
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -601,6 +604,15 @@
     },
     {
       "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn5.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn5.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn5.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -630,6 +642,9 @@
     },
     {
       "key": "primaryColumns.DataFineContratto.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn5.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -647,6 +662,9 @@
     },
     {
       "key": "primaryColumns.customColumn4.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn5.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -837,7 +855,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Livello",
       "notation": "standard",
       "originalId": "Livello",
@@ -5048,6 +5066,78 @@
       "notation": "standard",
       "onClick": "{{_4SelectSett.run(() => {\n  const n = _4SelectSett.data.length;\n\n  ResetForm.resetForm4();\n\n  if (n === 0) {\n    showModal(\"4ModalInsSett\");\n  } else if (n === 1) {\n    showModal(\"4ModalUpdSett\");\n  }\n});}}",
       "originalId": "customColumn4",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn5": {
+      "alias": "5°",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "annotation",
+      "id": "customColumn5",
+      "index": 100,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "5°",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{_5SelectSett.run(() => {\n  const n = _5SelectSett.data.length;\n\n  ResetForm.resetForm4();\n\n  if (n === 0) {\n    showModal(\"5ModalInsSett\");\n  } else if (n === 1) {\n    showModal(\"5ModalUpdSett\");\n  }\n});}}",
+      "originalId": "customColumn5",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn6": {
+      "alias": "6°",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "text",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn6",
+      "index": 100,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "6°",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "originalId": "customColumn6",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,

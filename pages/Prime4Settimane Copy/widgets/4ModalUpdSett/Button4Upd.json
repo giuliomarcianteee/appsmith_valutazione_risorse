@@ -20,6 +20,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -28,7 +31,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{\n  [\n    Rating37.value,\n    Rating38.value,\n    Rating39.value,\n    Rating40.value,\n    Rating41.value,\n    Rating42.value,\n    Rating43.value,\n    Rating44.value,\n\t\tRating45.value,\n\t\tRating46.value\n  ].some(r => r === 0)\n}}\n",
+  "isDisabled": "{{\n  [\n    Rating37Copy.value,\n    Rating38Copy.value,\n    Rating39Copy.value,\n    Rating40Copy.value,\n    Rating41Copy.value,\n    Rating42Copy.value,\n    Rating43Copy.value,\n    Rating44Copy.value,\n\t\tRating45Copy.value,\n\t\tRating46Copy.value\n  ].some(r => r === 0)\n}}\n",
   "isLoading": false,
   "isVisible": true,
   "key": "q3s0tpqxiy",
@@ -39,11 +42,11 @@
   "mobileRightColumn": 61,
   "mobileTopRow": 305,
   "needsErrorInfo": false,
-  "onClick": "{{_4InsSett.run().then(() => {\n  showAlert('Valutazione salvata correttamente', 'success');\n  DipendentiQuery.run();\n  closeModal('4ModalInsSett');\n}).catch(() => {\n  showAlert('Errore nel salvataggio', 'warning');\n});}}",
+  "onClick": "{{_4UpdSett.run().then(() => {\n  showAlert('Valutazione modificata correttamente', 'success');\n  DipendentiQuery.run();\n  closeModal('4ModalUpdSett');\n}).catch(() => {\n  showAlert('Errore nella modifica', 'warning');\n});}}",
   "originalBottomRow": 184,
   "originalTopRow": 180,
   "parentColumnSpace": 13.5625,
-  "parentId": "pxgabgid5q",
+  "parentId": "7pmt8ann5r",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
@@ -51,10 +54,10 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 63,
-  "text": "Salva",
+  "text": "Modifica",
   "topRow": 180,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "3m5s8zcwpp",
-  "widgetName": "Button4Save"
+  "widgetId": "u3yhlsh79z",
+  "widgetName": "Button4Upd"
 }

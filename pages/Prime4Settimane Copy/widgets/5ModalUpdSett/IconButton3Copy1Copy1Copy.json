@@ -13,7 +13,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -32,14 +36,14 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal('4ModalInsSett')}}",
-  "parentId": "pxgabgid5q",
+  "onClick": "{{closeModal('5ModalInsSettCopy')}}",
+  "parentId": "a5r0cauj8f",
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
   "rightColumn": 64,
   "topRow": 0,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "cjrawk0ns1",
-  "widgetName": "IconButton3Copy1"
+  "widgetId": "oarq0wtpno",
+  "widgetName": "IconButton3Copy1Copy1Copy"
 }

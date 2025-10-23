@@ -1,0 +1,24 @@
+UPDATE new_settimane
+SET
+  `4Comprensione` = {{Rating37Copy.value}},
+  `4NoteComprensione` = '{{Input37Copy.text}}',
+  `4AutonomiaAperturaChiusura` = {{Rating38Copy.value}},
+  `4NoteAutonomiaAperturaChiusura` = '{{Input38Copy.text}}',
+  `4ChiusuraContabile` = {{Rating39Copy.value}},
+  `4NoteChiusuraContabile` = '{{Input39Copy.text}}',
+  `4ConfrontoColleghe` = {{Rating40Copy.value}},
+  `4NoteConfrontoColleghe` = '{{Input40Copy.text}}',
+  `4ComproOroTutto` = {{Rating41Copy.value}},
+  `4NoteComproOroTutto` = '{{Input41Copy.text}}',
+  `4Acconti` = {{Rating42Copy.value}},
+  `4NoteAcconti` = '{{Input42Copy.text}}',
+  `4Resi` = {{Rating43Copy.value}},
+  `4NoteResi` = '{{Input43Copy.text}}',
+  `4CambiInGaranzia` = {{Rating44Copy.value}},
+  `4NoteCambiInGaranzia` = '{{Input44Copy.text}}',
+  `4GiroMerceIn` = {{Rating45Copy.value}},
+  `4NoteGiroMerceIn` = '{{Input45Copy.text}}',
+  `4GiroMerceOut` = {{Rating46Copy.value}},
+  `4NoteGiroMerceOut` = '{{Input46Copy.text}}',
+  ModificatoDa4 = '{{appsmith.user.name + "_" + moment().format("YYYYMMDD_HHmmss")}}'
+WHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};

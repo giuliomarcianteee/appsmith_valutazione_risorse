@@ -1,0 +1,11 @@
+INSERT INTO new_settimane SET
+  IdSettimane = '{{TabellaSettimane.triggeredRow.IdDipendenti}}',
+	5Diamanti = {{Rating47.value}},
+	5NoteDiamanti = '{{Input47.text}}',
+	5Pietre = {{Rating48.value}},
+	5NotePietre = '{{Input48.text}}',
+	5Fedi = {{Rating49.value}},
+	5NoteFedi = '{{Input49.text}}',
+	5SchedeOro = {{Rating50.value}},
+	5NoteSchedeOro = '{{Input50.text}}',
+ModificatoDa5 = '{{appsmith.user.name + "_" + moment().format("YYYYMMDD_HHmmss")}}';
