@@ -1,0 +1,10 @@
+SELECT 
+ IdSettimane,
+`6ManualeGioielleria`, `6NoteManualeGioielleria`,
+`6Turno`, `6NoteTurno`,
+`6Apertura`, `6NoteApertura`,
+`6Chiusura`, `6NoteChiusura`,
+`6Vetrine`, `6NoteVetrine`,
+ModificatoDa6
+FROM new_settimane
+WHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};

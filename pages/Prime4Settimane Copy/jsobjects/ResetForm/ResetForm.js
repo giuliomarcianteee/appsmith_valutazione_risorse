@@ -31,9 +31,17 @@ export default {
     }
   },
 	
-	  resetForm5() {
-    // Rating da 47 a 52
-    for (let i = 47; i <= 52; i++) {
+		  resetForm5() {
+    // Rating da 47 a 50
+    for (let i = 47; i <= 50; i++) {
+      resetWidget(`Rating${i}`);
+      resetWidget(`Input${i}`);
+    }
+  },
+	
+	  resetForm6() {
+    // Rating da 51 a 55
+    for (let i = 51; i <= 55; i++) {
       resetWidget(`Rating${i}`);
       resetWidget(`Input${i}`);
     }

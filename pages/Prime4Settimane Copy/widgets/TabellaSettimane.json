@@ -1,5 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": false,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -179,6 +180,7 @@
     "customColumn5": 60,
     "customColumn6": 60
   },
+  "compactMode": "DEFAULT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
@@ -645,6 +647,9 @@
     },
     {
       "key": "primaryColumns.customColumn5.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn5.buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -671,14 +676,15 @@
   "endOfData": false,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
+  "infiniteScrollEnabled": true,
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
-  "isSortable": true,
+  "isSortable": false,
   "isVisible": true,
   "isVisibleDownload": true,
   "isVisibleFilters": false,
   "isVisiblePagination": false,
-  "isVisibleSearch": true,
+  "isVisibleSearch": false,
   "key": "wakf9f17zb",
   "label": "Data",
   "leftColumn": 0,
@@ -695,6 +701,470 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
+    "1Agenda": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1AllarmeAlCollo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1CambioTurno": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1CassaPos": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1Congedo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1ConoscenzaBrandOreficeria": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1ControlloCassa": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1Fidelity": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1ManualeFormativo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1Metodo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteAgenda": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteAllarmeAlCollo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteCambioTurno": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteCassaPos": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteCongedo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteConoscenzaBrandOreficeria": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteControlloCassa": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteFidelity": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteManualeFormativo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteMetodo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteOrganizzazioneMerceologica": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NotePacchetto": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteProdottoeSconti": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteSaluto": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteTablet": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteVenditaInSicurezza": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1NoteVetrine": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1OrganizzazioneMerceologica": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1Pacchetto": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1ProdottoeSconti": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1Saluto": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1Tablet": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1VenditaInSicurezza": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1Vetrine": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "1°": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2Apertura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2Chiusura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2Comprensione": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2Gioielleria": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2GiroMerceIn": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2GiroMerceOut": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2Metodo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2MetodoRipa": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteApertura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteChiusura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteComprensione": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteGioielleria": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteGiroMerceIn": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteGiroMerceOut": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteMetodo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteMetodoRipa": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteOrologi": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteRipa": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2NoteTablet": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2Orologi": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2Ripa": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2Tablet": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "2°": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3Allestimento": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3Comprensione": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3ComproOro": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3Disallestimento": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3NoteAllestimento": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3NoteComprensione": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3NoteComproOro": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3NoteDisallestimento": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3NoteOroInvestimento": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3NotePianificazioneColleghe": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3NoteTabletComproOro": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3NoteTestMetallo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3OroInvestimento": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3PianificazioneColleghe": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3TabletComproOro": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3TestMetallo": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "3°": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4Acconti": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4AutonomiaAperturaChiusura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4CambiInGaranzia": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4ChiusuraContabile": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4Comprensione": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4ComproOroTutto": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4ConfrontoColleghe": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4GiroMerceIn": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4GiroMerceOut": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteAcconti": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteAutonomiaAperturaChiusura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteCambiInGaranzia": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteChiusuraContabile": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteComprensione": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteComproOroTutto": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteConfrontoColleghe": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteGiroMerceIn": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteGiroMerceOut": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4NoteResi": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4Resi": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "4°": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "5Diamanti": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "5Fedi": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "5NoteDiamanti": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "5NoteFedi": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "5NotePietre": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "5NoteSchedeOro": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "5Pietre": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "5SchedeOro": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "5°": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6Apertura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6Chiusura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6ManualeGioielleria": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6NoteApertura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6NoteChiusura": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6NoteManualeGioielleria": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6NoteTurno": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6NoteVetrine": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6Turno": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6Vetrine": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
+    "6°": {
+      "isCellEditable": false,
+      "isEditable": false
+    },
     "DataAssunzione": {
       "alias": "DataAssunzione",
       "allowCellWrapping": false,
@@ -5039,7 +5509,7 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  (() => {\n    let somma4 = 0;\n\n    Object.entries(currentRow).forEach(([key, value]) => {\n      if (Number.isInteger(value) && key.startsWith(\"4\")) {\n        somma4 += value;\n      }\n    });\n\n    if (somma4 === 0) return \"#d1d5db\"; // grigio chiaro\n\n    const campi = [\n      \"4AutonomiaAllarmiAperturaChiusura\",\n      \"4AutonomiaChiusraContabile\",\n      \"4CapacitaConfrontoColleghe\",\n      \"4ConoscenzaCompletaComproOro\",\n      \"4VenditaOroInvestimento\",\n      \"4RicercaProdottiSuTablet\",\n      \"4MetodoRistampaDocFediSchede\",\n      \"4MetodoDisimpegnoOggettiPrenotati\"\n    ];\n\n    const campoEccezione = \"4ConoscenzaCompletaComproOro\";\n\n    const tuttiVerdi = campi.every(k => {\n      if (k === campoEccezione) return currentRow[k] >= 2;\n      return currentRow[k] >= 3;\n    });\n\n    if (tuttiVerdi) return \"#22c55e\"; // verde\n\n    return \"#ef4444\"; // rosso\n  })()\n)) : \n  (() => {\n    let somma4 = 0;\n\n    Object.entries(currentRow).forEach(([key, value]) => {\n      if (Number.isInteger(value) && key.startsWith(\"4\")) {\n        somma4 += value;\n      }\n    });\n\n    if (somma4 === 0) return \"#d1d5db\"; // grigio chiaro\n\n    const campi = [\n      \"4AutonomiaAllarmiAperturaChiusura\",\n      \"4AutonomiaChiusraContabile\",\n      \"4CapacitaConfrontoColleghe\",\n      \"4ConoscenzaCompletaComproOro\",\n      \"4VenditaOroInvestimento\",\n      \"4RicercaProdottiSuTablet\",\n      \"4MetodoRistampaDocFediSchede\",\n      \"4MetodoDisimpegnoOggettiPrenotati\"\n    ];\n\n    const campoEccezione = \"4ConoscenzaCompletaComproOro\";\n\n    const tuttiVerdi = campi.every(k => {\n      if (k === campoEccezione) return currentRow[k] >= 2;\n      return currentRow[k] >= 3;\n    });\n\n    if (tuttiVerdi) return \"#22c55e\"; // verde\n\n    return \"#ef4444\"; // rosso\n  })()\n })()}}",
+      "buttonColor": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  (\n    currentRow[\"4Comprensione\"] +\n    currentRow[\"4AutonomiaAperturaChiusura\"] +\n    currentRow[\"4ChiusuraContabile\"] +\n    currentRow[\"4ConfrontoColleghe\"] +\n    currentRow[\"4ComproOroTutto\"] +\n    currentRow[\"4Acconti\"] +\n    currentRow[\"4Resi\"] +\n    currentRow[\"4CambiInGaranzia\"] +\n    currentRow[\"4GiroMerceIn\"] +\n    currentRow[\"4GiroMerceOut\"]\n  ) === 30 ? \"green\" :\n  (\n    (\n      currentRow[\"4Comprensione\"] === null ||\n      currentRow[\"4AutonomiaAperturaChiusura\"] === null ||\n      currentRow[\"4ChiusuraContabile\"] === null ||\n      currentRow[\"4ConfrontoColleghe\"] === null ||\n      currentRow[\"4ComproOroTutto\"] === null ||\n      currentRow[\"4Acconti\"] === null ||\n      currentRow[\"4Resi\"] === null ||\n      currentRow[\"4CambiInGaranzia\"] === null ||\n      currentRow[\"4GiroMerceIn\"] === null ||\n      currentRow[\"4GiroMerceOut\"] === null\n    ) ? \"default\" : \"red\"\n  )\n)) : \n  (\n    currentRow[\"4Comprensione\"] +\n    currentRow[\"4AutonomiaAperturaChiusura\"] +\n    currentRow[\"4ChiusuraContabile\"] +\n    currentRow[\"4ConfrontoColleghe\"] +\n    currentRow[\"4ComproOroTutto\"] +\n    currentRow[\"4Acconti\"] +\n    currentRow[\"4Resi\"] +\n    currentRow[\"4CambiInGaranzia\"] +\n    currentRow[\"4GiroMerceIn\"] +\n    currentRow[\"4GiroMerceOut\"]\n  ) === 30 ? \"green\" :\n  (\n    (\n      currentRow[\"4Comprensione\"] === null ||\n      currentRow[\"4AutonomiaAperturaChiusura\"] === null ||\n      currentRow[\"4ChiusuraContabile\"] === null ||\n      currentRow[\"4ConfrontoColleghe\"] === null ||\n      currentRow[\"4ComproOroTutto\"] === null ||\n      currentRow[\"4Acconti\"] === null ||\n      currentRow[\"4Resi\"] === null ||\n      currentRow[\"4CambiInGaranzia\"] === null ||\n      currentRow[\"4GiroMerceIn\"] === null ||\n      currentRow[\"4GiroMerceOut\"] === null\n    ) ? \"default\" : \"red\"\n  )\n })()}}",
       "buttonStyle": "rgb(3, 179, 101)",
       "buttonVariant": "PRIMARY",
       "columnType": "iconButton",
@@ -5079,7 +5549,7 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonColor": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  (\n    currentRow[\"5Diamanti\"] +\n    currentRow[\"5Pietre\"] +\n    currentRow[\"5Fedi\"] +\n    currentRow[\"5SchedeOro\"]\n  ) === 12 ? \"green\" :\n  (\n    (\n      currentRow[\"5Diamanti\"] === null ||\n      currentRow[\"5Pietre\"] === null ||\n      currentRow[\"5Fedi\"] === null ||\n      currentRow[\"5SchedeOro\"] === null\n    ) ? \"default\" : \"red\"\n  )\n)) : \n  (\n    currentRow[\"5Diamanti\"] +\n    currentRow[\"5Pietre\"] +\n    currentRow[\"5Fedi\"] +\n    currentRow[\"5SchedeOro\"]\n  ) === 12 ? \"green\" :\n  (\n    (\n      currentRow[\"5Diamanti\"] === null ||\n      currentRow[\"5Pietre\"] === null ||\n      currentRow[\"5Fedi\"] === null ||\n      currentRow[\"5SchedeOro\"] === null\n    ) ? \"default\" : \"red\"\n  )\n })()}}",
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "iconButton",
       "computedValue": "",
@@ -5103,7 +5573,7 @@
       "label": "5°",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{_5SelectSett.run(() => {\n  const n = _5SelectSett.data.length;\n\n  ResetForm.resetForm4();\n\n  if (n === 0) {\n    showModal(\"5ModalInsSett\");\n  } else if (n === 1) {\n    showModal(\"5ModalUpdSett\");\n  }\n});}}",
+      "onClick": "{{_5SelectSett.run(() => {\n  const n = _5SelectSett.data.length;\n\n  ResetForm.resetForm5();\n\n  if (n === 0) {\n    showModal(\"5ModalInsSett\");\n  } else if (n === 1) {\n    showModal(\"5ModalUpdSett\");\n  }\n});}}",
       "originalId": "customColumn5",
       "sticky": "",
       "textSize": "0.875rem",

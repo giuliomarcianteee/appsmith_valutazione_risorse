@@ -1,0 +1,48 @@
+{
+  "activeColor": "{{\n  Rating53.value === 1 ? \"red\" :\n  Rating53.value === 2 ? \"Orange\" :\n  Rating53.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
+  "animateLoading": true,
+  "bottomRow": 4,
+  "defaultRate": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "activeColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "activeColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "inactiveColor": "#E0DEDE",
+  "isAllowHalf": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isReadOnly": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "xjjzskha3j",
+  "leftColumn": 57,
+  "maxCount": "3",
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 12,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "originalBottomRow": 169,
+  "originalTopRow": 165,
+  "parentColumnSpace": 4.23828125,
+  "parentId": "msnkj5zysn",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "size": "LARGE",
+  "tooltips": "[\n  \"Non lo sa fare\",\n  \"Sta Imparando\",\n  \"Lo sa fare\"\n]",
+  "topRow": 0,
+  "type": "RATE_WIDGET",
+  "widgetId": "1cifrqf2q1",
+  "widgetName": "Rating53"
+}
