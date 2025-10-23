@@ -662,6 +662,12 @@
     },
     {
       "key": "primaryColumns.customColumn6.onClick"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn6.buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -5603,7 +5609,7 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonColor": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  (\n    currentRow[\"6ManualeGioielleria\"] +\n    currentRow[\"6Turno\"] +\n    currentRow[\"6Apertura\"] +\n    currentRow[\"6Chiusura\"] +\n    currentRow[\"6Vetrine\"]\n  ) === 15 ? \"green\" :\n  (\n    (\n      currentRow[\"6ManualeGioielleria\"] === null ||\n      currentRow[\"6Turno\"] === null ||\n      currentRow[\"6Apertura\"] === null ||\n      currentRow[\"6Chiusura\"] === null ||\n      currentRow[\"6Vetrine\"] === null\n    ) ? \"default\" : \"red\"\n  )\n)) : \n  (\n    currentRow[\"6ManualeGioielleria\"] +\n    currentRow[\"6Turno\"] +\n    currentRow[\"6Apertura\"] +\n    currentRow[\"6Chiusura\"] +\n    currentRow[\"6Vetrine\"]\n  ) === 15 ? \"green\" :\n  (\n    (\n      currentRow[\"6ManualeGioielleria\"] === null ||\n      currentRow[\"6Turno\"] === null ||\n      currentRow[\"6Apertura\"] === null ||\n      currentRow[\"6Chiusura\"] === null ||\n      currentRow[\"6Vetrine\"] === null\n    ) ? \"default\" : \"red\"\n  )\n })()}}",
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "iconButton",
       "computedValue": "",
