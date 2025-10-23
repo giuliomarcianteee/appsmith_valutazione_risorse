@@ -1,2 +1,2 @@
-SELECT DataPassaggio,IdPassaggiNegozi,Negozio FROM passaggi_negozi
+SELECT DataPassaggio,IdPassaggiNegozi,Negozio,UtenteModifica FROM passaggi_negozi
 WHERE Negozio = {{SelectNegozio.selectedOptionValue}}

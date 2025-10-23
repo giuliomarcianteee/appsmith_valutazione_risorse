@@ -12,11 +12,23 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{ Table1Negozio.triggeredRow.UtenteModifica !== appsmith.user.name }}\n",
   "isLoading": false,
   "isVisible": true,
   "key": "52yeynvoyh",
@@ -27,6 +39,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 164,
   "needsErrorInfo": false,
+  "onClick": "{{Insert1Negozio.run().then(() => {\n  showAlert('Relazione modificata con successo', 'success');\n  closeModal(ModalInsert1Negozio.name);\n}).catch(() => {\n  showAlert('Errore nella modifica', 'error');\n});}}",
   "parentColumnSpace": 13.9375,
   "parentId": "i40kazphys",
   "parentRowSpace": 10,

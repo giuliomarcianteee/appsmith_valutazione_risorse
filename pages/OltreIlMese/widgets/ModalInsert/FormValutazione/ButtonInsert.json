@@ -39,7 +39,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{ValutazioneInsert.run().then(() => {\n  closeModal(ModalInsert.name);\n  showAlert('Valutazione salvata con successo', 'success');\n}).catch(() => {\n  showAlert('Errore di salvataggio', 'error');\n});}}",
+  "onClick": "{{ValutazioneInsert.run().then(() => { DipendentiQuery.run();\n  closeModal(ModalInsert.name);\n  showAlert('Valutazione salvata con successo', 'success');\n}).catch(() => {\n  showAlert('Errore di salvataggio', 'error');\n});}}",
   "originalBottomRow": 347,
   "originalTopRow": 343,
   "parentColumnSpace": 14.7333984375,

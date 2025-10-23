@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 240,
+      "minHeight": 3560,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -80,5 +80,5 @@
   "version": 2,
   "widgetId": "k5ggpbi1ir",
   "widgetName": "ModalInsert",
-  "width": 1026
+  "width": 960
 }

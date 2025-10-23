@@ -1,6 +1,5 @@
-INSERT INTO passaggi_negozi SET
-  Negozio = '{{Table1Negozio.triggeredRow.}}',
-  DataPassaggio = '{{moment(DatePassaggio.selectedDate).format("YYYY-MM-DD")}}',
+UPDATE passaggi_negozi
+SET
   Posizione = '{{InputPosizioneCopy.text}}',
   RatingPosizione = {{RatingPosizioneCopy.value}},
   Affluenza = '{{InputAffluenzaCopy.text}}',
@@ -16,7 +15,5 @@ INSERT INTO passaggi_negozi SET
   Esposizione = '{{InputEsposizioneCopy.text}}',
   RatingEsposizione = {{RatingEsposizioneCopy.value}},
   Altro = '{{InputAltroCopy.text}}',
-  RatingAltro = 0,
-  DataCompilazione = '{{moment().format("YYYY-MM-DD HH:mm:ss")}}',
-  UtenteModifica = '{{appsmith.user.name}}',
-  IdPassaggiNegozi = '{{SelectNegozio.selectedOptionValue + "_" + moment().format("YYYYMMDD_HHmmss")}}';
+  RatingAltro = 0
+WHERE IdPassaggiNegozi = '{{Table1Negozio.triggeredRow.IdPassaggiNegozi}}';

@@ -1,1 +1,1 @@
-SELECT Negozio,DataPassaggio,IdPassaggiNegozi FROM passaggi_negozi
+SELECT Negozio,DataPassaggio,IdPassaggiNegozi, UtenteModifica FROM passaggi_negozi

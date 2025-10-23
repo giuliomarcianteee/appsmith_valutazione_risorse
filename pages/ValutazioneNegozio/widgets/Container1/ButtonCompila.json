@@ -20,9 +20,6 @@
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
-    },
-    {
-      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -42,7 +39,7 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "onClick": "{{ \nSelectVisualizzaInserisci.run()\n  .then(() => {\n    if (SelectVisualizzaInserisci.data.length > 0) {\n      showModal('ModalVisualizza_Inserisci');\n    } else {\n      showModal('ModalInsert');\n    }\n  })\n}}\n",
+  "onClick": "{{ResetPassaggiNegozi.reset();\nshowModal(ModalInsert.name);}}",
   "parentColumnSpace": 16.375,
   "parentId": "xxdf7pqnoe",
   "parentRowSpace": 10,

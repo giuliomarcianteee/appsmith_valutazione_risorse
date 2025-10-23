@@ -1,0 +1,19 @@
+UPDATE passaggi_negozi
+SET
+  Posizione = '{{InputPosizioneCopyCopyCopy.text}}',
+  RatingPosizione = {{RatingPosizioneCopyCopyCopy.value}},
+  Affluenza = '{{InputAffluenzaCopyCopyCopy.text}}',
+  RatingAffluenza = {{RatingAffluenzaCopyCopyCopy.value}},
+  Clientela = '{{InputClientelaCopyCopyCopy.text}}',
+  RatingClientela = {{RatingClientelaCopyCopyCopy.value}},
+  VenditaMerceologica = '{{InputVenditaMerceologicaCopyCopyCopy.text}}',
+  RatingVenditaMerceologica = 0,
+  AnalisiNegozio = '{{InputAnalisiNegozioCopyCopyCopy.text}}',
+  RatingAnalisiNegozio = 0,
+  PuliziaNegozio = '{{InputPuliziaNegozioCopyCopyCopy.text}}',
+  RatingPuliziaNegozio = {{RatingPuliziaNegozioCopyCopyCopy.value}},
+  Esposizione = '{{InputEsposizioneCopyCopyCopy.text}}',
+  RatingEsposizione = {{RatingEsposizioneCopyCopyCopy.value}},
+  Altro = '{{InputAltroCopyCopyCopy.text}}',
+  RatingAltro = 0
+WHERE IdPassaggiNegozi = '{{TableChoose.triggeredRow.IdPassaggiNegozi}}';
