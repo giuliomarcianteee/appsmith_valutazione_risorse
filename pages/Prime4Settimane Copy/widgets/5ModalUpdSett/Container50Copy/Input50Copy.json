@@ -5,13 +5,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 15,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{\n  _5SelectSett.data[0][\"5NoteSchedeOro\"] !== null \n    ? _5SelectSett.data[0][\"5NoteSchedeOro\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",

@@ -19,9 +19,6 @@
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "onClick"
-    },
-    {
       "key": "isDisabled"
     }
   ],
@@ -42,7 +39,7 @@
   "mobileRightColumn": 61,
   "mobileTopRow": 305,
   "needsErrorInfo": false,
-  "onClick": "{{_3UpdSett.run().then(() => {\n DipendentiQuery.run(); closeModal(3ModalUpdSett.name);\n  showAlert('Relazione salvata correttamente', 'success');\n  \n}).catch(() => {\n  showAlert('Errore nel salvataggio', 'error');\n});}}",
+  "onClick": "{{_3UpdSett.run().then(() => {\n  showAlert('Relazione modificata correttamente', 'success');\n  DipendentiQuery.run();\n  closeModal('3ModalUpdSett');\n}).catch(() => {\n  showAlert('Errore nella modifica', 'error');\n});}}",
   "originalBottomRow": 149,
   "originalTopRow": 145,
   "parentColumnSpace": 13.5625,

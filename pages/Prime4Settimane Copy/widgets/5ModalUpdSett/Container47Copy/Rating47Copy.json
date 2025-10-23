@@ -2,10 +2,13 @@
   "activeColor": "{{\n  Rating47Copy.value === 1 ? \"red\" :\n  Rating47Copy.value === 2 ? \"Orange\" :\n  Rating47Copy.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
   "bottomRow": 4,
-  "defaultRate": "",
+  "defaultRate": "{{\n  _5SelectSett.data[0][\"5Diamanti\"] !== null \n    ? _5SelectSett.data[0][\"5Diamanti\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "activeColor"
+    },
+    {
+      "key": "defaultRate"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
