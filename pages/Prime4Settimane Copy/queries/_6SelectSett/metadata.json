@@ -29,7 +29,7 @@
     ],
     "name": "_6SelectSett",
     "pageId": "Prime4Settimane Copy",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

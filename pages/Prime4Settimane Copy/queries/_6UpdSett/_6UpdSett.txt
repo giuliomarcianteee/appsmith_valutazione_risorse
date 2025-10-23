@@ -1,14 +1,14 @@
 UPDATE new_settimane
 SET
-  `6ManualeGioielleria` = {{Rating51.value}},
-  `6NoteManualeGioielleria` = '{{Input51.text}}',
-  `6Turno` = {{Rating52.value}},
-  `6NoteTurno` = '{{Input52.text}}',
-  `6Apertura` = {{Rating53.value}},
-  `6NoteApertura` = '{{Input53.text}}',
-  `6Chiusura` = {{Rating54.value}},
-  `6NoteChiusura` = '{{Input54.text}}',
-  `6Vetrine` = {{Rating55.value}},
-  `6NoteVetrine` = '{{Input55.text}}',
+  `6ManualeGioielleria` = {{Rating51Copy.value}},
+  `6NoteManualeGioielleria` = '{{Input51Copy.text}}',
+  `6Turno` = {{Rating52Copy.value}},
+  `6NoteTurno` = '{{Input52Copy.text}}',
+  `6Apertura` = {{Rating53Copy.value}},
+  `6NoteApertura` = '{{Input53Copy.text}}',
+  `6Chiusura` = {{Rating54Copy.value}},
+  `6NoteChiusura` = '{{Input54Copy.text}}',
+  `6Vetrine` = {{Rating55Copy.value}},
+  `6NoteVetrine` = '{{Input55Copy.text}}',
   ModificatoDa6 = '{{appsmith.user.name + "_" + moment().format("YYYYMMDD_HHmmss")}}'
 WHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};

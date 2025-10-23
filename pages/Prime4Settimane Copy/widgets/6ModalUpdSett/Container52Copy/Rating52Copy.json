@@ -1,0 +1,51 @@
+{
+  "activeColor": "{{\n  Rating52Copy.value === 1 ? \"red\" :\n  Rating52Copy.value === 2 ? \"Orange\" :\n  Rating52Copy.value >= 3 ? \"green\" :\n  \"grey\"\n}}\n",
+  "animateLoading": true,
+  "bottomRow": 4,
+  "defaultRate": "{{\n  _6SelectSett.data[0][\"6Turno\"] !== null \n    ? _6SelectSett.data[0][\"6Turno\"] \n    : \"\"\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "activeColor"
+    },
+    {
+      "key": "defaultRate"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "activeColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "inactiveColor": "#E0DEDE",
+  "isAllowHalf": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isReadOnly": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "xjjzskha3j",
+  "leftColumn": 55,
+  "maxCount": "4",
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 12,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "originalBottomRow": 6,
+  "originalTopRow": 0,
+  "parentColumnSpace": 4.23828125,
+  "parentId": "92dxbz4qz9",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "size": "LARGE",
+  "tooltips": "[\n  \"Non lo sa fare\",\n  \"Sta Imparando\",\n  \"Lo sa fare\",\n\t\"Lo sa insegnare\"\n]",
+  "topRow": 0,
+  "type": "RATE_WIDGET",
+  "widgetId": "jwd2wyb4kf",
+  "widgetName": "Rating52Copy"
+}

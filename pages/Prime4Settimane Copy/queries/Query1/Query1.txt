@@ -1,0 +1,2 @@
+DELETE FROM new_settimane
+WHERE IdSettimane = 888171;

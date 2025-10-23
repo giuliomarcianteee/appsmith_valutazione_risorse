@@ -36,18 +36,18 @@
   "originalBottomRow": 7,
   "originalTopRow": 1,
   "overflow": "NONE",
-  "parentId": "zh8gcz44ce",
+  "parentId": "crtx9w6cg5",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 51,
   "shouldTruncate": false,
-  "text": "Seconda settimana di {{TabellaSettimane.triggeredRow.Nome}} assunta il {{moment(TabellaSettimane.triggeredRow.DataAssunzione).format(\"DD/MM/YYYY\")}}",
+  "text": "Sesta settimana di {{TabellaSettimane.triggeredRow.Nome}} assunta il {{moment(TabellaSettimane.triggeredRow.DataAssunzione).format(\"DD/MM/YYYY\")}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "sgc6rqw78g",
-  "widgetName": "Text2Settimana"
+  "widgetId": "wxagpvkyls",
+  "widgetName": "Text6SettimanaCopy"
 }
