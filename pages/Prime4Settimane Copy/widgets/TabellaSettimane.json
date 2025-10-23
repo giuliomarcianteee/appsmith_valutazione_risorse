@@ -164,7 +164,7 @@
     "ModificatoDa5",
     "ModificatoDa6"
   ],
-  "columnUpdatedAt": 1761204783224,
+  "columnUpdatedAt": 1761222775594,
   "columnWidthMap": {
     "DataAssunzione": 154,
     "DataFineContratto": 175,
@@ -664,10 +664,10 @@
       "key": "primaryColumns.customColumn6.onClick"
     },
     {
-      "key": "tableData"
+      "key": "primaryColumns.customColumn6.buttonColor"
     },
     {
-      "key": "primaryColumns.customColumn6.buttonColor"
+      "key": "tableData"
     }
   ],
   "dynamicTriggerPathList": [
