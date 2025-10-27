@@ -1,0 +1,69 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "{{\n  [\n    Rating29.value,\n    Rating30.value,\n    Rating31.value,\n    Rating32.value,\n    Rating33.value,\n    Rating34.value,\n    Rating35.value,\n    Rating36.value\n  ].every(r => r >= 1)\n}}\n",
+  "key": "r3otbom5we",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 42,
+  "mobileLeftColumn": 6,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 38,
+  "needsErrorInfo": false,
+  "originalBottomRow": 41,
+  "originalTopRow": 37,
+  "overflow": "NONE",
+  "parentColumnSpace": 12.59375,
+  "parentId": "crp4x9fqcr",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 17,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    const somma =\n      Rating29.value +\n      Rating30.value +\n      Rating31.value +\n      Rating32.value +\n      Rating33.value +\n      Rating34.value +\n      Rating35.value +\n      Rating36.value;\n\n    return somma === 0 ? \"\" : (somma >= 20 ? \"IDONEO\" : \"NON IDONEO\");\n  })()\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "{{\n  (() => {\n    const somma =\n      Rating29.value +\n      Rating30.value +\n      Rating31.value +\n      Rating32.value +\n      Rating33.value +\n      Rating34.value +\n      Rating35.value +\n      Rating36.value;\n\n    return somma === 0 ? \"\" : (somma >= 20 ? \"green\" : \"red\");\n  })()\n}}\n",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "6t3gv4kmfd",
+  "widgetName": "Text3Idoneo"
+}

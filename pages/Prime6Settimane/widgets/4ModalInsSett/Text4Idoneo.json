@@ -1,0 +1,69 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "{{\n  [\n    Rating37.value,\n    Rating38.value,\n    Rating39.value,\n    Rating40.value,\n    Rating41.value,\n    Rating42.value,\n    Rating43.value,\n\t\tRating44.value,\n\t\tRating45.value,\n    Rating46.value\n  ].every(r => r >= 1)\n}}",
+  "key": "r3otbom5we",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 42,
+  "mobileLeftColumn": 6,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 38,
+  "needsErrorInfo": false,
+  "originalBottomRow": 41,
+  "originalTopRow": 37,
+  "overflow": "NONE",
+  "parentColumnSpace": 12.59375,
+  "parentId": "pxgabgid5q",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 17,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    const sommaPrincipale =\n      Rating37.value +\n      Rating38.value +\n      Rating39.value +\n      Rating40.value +\n      Rating41.value +\n      Rating42.value +\n      Rating43.value +\n      Rating44.value;\n\n    const sommaGiroMerce =\n      Rating45.value +\n      Rating46.value;\n\n    if (sommaPrincipale === 0 && sommaGiroMerce === 0) return \"\";\n\n    return (sommaPrincipale === 24 && sommaGiroMerce >= 4)\n      ? \"IDONEO\"\n      : \"NON IDONEO\";\n  })()\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "{{\n  (() => {\n    const sommaPrincipale =\n      Rating37.value +\n      Rating38.value +\n      Rating39.value +\n      Rating40.value +\n      Rating41.value +\n      Rating42.value +\n      Rating43.value +\n      Rating44.value;\n\n    const sommaGiroMerce =\n      Rating45.value +\n      Rating46.value;\n\n    const totale = sommaPrincipale + sommaGiroMerce;\n\n    return totale === 0 ? \"\" :\n      (sommaPrincipale === 24 && sommaGiroMerce >= 4)\n        ? \"green\"\n        : \"red\";\n  })()\n}}\n",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "a1iuaxgsys",
+  "widgetName": "Text4Idoneo"
+}

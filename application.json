@@ -14,7 +14,7 @@
       "navStyle": "stacked",
       "orientation": "top",
       "position": "static",
-      "showNavbar": true,
+      "showNavbar": false,
       "showSignIn": true
     },
     "themeSetting": {
@@ -31,7 +31,7 @@
   "pages": [
     {
       "id": "Prime4Settimane",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "OltreIlMese",
@@ -42,8 +42,8 @@
       "isDefault": false
     },
     {
-      "id": "Prime4Settimane Copy",
-      "isDefault": false
+      "id": "Prime6Settimane",
+      "isDefault": true
     }
   ],
   "unpublishedAppLayout": {
@@ -60,7 +60,7 @@
       "navStyle": "stacked",
       "orientation": "top",
       "position": "static",
-      "showNavbar": true,
+      "showNavbar": false,
       "showSignIn": true
     },
     "themeSetting": {

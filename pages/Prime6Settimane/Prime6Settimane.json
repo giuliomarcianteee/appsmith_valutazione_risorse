@@ -1,12 +1,12 @@
 {
-  "gitSyncId": "6836d5cc66fc6c72aee9dd3f_48deb6a3-8738-4396-b351-bac7aa410deb",
+  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_3cd29027-d2ae-41a6-b397-f17be3bb3268",
   "unpublishedPage": {
-    "isHidden": true,
+    "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 480,
+          "bottomRow": 470,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -27,7 +27,7 @@
         }
       }
     ],
-    "name": "Prime4Settimane",
-    "slug": "prime4settimane"
+    "name": "Prime6Settimane",
+    "slug": "prime6settimane"
   }
 }
