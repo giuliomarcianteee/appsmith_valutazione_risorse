@@ -34,6 +34,7 @@
   "columnOrder": [
     "DataInserimento",
     "customColumn1",
+    "ModificatoDa",
     "IdMesi",
     "Accoglienza",
     "AccoglienzaSaluto",
@@ -101,12 +102,12 @@
     "ConoscenzaProceduraRispettoProcedure",
     "ConoscenzaProceduraAiutoAFareRispettareLeProcedure",
     "NoteConoscenzaProcedura",
-    "ModificatoDa",
     "CodiceDipendente"
   ],
-  "columnUpdatedAt": 1760081124634,
+  "columnUpdatedAt": 1761562764821,
   "columnWidthMap": {
-    "DataInserimento": 175
+    "DataInserimento": 168,
+    "customColumn1": 114
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -2053,8 +2054,8 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
-      "label": "ModificatoDa",
+      "isVisible": true,
+      "label": "Utente",
       "notation": "standard",
       "originalId": "ModificatoDa",
       "sticky": "",
@@ -2561,7 +2562,7 @@
       "width": 150
     },
     "customColumn1": {
-      "alias": "Mostra o Modifica Valutazione",
+      "alias": "Mostra",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TableValutazioni.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -2587,7 +2588,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Mostra o Modifica Valutazione",
+      "label": "Mostra",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{ValutazioneSelect.run();closeModal(ModalSelect.name);\nshowModal(ModalUpdate.name);\n}}",

@@ -15,11 +15,17 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -30,7 +36,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": "{{\n[\n  Radio1Copy.selectedOptionValue,\n  Radio2Copy.selectedOptionValue,\n  Radio3Copy.selectedOptionValue,\n  Radio4Copy.selectedOptionValue,\n  Radio5Copy.selectedOptionValue,\n  Radio6Copy.selectedOptionValue,\n  Radio7Copy.selectedOptionValue,\n  Radio8Copy.selectedOptionValue,\n  Radio9Copy.selectedOptionValue,\n  Radio10Copy.selectedOptionValue,\n  Radio11Copy.selectedOptionValue,\n  Radio12Copy.selectedOptionValue,\n  Radio13Copy.selectedOptionValue,\n  Radio14Copy.selectedOptionValue,\n  Radio15Copy.selectedOptionValue,\n  Radio16Copy.selectedOptionValue,\n  Radio17Copy.selectedOptionValue,\n  Radio18Copy.selectedOptionValue,\n  Radio19Copy.selectedOptionValue,\n  Radio20Copy.selectedOptionValue,\n  Radio21Copy.selectedOptionValue,\n  Radio22Copy.selectedOptionValue,\n  Radio23Copy.selectedOptionValue,\n  Radio24Copy.selectedOptionValue,\n  Radio25Copy.selectedOptionValue,\n  Radio26Copy.selectedOptionValue,\n  Radio27Copy.selectedOptionValue,\n  Radio28Copy.selectedOptionValue,\n  Radio29Copy.selectedOptionValue,\n  Radio30Copy.selectedOptionValue,\n  Radio31Copy.selectedOptionValue,\n  Radio32Copy.selectedOptionValue,\n  Radio33Copy.selectedOptionValue,\n  Radio34Copy.selectedOptionValue,\n  Radio35Copy.selectedOptionValue,\n  Radio36Copy.selectedOptionValue,\n  Radio37Copy.selectedOptionValue,\n  Radio38Copy.selectedOptionValue,\n  Radio39Copy.selectedOptionValue,\n  Radio40Copy.selectedOptionValue,\n  Radio41Copy.selectedOptionValue,\n  Radio42Copy.selectedOptionValue,\n  Radio43Copy.selectedOptionValue,\n  Radio44Copy.selectedOptionValue\n].some(val => val === null || val === undefined || val === \"\")\n}}\n",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{appsmith.user.name === TableValutazioni.triggeredRow.UtenteModifica }}",
   "key": "zno6xzms6h",
   "leftColumn": 47,
   "minWidth": 120,
