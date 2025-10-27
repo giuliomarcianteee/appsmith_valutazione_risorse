@@ -33,8 +33,8 @@
       "index": 0,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Prime 4 settimane",
-      "onClick": "{{navigateTo('Prime4Settimane', {}, 'SAME_WINDOW');}}",
+      "label": "Prime 6 settimane",
+      "onClick": "{{navigateTo('Prime6Settimane', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
     "menuItem2": {
