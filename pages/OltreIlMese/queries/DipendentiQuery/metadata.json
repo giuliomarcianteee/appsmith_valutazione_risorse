@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  d.*,\n  CASE \n    WHEN d.DataFineContratto = '2099-12-31' THEN 'indeterminato'\n    ELSE TO_CHAR(d.DataFineContratto, 'DD/MM/YYYY')\n  END AS DataFineContrattoFormattata,\n  COALESCE(v.nRelazioni, 0) AS nRelazioni\nFROM dipendenti d\nLEFT JOIN (\n  SELECT CodiceDipendente, COUNT(*) AS nRelazioni\n  FROM valutazionerisorse_mesi\n  GROUP BY CodiceDipendente\n) v ON v.CodiceDipendente = d.IdDipendenti\nWHERE d.NEG IN (\n  SELECT NEG\n  FROM listanegozi\n  WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'\n)\nAND CURRENT_DATE - d.DataAssunzione >= 28\nORDER BY d.DataFineContratto ASC;\n",
+      "body": "SELECT \n  d.*,\n  CASE \n    WHEN d.DataFineContratto = '2099-12-31' THEN 'indeterminato'\n    ELSE TO_CHAR(d.DataFineContratto, 'DD/MM/YYYY')\n  END AS DataFineContrattoFormattata,\n  COALESCE(v.nRelazioni, 0) AS nRelazioni\nFROM dipendenti d\nLEFT JOIN (\n  SELECT CodiceDipendente, COUNT(*) AS nRelazioni\n  FROM valutazionerisorse_mesi\n  GROUP BY CodiceDipendente\n) v ON v.CodiceDipendente = d.IdDipendenti\nWHERE d.NEG IN (\n  SELECT NEG\n  FROM listanegozi\n  WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'\n)\nAND CURRENT_DATE - d.DataAssunzione >= 42\nORDER BY d.DataFineContratto ASC;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
