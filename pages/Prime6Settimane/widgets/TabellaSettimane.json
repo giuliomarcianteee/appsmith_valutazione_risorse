@@ -32,13 +32,13 @@
     }
   },
   "columnOrder": [
-    "Neg",
     "Nome",
-    "OreSett",
     "DataAssunzione",
+    "Neg",
     "DataFineContratto",
-    "customColumn1",
+    "OreSett",
     "customColumn2",
+    "customColumn1",
     "customColumn3",
     "customColumn4",
     "customColumn5",
@@ -163,7 +163,7 @@
     "ModificatoDa5",
     "ModificatoDa6"
   ],
-  "columnUpdatedAt": 1761562291662,
+  "columnUpdatedAt": 1761835035069,
   "columnWidthMap": {
     "DataAssunzione": 174,
     "DataFineContratto": 136.625,
