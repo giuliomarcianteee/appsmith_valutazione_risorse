@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 10,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -54,7 +54,7 @@
   "text": "{{(() => {\n  const ratings = [\n    Rating47.value,\n    Rating48.value,\n    Rating49.value,\n    Rating50.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: APPROFONDIRE I TEMI GIOIELLERIA E ORO DA INVESTIMENTO\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" : (somma >= 8 ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: APPROFONDIRE I TEMI GIOIELLERIA E ORO DA INVESTIMENTO\" : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: APPROFONDIRE I TEMI GIOIELLERIA E ORO DA INVESTIMENTO\");\n})()\n}}\n",
   "textAlign": "LEFT",
   "textColor": "{{(() => {\n  const ratings = [\n    Rating47.value,\n    Rating48.value,\n    Rating49.value,\n    Rating50.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"blue\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" : (somma >= 8 ? \"green\" : \"red\");\n})()\n}}",
-  "topRow": 7,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
