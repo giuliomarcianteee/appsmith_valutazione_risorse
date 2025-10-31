@@ -1,0 +1,63 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "r3otbom5we",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 42,
+  "mobileLeftColumn": 6,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 38,
+  "needsErrorInfo": false,
+  "originalBottomRow": 5,
+  "originalTopRow": 0,
+  "overflow": "NONE",
+  "parentColumnSpace": 2.1875,
+  "parentId": "2gz0e7fxus",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldTruncate": false,
+  "text": "{{(() => {\n  const ratingsPrincipale = [\n    Rating37Copy.value,\n\t\tRating38Copy.value,\n\t\tRating39Copy.value,\n\t\tRating40Copy.value,\n    Rating41Copy.value,\n\t\tRating42Copy.value,\n\t\tRating43Copy.value,\n\t\tRating44Copy.value\n  ];\n\n  const ratingsGiroMerce = [Rating45Copy.value, Rating46Copy.value];\n\n  const allRatings = [...ratingsPrincipale, ...ratingsGiroMerce];\n\n  const hasInvalidRating = allRatings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: LAVORARE IN AUTONOMIA PER I TEMI DELLE PRECEDENTI SETTIMANE\";\n  }\n\n  const sommaPrincipale = ratingsPrincipale.reduce((acc, val) => acc + val, 0);\n  const sommaGiroMerce = ratingsGiroMerce.reduce((acc, val) => acc + val, 0);\n\n  if (sommaPrincipale === 0 && sommaGiroMerce === 0) return \"\";\n\n  return (sommaPrincipale === 24 && sommaGiroMerce >= 4)\n    ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: LAVORARE IN AUTONOMIA PER I TEMI DELLE PRECEDENTI SETTIMANE\"\n    : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: LAVORARE IN AUTONOMIA PER I TEMI DELLE PRECEDENTI SETTIMANE\";\n})()\n}}",
+  "textAlign": "LEFT",
+  "textColor": "{{(() => {\n  const ratingsPrincipale = [\n    Rating37Copy.value,\n\t\tRating38Copy.value,\n\t\tRating39Copy.value,\n\t\tRating40Copy.value,\n    Rating41Copy.value,\n\t\tRating42Copy.value,\n\t\tRating43Copy.value,\n\t\tRating44Copy.value\n  ];\n\n  const ratingsGiroMerce = [Rating45Copy.value, Rating46Copy.value];\n\n  const allRatings = [...ratingsPrincipale, ...ratingsGiroMerce];\n\n  const hasInvalidRating = allRatings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"blue\";\n  }\n\n  const sommaPrincipale = ratingsPrincipale.reduce((acc, val) => acc + val, 0);\n  const sommaGiroMerce = ratingsGiroMerce.reduce((acc, val) => acc + val, 0);\n  const totale = sommaPrincipale + sommaGiroMerce;\n\n  return totale === 0 ? \"\" :\n    (sommaPrincipale === 24 && sommaGiroMerce >= 4)\n      ? \"green\"\n      : \"red\";\n})()\n}}",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "z64renxm87",
+  "widgetName": "Text4IdoneoCopy1"
+}

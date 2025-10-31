@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,20 +13,14 @@
       "key": "borderRadius"
     },
     {
-      "key": "isVisible"
+      "key": "text"
     },
     {
       "key": "textColor"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
-    {
-      "key": "isVisible"
-    },
     {
       "key": "textColor"
     }
@@ -36,7 +30,7 @@
   "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{\n  [\n    Rating37.value,\n    Rating38.value,\n    Rating39.value,\n    Rating40.value,\n    Rating41.value,\n    Rating42.value,\n    Rating43.value,\n\t\tRating44.value,\n\t\tRating45.value,\n    Rating46.value\n  ].every(r => r >= 1)\n}}",
+  "isVisible": true,
   "key": "r3otbom5we",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
@@ -47,7 +41,7 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 38,
   "needsErrorInfo": false,
-  "originalBottomRow": 5,
+  "originalBottomRow": 4,
   "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 2.1875,
@@ -57,9 +51,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{(() => {\n  const ratingsPrincipale = [\n    Rating37.value,\n\t\tRating38.value,\n\t\tRating39.value,\n\t\tRating40.value,\n    Rating41.value,\n\t\tRating42.value,\n\t\tRating43.value,\n\t\tRating44.value\n  ];\n\n  const ratingsGiroMerce = [Rating45.value, Rating46.value];\n\n  const allRatings = [...ratingsPrincipale, ...ratingsGiroMerce];\n\n  const hasInvalidRating = allRatings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: GESTIONE DELLA CASSA E GIRO MERCE\";\n  }\n\n  const sommaPrincipale = ratingsPrincipale.reduce((acc, val) => acc + val, 0);\n  const sommaGiroMerce = ratingsGiroMerce.reduce((acc, val) => acc + val, 0);\n\n  if (sommaPrincipale === 0 && sommaGiroMerce === 0) return \"\";\n\n  return (sommaPrincipale === 24 && sommaGiroMerce >= 4)\n    ? \"IDONEO\"\n    : \"NON IDONEO\";\n})()\n}}",
+  "text": "{{(() => {\n  const ratingsPrincipale = [\n    Rating37.value,\n\t\tRating38.value,\n\t\tRating39.value,\n\t\tRating40.value,\n    Rating41.value,\n\t\tRating42.value,\n\t\tRating43.value,\n\t\tRating44.value\n  ];\n\n  const ratingsGiroMerce = [Rating45.value, Rating46.value];\n\n  const allRatings = [...ratingsPrincipale, ...ratingsGiroMerce];\n\n  const hasInvalidRating = allRatings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: LAVORARE IN AUTONOMIA PER I TEMI DELLE PRECEDENTI SETTIMANE\";\n  }\n\n  const sommaPrincipale = ratingsPrincipale.reduce((acc, val) => acc + val, 0);\n  const sommaGiroMerce = ratingsGiroMerce.reduce((acc, val) => acc + val, 0);\n\n  if (sommaPrincipale === 0 && sommaGiroMerce === 0) return \"\";\n\n  return (sommaPrincipale === 24 && sommaGiroMerce >= 4)\n    ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: LAVORARE IN AUTONOMIA PER I TEMI DELLE PRECEDENTI SETTIMANE\"\n    : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: LAVORARE IN AUTONOMIA PER I TEMI DELLE PRECEDENTI SETTIMANE\";\n})()\n}}",
   "textAlign": "LEFT",
-  "textColor": "{{\n  (() => {\n    const sommaPrincipale =\n      Rating37.value +\n      Rating38.value +\n      Rating39.value +\n      Rating40.value +\n      Rating41.value +\n      Rating42.value +\n      Rating43.value +\n      Rating44.value;\n\n    const sommaGiroMerce =\n      Rating45.value +\n      Rating46.value;\n\n    const totale = sommaPrincipale + sommaGiroMerce;\n\n    return totale === 0 ? \"\" :\n      (sommaPrincipale === 24 && sommaGiroMerce >= 4)\n        ? \"green\"\n        : \"red\";\n  })()\n}}\n",
+  "textColor": "{{(() => {\n  const ratingsPrincipale = [\n    Rating37.value,\n\t\tRating38.value,\n\t\tRating39.value,\n\t\tRating40.value,\n    Rating41.value,\n\t\tRating42.value,\n\t\tRating43.value,\n\t\tRating44.value\n  ];\n\n  const ratingsGiroMerce = [Rating45.value, Rating46.value];\n\n  const allRatings = [...ratingsPrincipale, ...ratingsGiroMerce];\n\n  const hasInvalidRating = allRatings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"blue\";\n  }\n\n  const sommaPrincipale = ratingsPrincipale.reduce((acc, val) => acc + val, 0);\n  const sommaGiroMerce = ratingsGiroMerce.reduce((acc, val) => acc + val, 0);\n  const totale = sommaPrincipale + sommaGiroMerce;\n\n  return totale === 0 ? \"\" :\n    (sommaPrincipale === 24 && sommaGiroMerce >= 4)\n      ? \"green\"\n      : \"red\";\n})()\n}}",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
