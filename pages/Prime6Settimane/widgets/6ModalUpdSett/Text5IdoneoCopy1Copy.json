@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 12,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -16,17 +16,11 @@
       "key": "text"
     },
     {
-      "key": "isVisible"
-    },
-    {
       "key": "textColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
-    {
-      "key": "isVisible"
-    },
     {
       "key": "textColor"
     }
@@ -36,7 +30,7 @@
   "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{\n  [\n    Rating51Copy.value,\n    Rating52Copy.value,\n    Rating53Copy.value,\n    Rating54Copy.value,\n\t\tRating55Copy.value\n  ].every(r => r >= 1)\n}}",
+  "isVisible": true,
   "key": "r3otbom5we",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
@@ -47,20 +41,20 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 38,
   "needsErrorInfo": false,
-  "originalBottomRow": 41,
-  "originalTopRow": 37,
+  "originalBottomRow": 12,
+  "originalTopRow": 7,
   "overflow": "NONE",
   "parentColumnSpace": 12.59375,
   "parentId": "crtx9w6cg5",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 17,
+  "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{\n  (() => {\n    const valori = [\n      Rating51Copy.value,\n      Rating52Copy.value,\n      Rating53Copy.value,\n      Rating54Copy.value,\n      Rating55Copy.value\n    ];\n\n    const tuttiZero = valori.every(v => v === 0);\n    const tuttiAlmenoTre = valori.every(v => v >= 3);\n\n    return tuttiZero ? \"\" : (tuttiAlmenoTre ? \"IDONEO\" : \"NON IDONEO\");\n  })()\n}}\n\n",
+  "text": "{{(() => {\n  const ratings = [\n    Rating51Copy.value,\n    Rating52Copy.value,\n    Rating53Copy.value,\n    Rating54Copy.value,\n    Rating55Copy.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0 || r === \"\");\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: RISORSA IN GRADO DI LAVORARE IN AUTONOMIA IN UN TURNO A DUE\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" :\n    (somma >= 20\n      ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: RISORSA IN GRADO DI LAVORARE IN AUTONOMIA IN UN TURNO A DUE\"\n      : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: RISORSA IN GRADO DI LAVORARE IN AUTONOMIA IN UN TURNO A DUE\");\n})()\n}}",
   "textAlign": "LEFT",
-  "textColor": "{{\n  (() => {\n    const somma =\n      Rating51Copy.value +\n      Rating52Copy.value +\n      Rating53Copy.value +\n      Rating54Copy.value +\n\t\t\tRating55Copy.value;\n\n    return somma === 0 ? \"\" : (somma >= 15 ? \"green\" : \"red\");\n  })()\n}}\n",
-  "topRow": 5,
+  "textColor": "{{(() => {\n  const ratings = [\n    Rating51Copy.value,\n    Rating52Copy.value,\n    Rating53Copy.value,\n    Rating54Copy.value,\n    Rating55Copy.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0 || r === \"\");\n  if (hasInvalidRating) {\n    return \"blue\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" : (somma >= 20 ? \"green\" : \"red\");\n})()\n}}",
+  "topRow": 7,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

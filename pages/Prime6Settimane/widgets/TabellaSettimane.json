@@ -604,9 +604,6 @@
       "key": "primaryColumns.customColumn4.boxShadow"
     },
     {
-      "key": "primaryColumns.customColumn5.buttonColor"
-    },
-    {
       "key": "primaryColumns.customColumn5.borderRadius"
     },
     {
@@ -623,6 +620,9 @@
     },
     {
       "key": "primaryColumns.customColumn4.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn5.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -4719,7 +4719,7 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  (\n    currentRow[\"5Diamanti\"] +\n    currentRow[\"5Pietre\"] +\n    currentRow[\"5Fedi\"] +\n    currentRow[\"5SchedeOro\"]\n  ) === 12 ? \"green\" :\n  (\n    (\n      currentRow[\"5Diamanti\"] === null ||\n      currentRow[\"5Pietre\"] === null ||\n      currentRow[\"5Fedi\"] === null ||\n      currentRow[\"5SchedeOro\"] === null\n    ) ? \"default\" : \"red\"\n  )\n)) : \n  (\n    currentRow[\"5Diamanti\"] +\n    currentRow[\"5Pietre\"] +\n    currentRow[\"5Fedi\"] +\n    currentRow[\"5SchedeOro\"]\n  ) === 12 ? \"green\" :\n  (\n    (\n      currentRow[\"5Diamanti\"] === null ||\n      currentRow[\"5Pietre\"] === null ||\n      currentRow[\"5Fedi\"] === null ||\n      currentRow[\"5SchedeOro\"] === null\n    ) ? \"default\" : \"red\"\n  )\n })()}}",
+      "buttonColor": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n(() => {\n  const values = [\n    currentRow[\"5Diamanti\"],\n    currentRow[\"5Pietre\"],\n    currentRow[\"5Fedi\"],\n    currentRow[\"5SchedeOro\"]\n  ];\n\n  const allEmpty = values.every(v => v === null || v === 0 || v === \"\");\n  if (allEmpty) {\n    return \"default\";\n  }\n\n  const allAtLeastTwo = values.every(v => v >= 2);\n  return allAtLeastTwo ? \"green\" : \"red\";\n})()\n)) : \n(() => {\n  const values = [\n    currentRow[\"5Diamanti\"],\n    currentRow[\"5Pietre\"],\n    currentRow[\"5Fedi\"],\n    currentRow[\"5SchedeOro\"]\n  ];\n\n  const allEmpty = values.every(v => v === null || v === 0 || v === \"\");\n  if (allEmpty) {\n    return \"default\";\n  }\n\n  const allAtLeastTwo = values.every(v => v >= 2);\n  return allAtLeastTwo ? \"green\" : \"red\";\n})()\n })()}}",
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "iconButton",
       "computedValue": "",
@@ -4758,7 +4758,7 @@
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{TabellaSettimane.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  (\n    currentRow[\"6ManualeGioielleria\"] +\n    currentRow[\"6Turno\"] +\n    currentRow[\"6Apertura\"] +\n    currentRow[\"6Chiusura\"] +\n    currentRow[\"6Vetrine\"]\n  ) === 15 ? \"green\" :\n  (\n    (\n      currentRow[\"6ManualeGioielleria\"] === null ||\n      currentRow[\"6Turno\"] === null ||\n      currentRow[\"6Apertura\"] === null ||\n      currentRow[\"6Chiusura\"] === null ||\n      currentRow[\"6Vetrine\"] === null\n    ) ? \"default\" : \"red\"\n  )\n)) : \n  (\n    currentRow[\"6ManualeGioielleria\"] +\n    currentRow[\"6Turno\"] +\n    currentRow[\"6Apertura\"] +\n    currentRow[\"6Chiusura\"] +\n    currentRow[\"6Vetrine\"]\n  ) === 15 ? \"green\" :\n  (\n    (\n      currentRow[\"6ManualeGioielleria\"] === null ||\n      currentRow[\"6Turno\"] === null ||\n      currentRow[\"6Apertura\"] === null ||\n      currentRow[\"6Chiusura\"] === null ||\n      currentRow[\"6Vetrine\"] === null\n    ) ? \"default\" : \"red\"\n  )\n })()}}",
+      "buttonColor": "{{(() => { const tableData = TabellaSettimane.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  (\n    currentRow[\"6ManualeGioielleria\"] +\n    currentRow[\"6Turno\"] +\n    currentRow[\"6Apertura\"] +\n    currentRow[\"6Chiusura\"] +\n    currentRow[\"6Vetrine\"]\n  ) === 20 ? \"green\" :\n  (\n    (\n      currentRow[\"6ManualeGioielleria\"] === null ||\n      currentRow[\"6Turno\"] === null ||\n      currentRow[\"6Apertura\"] === null ||\n      currentRow[\"6Chiusura\"] === null ||\n      currentRow[\"6Vetrine\"] === null\n    ) ? \"default\" : \"red\"\n  )\n)) : \n  (\n    currentRow[\"6ManualeGioielleria\"] +\n    currentRow[\"6Turno\"] +\n    currentRow[\"6Apertura\"] +\n    currentRow[\"6Chiusura\"] +\n    currentRow[\"6Vetrine\"]\n  ) === 20 ? \"green\" :\n  (\n    (\n      currentRow[\"6ManualeGioielleria\"] === null ||\n      currentRow[\"6Turno\"] === null ||\n      currentRow[\"6Apertura\"] === null ||\n      currentRow[\"6Chiusura\"] === null ||\n      currentRow[\"6Vetrine\"] === null\n    ) ? \"default\" : \"red\"\n  )\n })()}}",
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "iconButton",
       "computedValue": "",
