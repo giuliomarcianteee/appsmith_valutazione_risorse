@@ -16,5 +16,5 @@ WHERE d.NEG IN (
   FROM listanegozi
   WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
 )
-AND CURRENT_DATE - d.DataAssunzione >= 42
+AND DATEDIFF(CURRENT_DATE, d.DataAssunzione) >= 42
 ORDER BY d.DataFineContratto ASC;
