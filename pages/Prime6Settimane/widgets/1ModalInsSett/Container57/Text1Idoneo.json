@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "r3otbom5we",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
+  "overflow": "NONE",
+  "parentColumnSpace": 4.306640625,
+  "parentId": "6geqn43isk",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "{{(() => {\n  const ratings = [\n\t\tRating1.value,\n\t\tRating2.value,\n\t\tRating3.value,\n\t\tRating4.value,\n\t\tRating5.value,\n    Rating6.value,\n\t\tRating7.value,\n\t\tRating8.value,\n\t\tRating9.value,\n\t\tRating10.value,\n    Rating11.value,\n\t\tRating12.value,\n\t\tRating13.value,\n\t\tRating14.value,\n\t\tRating15.value,\n    Rating16.value,\n\t\tRating17.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: ATTITUDINE ALLA VENDITA\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 51\n    ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: ATTITUDINE ALLA VENDITA\"\n    : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: ATTITUDINE ALLA VENDITA\";\n})()}}\n",
+  "textAlign": "CENTER",
+  "textColor": "{{(() => {\n  const ratings = [\n    Rating1.value,\n\t\tRating2.value,\n\t\tRating3.value,\n\t\tRating4.value,\n\t\tRating5.value,\n    Rating6.value,\n\t\tRating7.value,\n\t\tRating8.value,\n\t\tRating9.value,\n\t\tRating10.value,\n    Rating11.value,\n\t\tRating12.value,\n\t\tRating13.value,\n\t\tRating14.value,\n\t\tRating15.value,\n    Rating16.value,\n\t\tRating17.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"Blue\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" : (somma === 51 ? \"green\" : \"red\");\n})()\n}}",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "u5nsza79rg",
+  "widgetName": "Text1Idoneo"
+}

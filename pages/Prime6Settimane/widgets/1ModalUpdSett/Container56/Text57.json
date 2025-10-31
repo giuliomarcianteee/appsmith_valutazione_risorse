@@ -1,0 +1,63 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "aphh9a69l6",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 12,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "originalBottomRow": 5,
+  "originalTopRow": 0,
+  "overflow": "NONE",
+  "parentColumnSpace": 4.375,
+  "parentId": "ldlx08gvj2",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldTruncate": false,
+  "text": "{{(() => {\n  const ratings = [\n\t\tRating1Copy.value,\n\t\tRating2Copy.value,\n\t\tRating3Copy.value,\n\t\tRating4Copy.value,\n\t\tRating5Copy.value,\n    Rating6Copy.value,\n\t\tRating7Copy.value,\n\t\tRating8Copy.value,\n\t\tRating9Copy.value,\n\t\tRating10Copy.value,\n    Rating11Copy.value,\n\t\tRating12Copy.value,\n\t\tRating13Copy.value,\n\t\tRating14Copy.value,\n\t\tRating15Copy.value,\n    Rating16Copy.value,\n\t\tRating17Copy.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: ATTITUDINE ALLA VENDITA\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 51\n    ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: ATTITUDINE ALLA VENDITA\"\n    : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: ATTITUDINE ALLA VENDITA\";\n})()}}\n",
+  "textAlign": "CENTER",
+  "textColor": "{{(() => {\n  const ratings = [\n    Rating1Copy.value,\n\t\tRating2Copy.value,\n\t\tRating3Copy.value,\n\t\tRating4Copy.value,\n\t\tRating5Copy.value,\n    Rating6Copy.value,\n\t\tRating7Copy.value,\n\t\tRating8Copy.value,\n\t\tRating9Copy.value,\n\t\tRating10Copy.value,\n    Rating11Copy.value,\n\t\tRating12Copy.value,\n\t\tRating13Copy.value,\n\t\tRating14Copy.value,\n\t\tRating15Copy.value,\n    Rating16Copy.value,\n\t\tRating17Copy.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"Blue\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" : (somma === 51 ? \"green\" : \"red\");\n})()\n}}",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "p8g8gkdad9",
+  "widgetName": "Text57"
+}

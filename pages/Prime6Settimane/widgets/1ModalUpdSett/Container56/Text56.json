@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,43 +11,42 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "0.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "ve48iiqqn1",
-  "leftColumn": 1,
+  "key": "aphh9a69l6",
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 5,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 41,
-  "mobileTopRow": 1,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "originalBottomRow": 7,
-  "originalTopRow": 1,
+  "originalBottomRow": 9,
+  "originalTopRow": 4,
   "overflow": "NONE",
-  "parentId": "pn4euus76v",
+  "parentColumnSpace": 4.375,
+  "parentId": "ldlx08gvj2",
+  "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 51,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "Prima settimana di {{TabellaSettimane.triggeredRow.Nome}} assunta il {{moment(TabellaSettimane.triggeredRow.DataAssunzione).format(\"DD/MM/YYYY\")}}",
+  "text": "La risorsa a fine settimana deve essere in grado di accogliere il cliente e presentare il prodotto, chiudere la vendita e usare cassa, POS e pc, pacchetto e congedo.",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 0,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "xpc0pv4tn2",
-  "widgetName": "Text1SettimanaCopy"
+  "widgetId": "p9quwlbpj8",
+  "widgetName": "Text56"
 }

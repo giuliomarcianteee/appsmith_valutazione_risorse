@@ -3,20 +3,20 @@
   "backgroundColor": "#FFFFFF",
   "borderColor": "#E0DEDE",
   "borderWidth": "1",
-  "bottomRow": 256,
+  "bottomRow": 16,
   "boxShadow": "NONE",
   "children": [
     {
-      "bottomRow": 180,
+      "bottomRow": 110,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
       "isLoading": false,
       "isVisible": true,
       "leftColumn": 0,
-      "minHeight": 65.625,
+      "minHeight": 17.5,
       "parentColumnSpace": 1,
-      "parentId": "khc17x6yfg",
+      "parentId": "f3eqikyp0v",
       "parentRowSpace": 1,
       "props": {
         "canExtend": false,
@@ -25,12 +25,12 @@
         "detachFromLayout": true
       },
       "renderMode": "CANVAS",
-      "rightColumn": 271.25,
+      "rightColumn": 275.625,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "gbgghv09o7",
-      "widgetName": "Canvas11Copy3Copy1"
+      "widgetId": "6geqn43isk",
+      "widgetName": "Canvas13"
     }
   ],
   "containerStyle": "card",
@@ -43,7 +43,7 @@
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "7xwtn97ggc",
+  "key": "54jb71qonh",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
@@ -56,10 +56,10 @@
     "selectionBGCSSVar": "--on-canvas-ui-widget-selection",
     "selectionColorCSSVar": "--on-canvas-ui-widget-focus"
   },
-  "originalBottomRow": 256,
-  "originalTopRow": 238,
-  "parentColumnSpace": 4.23828125,
-  "parentId": "pn4euus76v",
+  "originalBottomRow": 16,
+  "originalTopRow": 5,
+  "parentColumnSpace": 4.306640625,
+  "parentId": "tsya0cto8j",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -75,9 +75,9 @@
     "Layout"
   ],
   "thumbnailSVG": "/static/media/thumbnail.6cb355b93146b5347bbb048a568ed446.svg",
-  "topRow": 238,
+  "topRow": 5,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "khc17x6yfg",
-  "widgetName": "Container14Copy"
+  "widgetId": "f3eqikyp0v",
+  "widgetName": "Container57"
 }

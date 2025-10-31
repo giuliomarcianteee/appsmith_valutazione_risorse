@@ -1,0 +1,63 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "r3otbom5we",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "originalBottomRow": 5,
+  "originalTopRow": 0,
+  "overflow": "NONE",
+  "parentColumnSpace": 2.1875,
+  "parentId": "igtraogqwf",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldTruncate": false,
+  "text": "{{(() => {\n  const ratings = [\n    Rating18Copy.value,\n\t\tRating19Copy.value,\n\t\tRating20Copy.value,\n\t\tRating21Copy.value,\n\t\tRating22Copy.value,\n    Rating23Copy.value,\n\t\tRating24Copy.value,\n\t\tRating25Copy.value,\n\t\tRating26Copy.value,\n\t\tRating27Copy.value,\n    Rating28Copy.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: RISPETTO DELL'ORDINE ORGANIZZATIVO E VOLONTÀ DI APPRENDERE\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" : (somma === 33 ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: RISPETTO DELL'ORDINE ORGANIZZATIVO E VOLONTÀ DI APPRENDERE\" : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: RISPETTO DELL'ORDINE ORGANIZZATIVO E VOLONTÀ DI APPRENDERE\");\n})()\n}}",
+  "textAlign": "LEFT",
+  "textColor": "{{(() => {\n  const ratings = [\n    Rating18Copy.value,\n\t\tRating19Copy.value,\n\t\tRating20Copy.value,\n\t\tRating21Copy.value,\n\t\tRating22Copy.value,\n    Rating23Copy.value,\n\t\tRating24Copy.value,\n\t\tRating25Copy.value,\n\t\tRating26Copy.value,\n\t\tRating27Copy.value,\n    Rating28Copy.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n\n  if (hasInvalidRating) {\n    return \"blue\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" : (somma === 33 ? \"green\" : \"red\");\n})()\n}}",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "61042q4igf",
+  "widgetName": "Text2IdoneoCopy1"
+}

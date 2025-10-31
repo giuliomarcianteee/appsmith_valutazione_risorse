@@ -11,14 +11,12 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "0.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -28,27 +26,27 @@
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 9,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 12,
+  "mobileLeftColumn": 17,
+  "mobileRightColumn": 33,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "originalBottomRow": 9,
+  "originalBottomRow": 10,
   "originalTopRow": 5,
   "overflow": "NONE",
-  "parentColumnSpace": 12.59375,
-  "parentId": "pn4euus76v",
+  "parentColumnSpace": 2.1875,
+  "parentId": "87lvxdvg15",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 12,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "Hello {{appsmith.user.name || appsmith.user.email}}",
+  "text": "La risorsa a fine settimana deve dimostrare di aver assmilato le attività apprese nella prima settimana e completare la conoscenza della gioielleria",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "73tkcgp7ft",
-  "widgetName": "Text57"
+  "widgetId": "fnx8c1h4e0",
+  "widgetName": "Text59"
 }
