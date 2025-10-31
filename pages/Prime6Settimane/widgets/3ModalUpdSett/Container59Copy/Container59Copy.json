@@ -3,20 +3,20 @@
   "backgroundColor": "#FFFFFF",
   "borderColor": "#E0DEDE",
   "borderWidth": "1",
-  "bottomRow": 119,
+  "bottomRow": 17,
   "boxShadow": "NONE",
   "children": [
     {
-      "bottomRow": 170,
+      "bottomRow": 120,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
       "isLoading": false,
       "isVisible": true,
       "leftColumn": 0,
-      "minHeight": 65.625,
+      "minHeight": 17.5,
       "parentColumnSpace": 1,
-      "parentId": "bz1tyz196x",
+      "parentId": "vyhfi4fol3",
       "parentRowSpace": 1,
       "props": {
         "canExtend": false,
@@ -25,12 +25,12 @@
         "detachFromLayout": true
       },
       "renderMode": "CANVAS",
-      "rightColumn": 271.25,
+      "rightColumn": 140,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "zfmm7rc732",
-      "widgetName": "Canvas11Copy3CopyCopyCopy1"
+      "widgetId": "jcnf73adap",
+      "widgetName": "Canvas15Copy"
     }
   ],
   "containerStyle": "card",
@@ -43,7 +43,7 @@
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "7xwtn97ggc",
+  "key": "54jb71qonh",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
@@ -56,10 +56,10 @@
     "selectionBGCSSVar": "--on-canvas-ui-widget-selection",
     "selectionColorCSSVar": "--on-canvas-ui-widget-focus"
   },
-  "originalBottomRow": 119,
-  "originalTopRow": 102,
-  "parentColumnSpace": 4.23828125,
-  "parentId": "crp4x9fqcr",
+  "originalBottomRow": 17,
+  "originalTopRow": 5,
+  "parentColumnSpace": 2.1875,
+  "parentId": "x7o2zj3mzm",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -75,9 +75,9 @@
     "Layout"
   ],
   "thumbnailSVG": "/static/media/thumbnail.6cb355b93146b5347bbb048a568ed446.svg",
-  "topRow": 102,
+  "topRow": 5,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "bz1tyz196x",
-  "widgetName": "Container34"
+  "widgetId": "vyhfi4fol3",
+  "widgetName": "Container59Copy"
 }
