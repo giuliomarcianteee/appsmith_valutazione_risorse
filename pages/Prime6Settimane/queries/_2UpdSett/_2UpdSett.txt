@@ -5,8 +5,6 @@ UPDATE new_settimane SET
   `2NoteGioielleria` = '{{Input19Copy.text}}',
   `2Orologi` = {{Rating20Copy.value}},
   `2NoteOrologi` = '{{Input20Copy.text}}',
-  `2Tablet` = {{Rating21Copy.value}},
-  `2NoteTablet` = '{{Input21Copy.text}}',
   `2Metodo` = {{Rating22Copy.value}},
   `2NoteMetodo` = '{{Input22Copy.text}}',
   `2MetodoRipa` = {{Rating23Copy.value}},

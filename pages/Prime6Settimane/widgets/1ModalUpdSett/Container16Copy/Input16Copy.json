@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 16,
+  "bottomRow": 15,
   "boxShadow": "none",
   "defaultText": "{{\n  _1SelectSett.data[0][\"1NoteAllarmeAlCollo\"] !== null \n    ? _1SelectSett.data[0][\"1NoteAllarmeAlCollo\"] \n    : \"\"\n}}",
   "dynamicBindingPathList": [
@@ -52,7 +52,7 @@
   "rightColumn": 64,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 5,
+  "topRow": 4,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "xd99ayzbzg",

@@ -6,8 +6,6 @@ INSERT INTO new_settimane SET
   2NoteGioielleria = '{{Input19.text}}',
   2Orologi = {{Rating20.value}},
   2NoteOrologi = '{{Input20.text}}',
-  2Tablet = {{Rating21.value}},
-  2NoteTablet = '{{Input21.text}}',
   2Metodo = {{Rating22.value}},
   2NoteMetodo = '{{Input22.text}}',
   2MetodoRipa = {{Rating23.value}},
