@@ -8,4 +8,6 @@ INSERT INTO new_settimane SET
 	5NoteFedi = '{{Input49.text}}',
 	5SchedeOro = {{Rating50.value}},
 	5NoteSchedeOro = '{{Input50.text}}',
+	5ApprofondimentoOro = {{Rating70.value}},
+	5NoteApprofondimentoOro = '{{Input70.text}}',
 ModificatoDa5 = '{{appsmith.user.name + "_" + moment().format("YYYYMMDD_HHmmss")}}';

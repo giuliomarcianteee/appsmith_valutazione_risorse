@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n IdSettimane,\n`5Diamanti`, `5NoteDiamanti`,\n`5Pietre`, `5NotePietre`,\n`5Fedi`, `5NoteFedi`,\n`5SchedeOro`, `5NoteSchedeOro`,\nModificatoDa5\nFROM new_settimane\nWHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};",
+      "body": "SELECT \n IdSettimane,\n`5Diamanti`, `5NoteDiamanti`,\n`5Pietre`, `5NotePietre`,\n`5Fedi`, `5NoteFedi`,\n`5SchedeOro`, `5NoteSchedeOro`,\n`5ApprofondimentoOro`, `5NoteApprofondimentoOro`,\nModificatoDa5\nFROM new_settimane\nWHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

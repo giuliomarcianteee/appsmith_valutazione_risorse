@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 10,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -54,7 +54,7 @@
   "text": "{{(() => {\n  const ratings = [\n    Rating51Copy.value,\n    Rating52Copy.value,\n    Rating53Copy.value,\n    Rating54Copy.value,\n    Rating55Copy.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0 || r === \"\");\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: RISORSA IN GRADO DI LAVORARE IN AUTONOMIA IN UN TURNO A DUE\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" :\n    (somma >= 20\n      ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: RISORSA IN GRADO DI LAVORARE IN AUTONOMIA IN UN TURNO A DUE\"\n      : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: RISORSA IN GRADO DI LAVORARE IN AUTONOMIA IN UN TURNO A DUE\");\n})()\n}}",
   "textAlign": "LEFT",
   "textColor": "{{(() => {\n  const ratings = [\n    Rating51Copy.value,\n    Rating52Copy.value,\n    Rating53Copy.value,\n    Rating54Copy.value,\n    Rating55Copy.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0 || r === \"\");\n  if (hasInvalidRating) {\n    return \"blue\";\n  }\n\n  const somma = ratings.reduce((acc, val) => acc + val, 0);\n\n  return somma === 0 ? \"\" : (somma >= 20 ? \"green\" : \"red\");\n})()\n}}",
-  "topRow": 7,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

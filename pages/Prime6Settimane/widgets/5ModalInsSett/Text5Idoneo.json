@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 10,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -41,7 +41,7 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 38,
   "needsErrorInfo": false,
-  "originalBottomRow": 10,
+  "originalBottomRow": 9,
   "originalTopRow": 5,
   "overflow": "NONE",
   "parentColumnSpace": 12.59375,
@@ -51,9 +51,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{(() => {\n  const ratings = [\n    Rating47.value,\n    Rating48.value,\n    Rating49.value,\n    Rating50.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: APPROFONDIRE I TEMI GIOIELLERIA E ORO DA INVESTIMENTO\";\n  }\n\n  const allAtLeastTwo = ratings.every(r => r >= 2);\n  return allAtLeastTwo\n    ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: APPROFONDIRE I TEMI GIOIELLERIA E ORO DA INVESTIMENTO\"\n    : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: APPROFONDIRE I TEMI GIOIELLERIA E ORO DA INVESTIMENTO\";\n})()\n}}\n",
+  "text": "{{(() => {\n  const ratings = [\n    Rating47.value,\n    Rating48.value,\n    Rating49.value,\n    Rating50.value,\n\t\tRating70.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n  if (hasInvalidRating) {\n    return \"OBIETTIVO DELLA SETTIMANA: APPROFONDIRE I TEMI GIOIELLERIA E ORO DA INVESTIMENTO\";\n  }\n\n  const allAtLeastTwo = ratings.every(r => r >= 2);\n  return allAtLeastTwo\n    ? \"OBIETTIVO DELLA SETTIMANA RAGGIUNTO: APPROFONDIRE I TEMI GIOIELLERIA E ORO DA INVESTIMENTO\"\n    : \"OBIETTIVO DELLA SETTIMANA NON RAGGIUNTO: APPROFONDIRE I TEMI GIOIELLERIA E ORO DA INVESTIMENTO\";\n})()\n}}\n",
   "textAlign": "LEFT",
-  "textColor": "{{\n(() => {\n  const ratings = [\n    Rating47.value,\n    Rating48.value,\n    Rating49.value,\n    Rating50.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n  if (hasInvalidRating) {\n    return \"blue\";\n  }\n\n  const allAtLeastTwo = ratings.every(r => r >= 2);\n  return allAtLeastTwo ? \"green\" : \"red\";\n})()\n}}",
+  "textColor": "{{\n(() => {\n  const ratings = [\n    Rating47.value,\n    Rating48.value,\n    Rating49.value,\n    Rating50.value,\n\t\tRating70.value\n  ];\n\n  const hasInvalidRating = ratings.some(r => r === null || r === 0);\n  if (hasInvalidRating) {\n    return \"blue\";\n  }\n\n  const allAtLeastTwo = ratings.every(r => r >= 2);\n  return allAtLeastTwo ? \"green\" : \"red\";\n})()\n}}",
   "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

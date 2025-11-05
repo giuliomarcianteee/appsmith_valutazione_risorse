@@ -4,6 +4,7 @@ SELECT
 `5Pietre`, `5NotePietre`,
 `5Fedi`, `5NoteFedi`,
 `5SchedeOro`, `5NoteSchedeOro`,
+`5ApprofondimentoOro`, `5NoteApprofondimentoOro`,
 ModificatoDa5
 FROM new_settimane
 WHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};

@@ -1,7 +1,10 @@
 {
   "animateLoading": true,
+  "backgroundColor": "",
+  "borderColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "borderWidth": "",
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,43 +14,42 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "ve48iiqqn1",
-  "leftColumn": 1,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 5,
+  "mobileBottomRow": 14,
   "mobileLeftColumn": 1,
-  "mobileRightColumn": 41,
-  "mobileTopRow": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "originalBottomRow": 7,
-  "originalTopRow": 1,
+  "originalBottomRow": 5,
+  "originalTopRow": 0,
   "overflow": "NONE",
-  "parentId": "crtx9w6cg5",
+  "parentColumnSpace": 4.23828125,
+  "parentId": "jxvp7izvt3",
+  "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 51,
+  "rightColumn": 44,
   "shouldTruncate": false,
-  "text": "Sesta settimana di {{TabellaSettimane.triggeredRow.Nome}} assunta il {{moment(TabellaSettimane.triggeredRow.DataAssunzione).format(\"DD/MM/YYYY\")}}",
+  "text": "Approfondimento oro da investimento",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 1,
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "wxagpvkyls",
-  "widgetName": "Text6SettimanaCopy"
+  "widgetId": "1viuwiyr8k",
+  "widgetName": "Text50Copy1"
 }

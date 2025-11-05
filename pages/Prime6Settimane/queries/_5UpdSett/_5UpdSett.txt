@@ -8,5 +8,7 @@ SET
   `5NoteFedi` = '{{Input49Copy.text}}',
   `5SchedeOro` = {{Rating50Copy.value}},
   `5NoteSchedeOro` = '{{Input50Copy.text}}',
+	`5ApprofondimentoOro` = {{Rating70Copy.value}},
+	`5NoteApprofondimentoOro` = '{{Input70Copy.text}}',
   ModificatoDa5 = '{{appsmith.user.name + "_" + moment().format("YYYYMMDD_HHmmss")}}'
 WHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};
