@@ -1,7 +1,6 @@
 SELECT 
   IdSettimane,
   `4Comprensione`, `4NoteComprensione`,
-  `4AutonomiaAperturaChiusura`, `4NoteAutonomiaAperturaChiusura`,
   `4ChiusuraContabile`, `4NoteChiusuraContabile`,
   `4ConfrontoColleghe`, `4NoteConfrontoColleghe`,
   `4ComproOroTutto`, `4NoteComproOroTutto`,

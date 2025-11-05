@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  IdSettimane,\n  `4Comprensione`, `4NoteComprensione`,\n  `4AutonomiaAperturaChiusura`, `4NoteAutonomiaAperturaChiusura`,\n  `4ChiusuraContabile`, `4NoteChiusuraContabile`,\n  `4ConfrontoColleghe`, `4NoteConfrontoColleghe`,\n  `4ComproOroTutto`, `4NoteComproOroTutto`,\n  `4Acconti`, `4NoteAcconti`,\n  `4Resi`, `4NoteResi`,\n  `4CambiInGaranzia`, `4NoteCambiInGaranzia`,\n  `4GiroMerceIn`, `4NoteGiroMerceIn`,\n  `4GiroMerceOut`, `4NoteGiroMerceOut`,\n  ModificatoDa4\nFROM new_settimane\nWHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};",
+      "body": "SELECT \n  IdSettimane,\n  `4Comprensione`, `4NoteComprensione`,\n  `4ChiusuraContabile`, `4NoteChiusuraContabile`,\n  `4ConfrontoColleghe`, `4NoteConfrontoColleghe`,\n  `4ComproOroTutto`, `4NoteComproOroTutto`,\n  `4Acconti`, `4NoteAcconti`,\n  `4Resi`, `4NoteResi`,\n  `4CambiInGaranzia`, `4NoteCambiInGaranzia`,\n  `4GiroMerceIn`, `4NoteGiroMerceIn`,\n  `4GiroMerceOut`, `4NoteGiroMerceOut`,\n  ModificatoDa4\nFROM new_settimane\nWHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

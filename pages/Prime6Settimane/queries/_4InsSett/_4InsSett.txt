@@ -2,8 +2,6 @@ INSERT INTO new_settimane SET
   IdSettimane = '{{TabellaSettimane.triggeredRow.IdDipendenti}}',
   4Comprensione = {{Rating37.value}},
   4NoteComprensione = '{{Input37.text}}',
-  4AutonomiaAperturaChiusura = {{Rating38.value}},
-  4NoteAutonomiaAperturaChiusura = '{{Input38.text}}',
   4ChiusuraContabile = {{Rating39.value}},
   4NoteChiusuraContabile = '{{Input39.text}}',
   4ConfrontoColleghe = {{Rating40.value}},

@@ -3,7 +3,6 @@ SELECT
   `2Comprensione`, `2NoteComprensione`,
   `2Gioielleria`, `2NoteGioielleria`,
   `2Orologi`, `2NoteOrologi`,
-  `2Tablet`, `2NoteTablet`,
   `2Metodo`, `2NoteMetodo`,
   `2MetodoRipa`, `2NoteMetodoRipa`,
   `2Ripa`, `2NoteRipa`,

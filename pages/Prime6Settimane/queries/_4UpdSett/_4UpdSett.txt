@@ -2,8 +2,6 @@ UPDATE new_settimane
 SET
   `4Comprensione` = {{Rating37Copy.value}},
   `4NoteComprensione` = '{{Input37Copy.text}}',
-  `4AutonomiaAperturaChiusura` = {{Rating38Copy.value}},
-  `4NoteAutonomiaAperturaChiusura` = '{{Input38Copy.text}}',
   `4ChiusuraContabile` = {{Rating39Copy.value}},
   `4NoteChiusuraContabile` = '{{Input39Copy.text}}',
   `4ConfrontoColleghe` = {{Rating40Copy.value}},

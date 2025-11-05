@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  IdSettimane,\n  `2Comprensione`, `2NoteComprensione`,\n  `2Gioielleria`, `2NoteGioielleria`,\n  `2Orologi`, `2NoteOrologi`,\n  `2Tablet`, `2NoteTablet`,\n  `2Metodo`, `2NoteMetodo`,\n  `2MetodoRipa`, `2NoteMetodoRipa`,\n  `2Ripa`, `2NoteRipa`,\n  `2Apertura`, `2NoteApertura`,\n  `2Chiusura`, `2NoteChiusura`,\n  `2GiroMerceIn`, `2NoteGiroMerceIn`,\n  `2GiroMerceOut`, `2NoteGiroMerceOut`,\n  ModificatoDa2\nFROM new_settimane\nWhere IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}}",
+      "body": "SELECT \n  IdSettimane,\n  `2Comprensione`, `2NoteComprensione`,\n  `2Gioielleria`, `2NoteGioielleria`,\n  `2Orologi`, `2NoteOrologi`,\n  `2Metodo`, `2NoteMetodo`,\n  `2MetodoRipa`, `2NoteMetodoRipa`,\n  `2Ripa`, `2NoteRipa`,\n  `2Apertura`, `2NoteApertura`,\n  `2Chiusura`, `2NoteChiusura`,\n  `2GiroMerceIn`, `2NoteGiroMerceIn`,\n  `2GiroMerceOut`, `2NoteGiroMerceOut`,\n  ModificatoDa2\nFROM new_settimane\nWhere IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
