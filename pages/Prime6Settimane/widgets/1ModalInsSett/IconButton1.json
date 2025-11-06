@@ -13,6 +13,7 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -31,7 +32,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(1ModalInsSett.name);}}",
+  "onClick": "{{closeModal('1ModalInsSett')}}",
   "parentId": "tsya0cto8j",
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
