@@ -31,7 +31,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{\n  [\n    Rating51.value,\n    Rating52.value,\n    Rating53.value,\n    Rating54.value,\n\t\tRating55.value\n  ].some(r => r === 0)\n}}\n",
+  "isDisabled": "{{\n  [\n    Rating51Copy.value,\n    Rating52Copy.value,\n    Rating53Copy.value,\n    Rating54Copy.value,\n\t\tRating55Copy.value\n  ].some(r => r === 0)\n}}\n",
   "isLoading": false,
   "isVisible": true,
   "key": "q3s0tpqxiy",
