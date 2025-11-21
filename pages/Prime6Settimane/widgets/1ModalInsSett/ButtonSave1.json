@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 310,
+  "bottomRow": 400,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -52,7 +52,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 63,
   "text": "Salva",
-  "topRow": 306,
+  "topRow": 396,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "olb6tlaxll",

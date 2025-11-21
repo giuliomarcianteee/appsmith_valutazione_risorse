@@ -1,0 +1,35 @@
+{
+  "gitSyncId": "6874cb3412f3fb32b8fb2ec3_13e9bed2-b6ae-4235-a9d4-9309426d751d",
+  "id": "OltreIlMese_ValutazioneNoUpdMaIns",
+  "pluginId": "mysql-plugin",
+  "pluginType": "DB",
+  "unpublishedAction": {
+    "actionConfiguration": {
+      "body": "INSERT INTO valutazionerisorse_mesi SET\n    IdMesi = '{{appsmith.store.IdMesiSelezionato + \"_\" + moment().format(\"YYYYMMDD_HHmmss\")}}',\n    Accoglienza = {{RatingAccoglienzaCopy.value || 0}},\n    AccoglienzaSaluto = {{Radio1Copy.selectedOptionValue || 0}},\n    AccoglienzaProporreAssistenza = {{Radio2Copy.selectedOptionValue || 0}},\n    AccoglienzaIllustrarePosizionamentoNegozioEScontistiche = {{Radio3Copy.selectedOptionValue || 0}},\n    AccoglienzaUscireDallaPenisola = {{Radio4Copy.selectedOptionValue || 0}},\n    NoteAccoglienza = '{{InputAccoglienzaCopy.text || \"\"}}',\n    AnalisiBisognoCliente = {{RatingBisognoCopy.value || 0}},\n    AnalisiBisognoClienteDomandeAperte = {{Radio5Copy.selectedOptionValue || 0}},\n    AnalisiBisognoClienteDomandeDiApprofondimento = {{Radio6Copy.selectedOptionValue || 0}},\n    AnalisiBisognoClienteDomandeFinalizzateAllAcquisto = {{Radio7Copy.selectedOptionValue || 0}},\n    AnalisiBisognoClienteRiformulareBisognoCliente = {{Radio8Copy.selectedOptionValue || 0}},\n    NoteAnalisiBisognoCliente = '{{InputBisognoCopy.text || \"\"}}',\n    ConoscenzaProdottiGdv = {{RatingProdottiGdVCopy.value || 0}},\n    ConoscenzaProdottiGdvGioielleria = {{Radio9Copy.selectedOptionValue || 0}},\n    ConoscenzaProdottiGdvOreficeria = {{Radio10Copy.selectedOptionValue || 0}},\n    ConoscenzaProdottiGdvLingottiSterlina = {{Radio11Copy.selectedOptionValue || 0}},\n    ConoscenzaProdottiGdvDiamantiIgi = {{Radio12Copy.selectedOptionValue || 0}},\n    NoteConoscenzaProdottiGdv = '{{InputProdottiGdVCopy.text || \"\"}}',\n    ConoscenzaProdotti = {{RatingProdottiCopy.value || 0}},\n    ConoscenzaProdottiOrologi = {{Radio13Copy.selectedOptionValue || 0}},\n    ConoscenzaProdottiBrand = {{Radio14Copy.selectedOptionValue || 0}},\n    ConoscenzaProdottiDaveri = {{Radio15Copy.selectedOptionValue || 0}},\n    ConoscenzaProdottiOro9Kt = {{Radio16Copy.selectedOptionValue || 0}},\n    NoteConoscenzaProdotti = '{{InputProdottiCopy.text || \"\"}}',\n    ConsulenzaSullAcquisto = {{RatingConsulenzaCopy.value || 0}},\n    ConsulenzaSullAcquistoConsigli = {{Radio17Copy.selectedOptionValue || 0}},\n    ConsulenzaSullAcquistoRisaltoCaratteristicheEBenefici = {{Radio18Copy.selectedOptionValue || 0}},\n    ConsulenzaSullAcquistoVerificareSpiegazioneArticolo = {{Radio19Copy.selectedOptionValue || 0}},\n    ConsulenzaSullAcquistoCollegareCarattProdConIlBeneficio = {{Radio20Copy.selectedOptionValue || 0}},\n    NoteConsulenzaSullAcquisto = '{{InputConsulenzaCopy.text || \"\"}}',\n    ConoscenzeStrategichePromozioni = {{RatingPromozioniCopy.value || 0}},\n    ConoscenzeStrategichePromozioniPromozioniSaltuarie = {{Radio21Copy.selectedOptionValue || 0}},\n    ConoscenzeStrategichePromozioniFidelity = {{Radio22Copy.selectedOptionValue || 0}},\n    ConoscenzeStratPromoOrdinePropostaGioielOrefDaVeriBrandOrologi = {{Radio23Copy.selectedOptionValue || 0}},\n    ConoscenzeStrategichePromozioniScontistiche30Percento50Percento = {{Radio24Copy.selectedOptionValue || 0}},\n    NoteConoscenzeStrategichePromozioni = '{{InputPromozioniCopy.text || \"\"}}',\n    GestioneObiezioniEDubbi = {{RatingObiezioniCopy.value || 0}},\n    GestioneObiezioniEDubbiComprensioniObiezioni = {{Radio25Copy.selectedOptionValue || 0}},\n    GestioneObiezioniEDubbiFareDomande = {{Radio26Copy.selectedOptionValue || 0}},\n    GestioneObiezioniEDubbiCircoscrivereDubbiObiezioni = {{Radio27Copy.selectedOptionValue || 0}},\n    GestioneObiezioniEDubbiEsporreSoluzione = {{Radio28Copy.selectedOptionValue || 0}},\n    NoteGestioneObiezioniEDubbi = '{{InputObiezioniCopy.text || \"\"}}',\n    ChiusuraVendita = {{RatingChiusuraVenditaCopy.value || 0}},\n    ChiusuraVenditaUsoStrumentiTecnici = {{Radio29Copy.selectedOptionValue || 0}},\n    ChiusuraVenditaUsoStrumentiMarketing = {{Radio30Copy.selectedOptionValue || 0}},\n    ChiusuraVenditaVenditaAggiuntaCrossSallingUpSalling = {{Radio31Copy.selectedOptionValue || 0}},\n    ChiusuraVenditaTecnicheChiusuraVendita = {{Radio32Copy.selectedOptionValue || 0}},\n    NoteChiusuraVendita = '{{InputChiusuraVenditaCopy.text || \"\"}}',\n    LavoroInTeam = {{RatingTeamCopy.value || 0}},\n    LavoroInTeamConfrontoConCollega = {{Radio33Copy.selectedOptionValue || 0}},\n    LavoroInTeamRispettoDelPlanning = {{Radio34Copy.selectedOptionValue || 0}},\n    LavoroInTeamFormazioneStudiareProcedure = {{Radio35Copy.selectedOptionValue || 0}},\n    LavoroInTeamCollaborazioneCambioTurnoProblemiInNegozio = {{Radio36Copy.selectedOptionValue || 0}},\n    NoteLavoroInTeam = '{{InputTeamCopy.text || \"\"}}',\n    OrganizzazioneAttivitaNelTurno = {{RatingOrganizzazioneCopy.value || 0}},\n    OrganizzazioneAttivitaNelTurnoPuliziaNegozio = {{Radio37Copy.selectedOptionValue || 0}},\n    OrganizzazioneAttivitaNelTurnoPuliziaProdotti = {{Radio38Copy.selectedOptionValue || 0}},\n    OrganizzazioneAttivitaNelTurnoRimpiazzi = {{Radio39Copy.selectedOptionValue || 0}},\n    OrganizzazioneAttivitaNelTurnoMailComunicazione = {{Radio40Copy.selectedOptionValue || 0}},\n    NoteOrganizzazioneAttivitaNelTurno = '{{InputOrganizzazioneCopy.text || \"\"}}',\n    ConoscenzaProcedura = {{RatingProcedureCopy.value || 0}},\n    ConoscenzaProceduraLettura = {{Radio41Copy.selectedOptionValue || 0}},\n    ConoscenzaProceduraComprensione = {{Radio42Copy.selectedOptionValue || 0}},\n    ConoscenzaProceduraRispettoProcedure = {{Radio43Copy.selectedOptionValue || 0}},\n    ConoscenzaProceduraAiutoAFareRispettareLeProcedure = {{Radio44Copy.selectedOptionValue || 0}},\n    NoteConoscenzaProcedura = '{{InputProcedureCopy.text || \"\"}}',\n    ModificatoDa = '{{appsmith.user.name || \"sconosciuto\"}}',\n    CodiceDipendente = {{appsmith.store.IdMesiSelezionato}},\n    DataInserimento = {{moment(DateValutazioneCopy.selectedDate).format(\"YYYY-MM-DD\")}};\n",
+      "encodeParamsToggle": true,
+      "paginationType": "NONE",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": true
+        }
+      ],
+      "timeoutInMillisecond": 10000
+    },
+    "confirmBeforeExecute": false,
+    "datasource": {
+      "id": "Metabase",
+      "isAutoGenerated": false,
+      "name": "Metabase",
+      "pluginId": "mysql-plugin"
+    },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "ValutazioneNoUpdMaIns",
+    "pageId": "OltreIlMese",
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
+  }
+}
