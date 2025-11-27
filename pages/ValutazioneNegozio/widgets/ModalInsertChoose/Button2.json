@@ -40,6 +40,8 @@
   "mobileTopRow": 163,
   "needsErrorInfo": false,
   "onClick": "{{InsertChoose.run().then(() => {\n  showAlert('Relazione modificata con successo', 'success');\n  closeModal(ModalInsertChoose.name);\n}).catch(() => {\n  showAlert('Errore nella modifica', 'error');\n});}}",
+  "originalBottomRow": 171,
+  "originalTopRow": 167,
   "parentColumnSpace": 13.9375,
   "parentId": "ldy2oxlola",
   "parentRowSpace": 10,

@@ -30,7 +30,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": "{{appsmith.user.name === \"Attilio Buttiglione\" || appsmith.user.name === \"Davide Maggi\"|| appsmith.user.name === \"Giovanni Bonsignore\"}}\n",
+  "isVisible": "{{appsmith.user.name === \"Attilio Buttiglione\" || appsmith.user.name === \"Davide Maggi\"|| appsmith.user.name === \"Giovanni Bonsignore\" || appsmith.user.name === \"Maggie\"}}\n",
   "key": "n8777ozjlu",
   "leftColumn": 0,
   "minWidth": 120,

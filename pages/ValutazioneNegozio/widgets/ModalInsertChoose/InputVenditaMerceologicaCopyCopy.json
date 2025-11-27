@@ -41,6 +41,8 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
+  "originalBottomRow": 83,
+  "originalTopRow": 71,
   "parentColumnSpace": 13.9375,
   "parentId": "ldy2oxlola",
   "parentRowSpace": 10,
