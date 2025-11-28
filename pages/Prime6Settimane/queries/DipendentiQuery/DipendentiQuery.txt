@@ -8,7 +8,8 @@ WHERE d.NEG IN (
   FROM listanegozi
   WHERE Coordinatore = '{{SelectCoordinatore.selectedOptionValue}}'
 )
-AND DATEDIFF(CURRENT_DATE, d.DataAssunzione) < 70
+AND DATEDIFF(CURRENT_DATE, d.DataAssunzione) < 365
+
 ORDER BY d.DataFineContratto ASC;
 
 
