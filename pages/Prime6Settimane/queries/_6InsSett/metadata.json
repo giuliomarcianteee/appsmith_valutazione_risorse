@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO new_settimane SET\n  IdSettimane = '{{TabellaSettimane.triggeredRow.IdDipendenti}}',\n  6ManualeGioielleria = {{Rating51.value}},\n  6NoteManualeGioielleria = '{{Input51.text}}',\n  6Turno = {{Rating52.value}},\n  6NoteTurno = '{{Input52.text}}',\n  6Apertura = {{Rating53.value}},\n  6NoteApertura = '{{Input53.text}}',\n  6Chiusura = {{Rating54.value}},\n  6NoteChiusura = '{{Input54.text}}',\n  6Vetrine = {{Rating55.value}},\n  6NoteVetrine = '{{Input55.text}}',\n  ModificatoDa6 = '{{appsmith.user.name + \"_\" + moment().format(\"YYYYMMDD_HHmmss\")}}';\n",
+      "body": "INSERT INTO new_settimane SET\n  IdSettimane = '{{TabellaSettimane.triggeredRow.IdDipendenti}}',\n  6ManualeGioielleria = {{Rating51.value}},\n  6NoteManualeGioielleria = \"{{Input51.text}}\",\n  6Turno = {{Rating52.value}},\n  6NoteTurno = \"{{Input52.text}}\",\n  6Apertura = {{Rating53.value}},\n  6NoteApertura = \"{{Input53.text}}\",\n  6Chiusura = {{Rating54.value}},\n  6NoteChiusura = \"{{Input54.text}}\",\n  6Vetrine = {{Rating55.value}},\n  6NoteVetrine = \"{{Input55.text}}\",\n  ModificatoDa6 = \"{{appsmith.user.name + \"_\" + moment().format(\"YYYYMMDD_HHmmss\")}}\";\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

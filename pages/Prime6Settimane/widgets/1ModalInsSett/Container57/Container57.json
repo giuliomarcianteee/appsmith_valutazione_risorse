@@ -3,11 +3,11 @@
   "backgroundColor": "#FFFFFF",
   "borderColor": "#E0DEDE",
   "borderWidth": "1",
-  "bottomRow": 22,
+  "bottomRow": 16,
   "boxShadow": "NONE",
   "children": [
     {
-      "bottomRow": 130,
+      "bottomRow": 110,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -75,7 +75,7 @@
     "Layout"
   ],
   "thumbnailSVG": "/static/media/thumbnail.6cb355b93146b5347bbb048a568ed446.svg",
-  "topRow": 9,
+  "topRow": 5,
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "f3eqikyp0v",

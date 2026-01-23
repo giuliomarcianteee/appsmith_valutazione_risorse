@@ -1,7 +1,7 @@
 {
   "activeColor": "{{\n  Rating14.value === 1 ? \"red\" :\n  Rating14.value === 2 ? \"Orange\" :\n  Rating14.value === 3 ? \"green\" :\n  \"grey\"\n}}\n",
   "animateLoading": true,
-  "bottomRow": 9,
+  "bottomRow": 4,
   "defaultRate": "",
   "dynamicBindingPathList": [
     {
@@ -32,7 +32,7 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
+  "originalBottomRow": 9,
   "originalTopRow": 0,
   "parentColumnSpace": 4.23828125,
   "parentId": "qj54j9yrhx",

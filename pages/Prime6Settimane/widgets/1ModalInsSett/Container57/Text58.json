@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "originalBottomRow": 9,
-  "originalTopRow": 4,
+  "originalBottomRow": 11,
+  "originalTopRow": 5,
   "overflow": "NONE",
   "parentColumnSpace": 4.306640625,
   "parentId": "6geqn43isk",
@@ -43,7 +43,7 @@
   "text": "La risorsa a fine settimana deve essere in grado di accogliere il cliente e presentare il prodotto, chiudere la vendita e usare cassa, POS e pc, pacchetto e congedo.",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 5,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

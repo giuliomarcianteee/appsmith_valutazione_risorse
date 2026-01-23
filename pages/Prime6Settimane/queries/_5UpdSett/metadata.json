@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE new_settimane\nSET\n  `5Diamanti` = {{Rating47Copy.value}},\n  `5NoteDiamanti` = '{{Input47Copy.text}}',\n  `5Pietre` = {{Rating48Copy.value}},\n  `5NotePietre` = '{{Input48Copy.text}}',\n  `5Fedi` = {{Rating49Copy.value}},\n  `5NoteFedi` = '{{Input49Copy.text}}',\n  `5SchedeOro` = {{Rating50Copy.value}},\n  `5NoteSchedeOro` = '{{Input50Copy.text}}',\n\t`5ApprofondimentoOro` = {{Rating70Copy.value}},\n\t`5NoteApprofondimentoOro` = '{{Input70Copy.text}}',\n  ModificatoDa5 = '{{appsmith.user.name + \"_\" + moment().format(\"YYYYMMDD_HHmmss\")}}'\nWHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};\n",
+      "body": "UPDATE new_settimane\nSET\n  `5Diamanti` = {{Rating47Copy.value}},\n  `5NoteDiamanti` = \"{{Input47Copy.text}}\",\n  `5Pietre` = {{Rating48Copy.value}},\n  `5NotePietre` = \"{{Input48Copy.text}}\",\n  `5Fedi` = {{Rating49Copy.value}},\n  `5NoteFedi` = \"{{Input49Copy.text}}\",\n  `5SchedeOro` = {{Rating50Copy.value}},\n  `5NoteSchedeOro` = \"{{Input50Copy.text}}\",\n\t`5ApprofondimentoOro` = {{Rating70Copy.value}},\n\t`5NoteApprofondimentoOro` = \"{{Input70Copy.text}}\",\n  ModificatoDa5 = \"{{appsmith.user.name + \"_\" + moment().format(\"YYYYMMDD_HHmmss\")}}\"\nWHERE IdSettimane = {{TabellaSettimane.triggeredRow.IdDipendenti}};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
