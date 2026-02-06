@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 61,
   "boxShadow": "none",
-  "defaultText": "{{SelectChooseModal.data[0].Affluenza}}",
+  "defaultText": "{{SelectChooseModal.data[0].Clientela}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
